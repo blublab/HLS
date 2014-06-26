@@ -1,0 +1,17 @@
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\bin\Release\Configurations\ConnectionStrings.config
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\bin\Release\Configurations\Logger.config
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\bin\Release\PersistenceServices.dll
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\bin\Release\PersistenceServices.pdb
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\bin\Release\Common.dll
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\bin\Release\FluentNHibernate.dll
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\bin\Release\Iesi.Collections.dll
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\bin\Release\log4net.dll
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\bin\Release\NHibernate.dll
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\bin\Release\Common.pdb
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\bin\Release\FluentNHibernate.xml
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\bin\Release\Iesi.Collections.xml
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\bin\Release\log4net.xml
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\bin\Release\NHibernate.xml
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\obj\Release\PersistenceServices.csprojResolveAssemblyReference.cache
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\obj\Release\PersistenceServices.dll
+C:\Users\Yavuz\HLS\2 - Code\PersistenceServices\obj\Release\PersistenceServices.pdb

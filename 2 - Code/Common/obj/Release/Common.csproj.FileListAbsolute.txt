@@ -1,0 +1,9 @@
+C:\Users\Yavuz\HLS\2 - Code\Common\bin\Release\Configurations\ConnectionStrings.config
+C:\Users\Yavuz\HLS\2 - Code\Common\bin\Release\Configurations\Logger.config
+C:\Users\Yavuz\HLS\2 - Code\Common\bin\Release\Common.dll
+C:\Users\Yavuz\HLS\2 - Code\Common\bin\Release\Common.pdb
+C:\Users\Yavuz\HLS\2 - Code\Common\bin\Release\log4net.dll
+C:\Users\Yavuz\HLS\2 - Code\Common\bin\Release\log4net.xml
+C:\Users\Yavuz\HLS\2 - Code\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
+C:\Users\Yavuz\HLS\2 - Code\Common\obj\Release\Common.dll
+C:\Users\Yavuz\HLS\2 - Code\Common\obj\Release\Common.pdb

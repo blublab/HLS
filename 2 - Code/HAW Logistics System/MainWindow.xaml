@@ -1,0 +1,29 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="HAW Logistics System" Height="509" Width="882" Icon="HLS-Logo.ico">
+
+    <StackPanel>
+        <Menu HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="507">
+            <MenuItem Header="System">
+                <MenuItem Header="Exit" Click="MenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+        <TabControl >
+            <TabItem Header="Sendungsanfragen">
+                <StackPanel>
+                    <Button x:Name="btn_NeueSendungsanfrage" Content="Erstelle neue Sendungsanfrage..." Width="200" Margin="10" Click="Btn_NeueSendungsanfrage_Click" ></Button>
+                    <TextBlock Text="Aktuelle Sendungsanfragen:"></TextBlock>
+                    <DataGrid x:Name="dg_sa" Height="375" MouseDoubleClick="Dg_sa_MouseDoubleClick"></DataGrid>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Transportplanung">
+                <StackPanel>
+                    <TextBlock Text="Aktuelle Transportplanungen:"></TextBlock>
+                    <DataGrid x:Name="dg_tp" Height="375" MouseDoubleClick="dg_tp_MouseDoubleClick"></DataGrid>
+                </StackPanel>
+            </TabItem>
+            
+        </TabControl>
+    </StackPanel>
+</Window>

@@ -1,0 +1,5 @@
+C:\Users\Yavuz\HLS\2 - Code\PeriodicTaskFactory\bin\Debug\PeriodicTaskFactory.dll
+C:\Users\Yavuz\HLS\2 - Code\PeriodicTaskFactory\bin\Debug\PeriodicTaskFactory.pdb
+C:\Users\Yavuz\HLS\2 - Code\PeriodicTaskFactory\obj\Debug\PeriodicTaskFactory.dll
+C:\Users\Yavuz\HLS\2 - Code\PeriodicTaskFactory\obj\Debug\PeriodicTaskFactory.pdb
+C:\Users\Yavuz\HLS\2 - Code\PeriodicTaskFactory\obj\Debug\PeriodicTaskFactory.csprojResolveAssemblyReference.cache

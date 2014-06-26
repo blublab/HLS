@@ -1,0 +1,15 @@
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Debug\Configurations\ConnectionStrings.config
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Debug\Configurations\Logger.config
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Debug\MessagingServices.dll
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Debug\MessagingServices.pdb
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Debug\Common.dll
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Debug\log4net.dll
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Debug\RabbitMQ.Client.dll
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Debug\Common.pdb
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Debug\log4net.xml
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Debug\RabbitMQ.Client.xml
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\obj\Debug\MessagingServices.csprojResolveAssemblyReference.cache
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\obj\Debug\MessagingServices.dll
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\obj\Debug\MessagingServices.pdb

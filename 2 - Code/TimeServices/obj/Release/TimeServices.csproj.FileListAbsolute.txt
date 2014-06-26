@@ -1,0 +1,5 @@
+C:\Users\Yavuz\HLS\2 - Code\TimeServices\bin\Release\TimeServices.dll
+C:\Users\Yavuz\HLS\2 - Code\TimeServices\bin\Release\TimeServices.pdb
+C:\Users\Yavuz\HLS\2 - Code\TimeServices\obj\Release\TimeServices.csprojResolveAssemblyReference.cache
+C:\Users\Yavuz\HLS\2 - Code\TimeServices\obj\Release\TimeServices.dll
+C:\Users\Yavuz\HLS\2 - Code\TimeServices\obj\Release\TimeServices.pdb

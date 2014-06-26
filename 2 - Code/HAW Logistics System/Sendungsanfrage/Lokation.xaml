@@ -1,0 +1,24 @@
+﻿<Window x:Class="Client.GUI_Lokation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       Title="Lokation hinzufügen" Height="221" Width="300" WindowStyle="ToolWindow" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <GroupBox Header="Lokation"  Padding="10">
+            <StackPanel>
+                <TextBlock Text="Orts Name"></TextBlock>
+                <TextBox x:Name="Tb_name" Padding="0,0,0,5">Hamburg</TextBox>
+
+                <TextBlock Text="Lager Kosten Pro Stunde"></TextBlock>
+                <TextBox x:Name="Tb_lagerKostenProStunde" Padding="0,0,0,5">10</TextBox>
+
+                <TextBlock Text="Maximale Lager Zeit"></TextBlock>
+                <TextBox x:Name="Tb_maxLagerZeit" Padding="0,0,0,5">100</TextBox>
+            </StackPanel>
+ 
+        </GroupBox>
+        <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
+            <Button x:Name="btn_Save" Content="Lokation Speichern" Click="Btn_Save_Click" IsDefault="True"></Button>
+            <Button x:Name="btn_Cancel" Content=" Abbrechen " Click="Btn_Cancel_Click" Margin="10 0 0 0" IsCancel="True"></Button>
+        </StackPanel>
+    </StackPanel>
+</Window>

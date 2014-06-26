@@ -1,0 +1,15 @@
+C:\Users\Yavuz\HLS\2 - Code\HAW Logistics System\bin\Release\HAW Logistics System.exe.config
+C:\Users\Yavuz\HLS\2 - Code\HAW Logistics System\bin\Release\HAW Logistics System.exe
+C:\Users\Yavuz\HLS\2 - Code\HAW Logistics System\bin\Release\HAW Logistics System.pdb
+C:\Users\Yavuz\HLS\2 - Code\HAW Logistics System\bin\Release\log4net.dll
+C:\Users\Yavuz\HLS\2 - Code\HAW Logistics System\bin\Release\log4net.xml
+C:\Users\Yavuz\HLS\2 - Code\HAW Logistics System\obj\Release\HAW Logistics System.csprojResolveAssemblyReference.cache
+C:\Users\Yavuz\HLS\2 - Code\HAW Logistics System\obj\Release\MainWindow.baml
+C:\Users\Yavuz\HLS\2 - Code\HAW Logistics System\obj\Release\MainWindow.g.cs
+C:\Users\Yavuz\HLS\2 - Code\HAW Logistics System\obj\Release\App.g.cs
+C:\Users\Yavuz\HLS\2 - Code\HAW Logistics System\obj\Release\HAW Logistics System_MarkupCompile.cache
+C:\Users\Yavuz\HLS\2 - Code\HAW Logistics System\obj\Release\HAW Logistics System.g.resources
+C:\Users\Yavuz\HLS\2 - Code\HAW Logistics System\obj\Release\Client.Properties.Resources.resources
+C:\Users\Yavuz\HLS\2 - Code\HAW Logistics System\obj\Release\HAW Logistics System.csproj.GenerateResource.Cache
+C:\Users\Yavuz\HLS\2 - Code\HAW Logistics System\obj\Release\HAW Logistics System.exe
+C:\Users\Yavuz\HLS\2 - Code\HAW Logistics System\obj\Release\HAW Logistics System.pdb

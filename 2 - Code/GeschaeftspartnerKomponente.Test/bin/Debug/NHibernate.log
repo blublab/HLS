@@ -1,0 +1,424 @@
+2013-12-06 17:07:53,983 INFO  NHibernate.Cfg.Environment - NHibernate 3.3.1.4000 (3.3.3.GA)
+2013-12-06 17:07:54,061 INFO  NHibernate.Cfg.Environment - hibernate-configuration section not found in application configuration file
+2013-12-06 17:07:54,062 INFO  NHibernate.Cfg.Environment - Bytecode provider name : lcg
+2013-12-06 17:07:54,063 INFO  NHibernate.Cfg.Environment - Using reflection optimizer
+2013-12-06 17:07:54,442 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse, GeschätspartnerKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Adresse`"><id name="Id" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="identity" /></id><property name="Strasse" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Strasse" /></property><property name="Hausnummer" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Hausnummer" /></property><property name="PLZ" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="PLZ" /></property><property name="Wohnort" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Wohnort" /></property><property name="Land" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Land" /></property></class></hibernate-mapping>
+2013-12-06 17:07:54,524 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-06 17:07:54,573 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse -> Adresse
+2013-12-06 17:07:54,597 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Id -> Id, type: Int32
+2013-12-06 17:07:54,610 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Strasse -> Strasse, type: String
+2013-12-06 17:07:54,610 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Hausnummer -> Hausnummer, type: String
+2013-12-06 17:07:54,610 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: PLZ -> PLZ, type: String
+2013-12-06 17:07:54,610 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Wohnort -> Wohnort, type: String
+2013-12-06 17:07:54,610 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Land -> Land, type: String
+2013-12-06 17:07:54,621 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner, GeschätspartnerKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Geschaeftspartner`"><id name="GpNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="GpNr" /><generator class="identity" /></id><version name="Version" type="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Version" /></version><bag cascade="all" lazy="false" name="Adressen"><key><column name="Geschaeftspartner_id" /></key><one-to-many class="ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse, GeschätspartnerKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" /></bag><property name="Email" type="Common.DataTypes.EMailType, Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"><column name="Email" not-null="true" /></property><property name="Nachname" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nachname" not-null="true" /></property><property name="Vorname" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Vorname" not-null="true" /></property></class></hibernate-mapping>
+2013-12-06 17:07:54,636 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-06 17:07:54,636 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner -> Geschaeftspartner
+2013-12-06 17:07:54,636 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: GpNr -> GpNr, type: Int32
+2013-12-06 17:07:54,637 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Version -> Version, type: Int64
+2013-12-06 17:07:54,654 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Adressen, type: System.Collections.Generic.ICollection`1[[ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse, GeschätspartnerKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]](ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen)
+2013-12-06 17:07:54,655 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Email -> Email, type: Common.DataTypes.EMailType
+2013-12-06 17:07:54,655 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Nachname -> Nachname, type: String
+2013-12-06 17:07:54,655 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Vorname -> Vorname, type: String
+2013-12-06 17:07:54,659 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-06 17:07:54,661 INFO  NHibernate.Cfg.Configuration - checking mappings queue
+2013-12-06 17:07:54,661 INFO  NHibernate.Cfg.Configuration - processing one-to-many association mappings
+2013-12-06 17:07:54,662 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Second pass for collection: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-06 17:07:54,664 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - mapping collection: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen -> Adresse
+2013-12-06 17:07:54,672 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped collection key: Geschaeftspartner_id, one-to-many: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse
+2013-12-06 17:07:54,672 INFO  NHibernate.Cfg.Configuration - processing one-to-one association property references
+2013-12-06 17:07:54,672 INFO  NHibernate.Cfg.Configuration - processing foreign key constraints
+2013-12-06 17:07:54,674 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:54,676 INFO  NHibernate.Cfg.Configuration - processing filters (second pass)
+2013-12-06 17:07:54,690 INFO  NHibernate.Cfg.Configuration - checking mappings queue
+2013-12-06 17:07:54,690 INFO  NHibernate.Cfg.Configuration - processing one-to-many association mappings
+2013-12-06 17:07:54,690 INFO  NHibernate.Cfg.Configuration - processing one-to-one association property references
+2013-12-06 17:07:54,690 INFO  NHibernate.Cfg.Configuration - processing foreign key constraints
+2013-12-06 17:07:54,690 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:54,691 INFO  NHibernate.Cfg.Configuration - processing filters (second pass)
+2013-12-06 17:07:54,703 INFO  NHibernate.Connection.ConnectionProviderFactory - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2013-12-06 17:07:54,704 INFO  NHibernate.Connection.ConnectionProvider - Configuring ConnectionProvider
+2013-12-06 17:07:54,719 DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2013-12-06 17:07:54,862 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    
+alter table `Adresse`  drop foreign key FK48FA4275AE8B0ABA
+
+2013-12-06 17:07:54,885 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `Adresse`
+2013-12-06 17:07:54,890 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `Geschaeftspartner`
+2013-12-06 17:07:54,899 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `Adresse` (
+        Id INTEGER NOT NULL AUTO_INCREMENT,
+       Strasse VARCHAR(255),
+       Hausnummer VARCHAR(255),
+       PLZ VARCHAR(255),
+       Wohnort VARCHAR(255),
+       Land VARCHAR(255),
+       Geschaeftspartner_id INTEGER,
+       primary key (Id)
+    )
+2013-12-06 17:07:54,918 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `Geschaeftspartner` (
+        GpNr INTEGER NOT NULL AUTO_INCREMENT,
+       Version BIGINT not null,
+       Email LONGBLOB not null,
+       Nachname VARCHAR(255) not null,
+       Vorname VARCHAR(255) not null,
+       primary key (GpNr)
+    )
+2013-12-06 17:07:54,959 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    alter table `Adresse` 
+        add index (Geschaeftspartner_id), 
+        add constraint FK48FA4275AE8B0ABA 
+        foreign key (Geschaeftspartner_id) 
+        references `Geschaeftspartner` (GpNr)
+2013-12-06 17:07:55,019 DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2013-12-06 17:07:55,023 DEBUG NHibernate.Connection.ConnectionProvider - Disposing of ConnectionProvider.
+2013-12-06 17:07:55,024 INFO  NHibernate.Cfg.Configuration - checking mappings queue
+2013-12-06 17:07:55,024 INFO  NHibernate.Cfg.Configuration - processing one-to-many association mappings
+2013-12-06 17:07:55,024 INFO  NHibernate.Cfg.Configuration - processing one-to-one association property references
+2013-12-06 17:07:55,025 INFO  NHibernate.Cfg.Configuration - processing foreign key constraints
+2013-12-06 17:07:55,025 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:55,025 INFO  NHibernate.Cfg.Configuration - processing filters (second pass)
+2013-12-06 17:07:55,051 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-06 17:07:55,058 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-06 17:07:55,131 INFO  NHibernate.Exceptions.SQLExceptionConverterFactory - Using dialect defined converter
+2013-12-06 17:07:55,132 INFO  NHibernate.Cfg.SettingsFactory - Generate SQL with comments: disabled
+2013-12-06 17:07:55,132 INFO  NHibernate.Connection.ConnectionProviderFactory - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2013-12-06 17:07:55,133 INFO  NHibernate.Connection.ConnectionProvider - Configuring ConnectionProvider
+2013-12-06 17:07:55,133 INFO  NHibernate.Cfg.SettingsFactory - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2013-12-06 17:07:55,134 INFO  NHibernate.Cfg.SettingsFactory - Optimize cache for minimal puts: False
+2013-12-06 17:07:55,134 INFO  NHibernate.Cfg.SettingsFactory - Connection release mode: auto
+2013-12-06 17:07:55,135 INFO  NHibernate.Cfg.SettingsFactory - Default batch fetch size: 1
+2013-12-06 17:07:55,135 INFO  NHibernate.Cfg.SettingsFactory - Statistics: disabled
+2013-12-06 17:07:55,135 INFO  NHibernate.Cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+2013-12-06 17:07:55,136 INFO  NHibernate.Cfg.SettingsFactory - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2013-12-06 17:07:55,137 INFO  NHibernate.Cfg.SettingsFactory - Query language substitutions: {}
+2013-12-06 17:07:55,138 INFO  NHibernate.Cfg.SettingsFactory - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2013-12-06 17:07:55,138 INFO  NHibernate.Cfg.SettingsFactory - Order SQL inserts for batching: disabled
+2013-12-06 17:07:55,139 DEBUG NHibernate.Cfg.SettingsFactory - Wrap result sets: disabled
+2013-12-06 17:07:55,139 INFO  NHibernate.Cfg.SettingsFactory - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2013-12-06 17:07:55,140 INFO  NHibernate.Cfg.SettingsFactory - Default entity-mode: Poco
+2013-12-06 17:07:55,140 INFO  NHibernate.Cfg.SettingsFactory - Named query checking : enabled
+2013-12-06 17:07:55,153 INFO  NHibernate.Impl.SessionFactoryImpl - building session factory
+2013-12-06 17:07:55,154 DEBUG NHibernate.Impl.SessionFactoryImpl - Session factory constructed with filter configurations : {}
+2013-12-06 17:07:55,154 DEBUG NHibernate.Impl.SessionFactoryImpl - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider', 'connection.driver_class'='NHibernate.Driver.MySqlDataDriver, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.MySQLDialect, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.MySQLDialect, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'connection.connection_string'='Server=win-devel.informatik.haw-hamburg.de; Port=3306; Database=wp13team3db;Uid=team3;Pwd=Q3yz73j6;', 'current_session_context_class'='NHibernate.Context.CallSessionContext'}
+2013-12-06 17:07:55,156 DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2013-12-06 17:07:55,174 DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2013-12-06 17:07:55,223 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse
+2013-12-06 17:07:55,227 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse
+2013-12-06 17:07:55,244 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse
+2013-12-06 17:07:55,274 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:55,274 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:55,275 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:55,296 DEBUG NHibernate.Persister.Collection.ICollectionPersister - Static SQL for collection: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-06 17:07:55,297 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  Row insert: UPDATE `Adresse` SET Geschaeftspartner_id = ? WHERE Id = ?
+2013-12-06 17:07:55,297 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  Row delete: UPDATE `Adresse` SET Geschaeftspartner_id = null WHERE Geschaeftspartner_id = ? AND Id = ?
+2013-12-06 17:07:55,297 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  One-shot delete: UPDATE `Adresse` SET Geschaeftspartner_id = null WHERE Geschaeftspartner_id = ?
+2013-12-06 17:07:55,323 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse
+2013-12-06 17:07:55,323 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT Id FROM `Adresse` WHERE Id = ?
+2013-12-06 17:07:55,323 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT adresse_.Id, adresse_.Strasse as Strasse0_, adresse_.Hausnummer as Hausnummer0_, adresse_.PLZ as PLZ0_, adresse_.Wohnort as Wohnort0_, adresse_.Land as Land0_ FROM `Adresse` adresse_ WHERE adresse_.Id=?
+2013-12-06 17:07:55,323 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `Adresse` (Strasse, Hausnummer, PLZ, Wohnort, Land, Id) VALUES (?, ?, ?, ?, ?, ?)
+2013-12-06 17:07:55,323 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `Adresse` SET Strasse = ?, Hausnummer = ?, PLZ = ?, Wohnort = ?, Land = ? WHERE Id = ?
+2013-12-06 17:07:55,323 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `Adresse` WHERE Id = ?
+2013-12-06 17:07:55,323 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `Adresse` (Strasse, Hausnummer, PLZ, Wohnort, Land) VALUES (?, ?, ?, ?, ?)
+2013-12-06 17:07:55,350 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse: SELECT adresse0_.Id as Id0_0_, adresse0_.Strasse as Strasse0_0_, adresse0_.Hausnummer as Hausnummer0_0_, adresse0_.PLZ as PLZ0_0_, adresse0_.Wohnort as Wohnort0_0_, adresse0_.Land as Land0_0_ FROM `Adresse` adresse0_ WHERE adresse0_.Id=?
+2013-12-06 17:07:55,350 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse: SELECT adresse0_.Id as Id0_0_, adresse0_.Strasse as Strasse0_0_, adresse0_.Hausnummer as Hausnummer0_0_, adresse0_.PLZ as PLZ0_0_, adresse0_.Wohnort as Wohnort0_0_, adresse0_.Land as Land0_0_ FROM `Adresse` adresse0_ WHERE adresse0_.Id=?
+2013-12-06 17:07:55,350 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse: SELECT adresse0_.Id as Id0_0_, adresse0_.Strasse as Strasse0_0_, adresse0_.Hausnummer as Hausnummer0_0_, adresse0_.PLZ as PLZ0_0_, adresse0_.Wohnort as Wohnort0_0_, adresse0_.Land as Land0_0_ FROM `Adresse` adresse0_ WHERE adresse0_.Id=? for update
+2013-12-06 17:07:55,351 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse: SELECT adresse0_.Id as Id0_0_, adresse0_.Strasse as Strasse0_0_, adresse0_.Hausnummer as Hausnummer0_0_, adresse0_.PLZ as PLZ0_0_, adresse0_.Wohnort as Wohnort0_0_, adresse0_.Land as Land0_0_ FROM `Adresse` adresse0_ WHERE adresse0_.Id=? for update
+2013-12-06 17:07:55,351 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse: SELECT adresse0_.Id as Id0_0_, adresse0_.Strasse as Strasse0_0_, adresse0_.Hausnummer as Hausnummer0_0_, adresse0_.PLZ as PLZ0_0_, adresse0_.Wohnort as Wohnort0_0_, adresse0_.Land as Land0_0_ FROM `Adresse` adresse0_ WHERE adresse0_.Id=? for update
+2013-12-06 17:07:55,351 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse: SELECT adresse0_.Id as Id0_0_, adresse0_.Strasse as Strasse0_0_, adresse0_.Hausnummer as Hausnummer0_0_, adresse0_.PLZ as PLZ0_0_, adresse0_.Wohnort as Wohnort0_0_, adresse0_.Land as Land0_0_ FROM `Adresse` adresse0_ WHERE adresse0_.Id=?
+2013-12-06 17:07:55,351 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse: SELECT adresse0_.Id as Id0_0_, adresse0_.Strasse as Strasse0_0_, adresse0_.Hausnummer as Hausnummer0_0_, adresse0_.PLZ as PLZ0_0_, adresse0_.Wohnort as Wohnort0_0_, adresse0_.Land as Land0_0_ FROM `Adresse` adresse0_ WHERE adresse0_.Id=?
+2013-12-06 17:07:55,353 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:55,353 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT Version FROM `Geschaeftspartner` WHERE GpNr = ?
+2013-12-06 17:07:55,353 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT geschaefts_.GpNr, geschaefts_.Version as Version1_, geschaefts_.Email as Email1_, geschaefts_.Nachname as Nachname1_, geschaefts_.Vorname as Vorname1_ FROM `Geschaeftspartner` geschaefts_ WHERE geschaefts_.GpNr=?
+2013-12-06 17:07:55,353 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `Geschaeftspartner` (Version, Email, Nachname, Vorname, GpNr) VALUES (?, ?, ?, ?, ?)
+2013-12-06 17:07:55,353 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `Geschaeftspartner` SET Version = ?, Email = ?, Nachname = ?, Vorname = ? WHERE GpNr = ? AND Version = ?
+2013-12-06 17:07:55,353 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `Geschaeftspartner` WHERE GpNr = ? AND Version = ?
+2013-12-06 17:07:55,353 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `Geschaeftspartner` (Version, Email, Nachname, Vorname) VALUES (?, ?, ?, ?)
+2013-12-06 17:07:55,356 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner: SELECT geschaefts0_.GpNr as GpNr1_0_, geschaefts0_.Version as Version1_0_, geschaefts0_.Email as Email1_0_, geschaefts0_.Nachname as Nachname1_0_, geschaefts0_.Vorname as Vorname1_0_ FROM `Geschaeftspartner` geschaefts0_ WHERE geschaefts0_.GpNr=?
+2013-12-06 17:07:55,356 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner: SELECT geschaefts0_.GpNr as GpNr1_0_, geschaefts0_.Version as Version1_0_, geschaefts0_.Email as Email1_0_, geschaefts0_.Nachname as Nachname1_0_, geschaefts0_.Vorname as Vorname1_0_ FROM `Geschaeftspartner` geschaefts0_ WHERE geschaefts0_.GpNr=?
+2013-12-06 17:07:55,356 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner: SELECT geschaefts0_.GpNr as GpNr1_0_, geschaefts0_.Version as Version1_0_, geschaefts0_.Email as Email1_0_, geschaefts0_.Nachname as Nachname1_0_, geschaefts0_.Vorname as Vorname1_0_ FROM `Geschaeftspartner` geschaefts0_ WHERE geschaefts0_.GpNr=? for update
+2013-12-06 17:07:55,356 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner: SELECT geschaefts0_.GpNr as GpNr1_0_, geschaefts0_.Version as Version1_0_, geschaefts0_.Email as Email1_0_, geschaefts0_.Nachname as Nachname1_0_, geschaefts0_.Vorname as Vorname1_0_ FROM `Geschaeftspartner` geschaefts0_ WHERE geschaefts0_.GpNr=? for update
+2013-12-06 17:07:55,356 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner: SELECT geschaefts0_.GpNr as GpNr1_0_, geschaefts0_.Version as Version1_0_, geschaefts0_.Email as Email1_0_, geschaefts0_.Nachname as Nachname1_0_, geschaefts0_.Vorname as Vorname1_0_ FROM `Geschaeftspartner` geschaefts0_ WHERE geschaefts0_.GpNr=? for update
+2013-12-06 17:07:55,366 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner: SELECT geschaefts0_.GpNr as GpNr1_1_, geschaefts0_.Version as Version1_1_, geschaefts0_.Email as Email1_1_, geschaefts0_.Nachname as Nachname1_1_, geschaefts0_.Vorname as Vorname1_1_, adressen1_.Geschaeftspartner_id as Geschaef7_3_, adressen1_.Id as Id3_, adressen1_.Id as Id0_0_, adressen1_.Strasse as Strasse0_0_, adressen1_.Hausnummer as Hausnummer0_0_, adressen1_.PLZ as PLZ0_0_, adressen1_.Wohnort as Wohnort0_0_, adressen1_.Land as Land0_0_ FROM `Geschaeftspartner` geschaefts0_ left outer join `Adresse` adressen1_ on geschaefts0_.GpNr=adressen1_.Geschaeftspartner_id WHERE geschaefts0_.GpNr=?
+2013-12-06 17:07:55,367 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner: SELECT geschaefts0_.GpNr as GpNr1_1_, geschaefts0_.Version as Version1_1_, geschaefts0_.Email as Email1_1_, geschaefts0_.Nachname as Nachname1_1_, geschaefts0_.Vorname as Vorname1_1_, adressen1_.Geschaeftspartner_id as Geschaef7_3_, adressen1_.Id as Id3_, adressen1_.Id as Id0_0_, adressen1_.Strasse as Strasse0_0_, adressen1_.Hausnummer as Hausnummer0_0_, adressen1_.PLZ as PLZ0_0_, adressen1_.Wohnort as Wohnort0_0_, adressen1_.Land as Land0_0_ FROM `Geschaeftspartner` geschaefts0_ left outer join `Adresse` adressen1_ on geschaefts0_.GpNr=adressen1_.Geschaeftspartner_id WHERE geschaefts0_.GpNr=?
+2013-12-06 17:07:55,370 DEBUG NHibernate.Loader.Collection.OneToManyLoader - Static select for one-to-many ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen: SELECT adressen0_.Geschaeftspartner_id as Geschaef7_1_, adressen0_.Id as Id1_, adressen0_.Id as Id0_0_, adressen0_.Strasse as Strasse0_0_, adressen0_.Hausnummer as Hausnummer0_0_, adressen0_.PLZ as PLZ0_0_, adressen0_.Wohnort as Wohnort0_0_, adressen0_.Land as Land0_0_ FROM `Adresse` adressen0_ WHERE adressen0_.Geschaeftspartner_id=?
+2013-12-06 17:07:55,371 DEBUG NHibernate.Impl.SessionFactoryObjectFactory - initializing class SessionFactoryObjectFactory
+2013-12-06 17:07:55,371 DEBUG NHibernate.Impl.SessionFactoryObjectFactory - registered: 731f46d5692f48bd9dbd5b65ebf1bb1b(unnamed)
+2013-12-06 17:07:55,371 INFO  NHibernate.Impl.SessionFactoryObjectFactory - no name configured
+2013-12-06 17:07:55,372 DEBUG NHibernate.Impl.SessionFactoryImpl - Instantiated session factory
+2013-12-06 17:07:55,374 DEBUG NHibernate.Impl.SessionFactoryImpl - Checking 0 named HQL queries
+2013-12-06 17:07:55,374 DEBUG NHibernate.Impl.SessionFactoryImpl - Checking 0 named SQL queries
+2013-12-06 17:07:55,393 DEBUG NHibernate.Impl.SessionImpl - [session-id=b611d863-e288-4e88-a919-4108f12b633b] opened session at timestamp: 635219464753, for session factory: [/731f46d5692f48bd9dbd5b65ebf1bb1b]
+2013-12-06 17:07:55,396 DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2013-12-06 17:07:55,396 DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2013-12-06 17:07:55,412 DEBUG NHibernate.Engine.VersionValue - unsaved-value: 0
+2013-12-06 17:07:55,413 DEBUG NHibernate.Event.Default.AbstractSaveEventListener - transient instance of: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:55,413 DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener - saving transient instance
+2013-12-06 17:07:55,414 DEBUG NHibernate.Event.Default.AbstractSaveEventListener - saving [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#<null>]
+2013-12-06 17:07:55,419 INFO  NHibernate.Engine.Cascade - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:55,420 INFO  NHibernate.Engine.Cascade - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:55,420 DEBUG NHibernate.Event.Default.AbstractSaveEventListener - executing insertions
+2013-12-06 17:07:55,423 DEBUG NHibernate.Engine.VersionValue - unsaved-value: 0
+2013-12-06 17:07:55,423 DEBUG NHibernate.Engine.Versioning - Seeding: 1
+2013-12-06 17:07:55,428 DEBUG NHibernate.Event.Default.AbstractSaveEventListener - executing identity-insert immediately
+2013-12-06 17:07:55,430 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Inserting entity: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner (native id)
+2013-12-06 17:07:55,430 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Version: 1
+2013-12-06 17:07:55,438 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2013-12-06 17:07:55,438 DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: INSERT INTO `Geschaeftspartner` (Version, Email, Nachname, Vorname) VALUES (?, ?, ?, ?)
+2013-12-06 17:07:55,439 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Dehydrating entity: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#<null>]
+2013-12-06 17:07:55,439 DEBUG NHibernate.Type.Int64Type - binding '1' to parameter: 0
+2013-12-06 17:07:55,441 DEBUG NHibernate.Type.SerializableType - binding '0001000000ffffffff01000000000000000c020000003d436f6d6d6f6e2c2056657273696f6e3d312e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c05010000001a436f6d6d6f6e2e4461746154797065732e454d61696c547970650100000005454d61696c01020000000603000000116d6178406d75737465726d616e6e2e64650b' to parameter: 1
+2013-12-06 17:07:55,441 DEBUG NHibernate.Type.StringType - binding 'Schmidt' to parameter: 2
+2013-12-06 17:07:55,442 DEBUG NHibernate.Type.StringType - binding 'Heinz' to parameter: 3
+2013-12-06 17:07:55,445 DEBUG NHibernate.SQL - INSERT INTO `Geschaeftspartner` (Version, Email, Nachname, Vorname) VALUES (?p0, ?p1, ?p2, ?p3);?p0 = 1 [Type: Int64 (0)], ?p1 = 0x0001000000FFFFFFFF01000000000000000C020000003D436F6D6D6F6E2C2056657273696F6E3D312E302E302E302C2043756C747572653D6E65757472616C2C205075626C69634B6579546F6B656E3D6E756C6C05010000001A436F6D6D6F6E2E4461746154797065732E454D61696C547970650100000005454D61696C0102... [Type: Binary (155)], ?p2 = 'Schmidt' [Type: String (7)], ?p3 = 'Heinz' [Type: String (5)]
+2013-12-06 17:07:55,446 DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2013-12-06 17:07:55,452 DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteNonQuery took 5 ms
+2013-12-06 17:07:55,454 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2013-12-06 17:07:55,456 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2013-12-06 17:07:55,456 DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: SELECT LAST_INSERT_ID()
+2013-12-06 17:07:55,456 DEBUG NHibernate.SQL - SELECT LAST_INSERT_ID()
+2013-12-06 17:07:55,457 DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2013-12-06 17:07:55,458 DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 1 ms
+2013-12-06 17:07:55,459 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
+2013-12-06 17:07:55,461 DEBUG NHibernate.Type.Int32Type - returning '1' as column: LAST_INSERT_ID()
+2013-12-06 17:07:55,461 DEBUG NHibernate.Id.IdentifierGeneratorFactory - Natively generated identity: 1
+2013-12-06 17:07:55,461 DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
+2013-12-06 17:07:55,462 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
+2013-12-06 17:07:55,462 DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 5 ms
+2013-12-06 17:07:55,462 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2013-12-06 17:07:55,468 INFO  NHibernate.Engine.Cascade - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:55,469 INFO  NHibernate.Engine.Cascade - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-06 17:07:55,470 INFO  NHibernate.Engine.Cascade - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-06 17:07:55,470 INFO  NHibernate.Engine.Cascade - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:55,472 DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2013-12-06 17:07:55,473 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
+2013-12-06 17:07:55,474 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
+2013-12-06 17:07:55,476 INFO  NHibernate.Engine.Cascade - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:55,476 INFO  NHibernate.Engine.Cascade - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-06 17:07:55,476 INFO  NHibernate.Engine.Cascade - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-06 17:07:55,476 INFO  NHibernate.Engine.Cascade - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:55,476 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
+2013-12-06 17:07:55,477 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2013-12-06 17:07:55,486 DEBUG NHibernate.Event.Default.WrapVisitor - Wrapped collection in role: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-06 17:07:55,506 DEBUG NHibernate.Engine.Collections - Collection found: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1], was: [<unreferenced>] (initialized)
+2013-12-06 17:07:55,508 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
+2013-12-06 17:07:55,508 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2013-12-06 17:07:55,509 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2013-12-06 17:07:55,509 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 1 (re)creations, 0 updates, 0 removals to 1 collections
+2013-12-06 17:07:55,510 DEBUG NHibernate.Impl.Printer - listing entities:
+2013-12-06 17:07:55,512 DEBUG NHibernate.Impl.Printer - ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner{'GpNr'='1', 'Version'='1', 'Adressen'='[]', 'Email'='0001000000ffffffff01000000000000000c020000003d436f6d6d6f6e2c2056657273696f6e3d312e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c05010000001a436f6d6d6f6e2e4461746154797065732e454d61696c547970650100000005454d61696c01020000000603000000116d6178406d75737465726d616e6e2e64650b', 'Nachname'='Schmidt', 'Vorname'='Heinz'}
+2013-12-06 17:07:55,513 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
+2013-12-06 17:07:55,513 DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
+2013-12-06 17:07:55,516 DEBUG NHibernate.Persister.Collection.ICollectionPersister - Inserting collection: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]
+2013-12-06 17:07:55,516 DEBUG NHibernate.Persister.Collection.ICollectionPersister - collection was empty
+2013-12-06 17:07:55,517 DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
+2013-12-06 17:07:55,518 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
+2013-12-06 17:07:55,520 DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2013-12-06 17:07:55,524 DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2013-12-06 17:07:55,524 DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2013-12-06 17:07:55,525 DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2013-12-06 17:07:55,525 DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2013-12-06 17:07:55,527 DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2013-12-06 17:07:55,529 DEBUG NHibernate.Impl.SessionImpl - closing session
+2013-12-06 17:07:55,529 DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2013-12-06 17:07:55,532 DEBUG NHibernate.Impl.SessionImpl - [session-id=53d37625-2b2d-40fc-9246-b903c715dd3c] opened session at timestamp: 635219464755, for session factory: [/731f46d5692f48bd9dbd5b65ebf1bb1b]
+2013-12-06 17:07:55,532 DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2013-12-06 17:07:55,532 DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2013-12-06 17:07:55,543 DEBUG NHibernate.Event.Default.DefaultLoadEventListener - loading entity: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:55,544 DEBUG NHibernate.Event.Default.DefaultLoadEventListener - attempting to resolve: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:55,546 DEBUG NHibernate.Event.Default.DefaultLoadEventListener - object not resolved in any cache: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:55,546 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Fetching entity: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:55,549 DEBUG NHibernate.Loader.Loader - loading entity: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:55,571 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2013-12-06 17:07:55,571 DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: SELECT geschaefts0_.GpNr as GpNr1_0_, geschaefts0_.Version as Version1_0_, geschaefts0_.Email as Email1_0_, geschaefts0_.Nachname as Nachname1_0_, geschaefts0_.Vorname as Vorname1_0_ FROM `Geschaeftspartner` geschaefts0_ WHERE geschaefts0_.GpNr=?
+2013-12-06 17:07:55,572 DEBUG NHibernate.Type.Int32Type - binding '1' to parameter: 0
+2013-12-06 17:07:55,575 INFO  NHibernate.Loader.Loader - SELECT geschaefts0_.GpNr as GpNr1_0_, geschaefts0_.Version as Version1_0_, geschaefts0_.Email as Email1_0_, geschaefts0_.Nachname as Nachname1_0_, geschaefts0_.Vorname as Vorname1_0_ FROM `Geschaeftspartner` geschaefts0_ WHERE geschaefts0_.GpNr=?p0
+2013-12-06 17:07:55,575 DEBUG NHibernate.SQL - SELECT geschaefts0_.GpNr as GpNr1_0_, geschaefts0_.Version as Version1_0_, geschaefts0_.Email as Email1_0_, geschaefts0_.Nachname as Nachname1_0_, geschaefts0_.Vorname as Vorname1_0_ FROM `Geschaeftspartner` geschaefts0_ WHERE geschaefts0_.GpNr=?p0;?p0 = 1 [Type: Int32 (0)]
+2013-12-06 17:07:55,575 DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2013-12-06 17:07:55,577 DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 2 ms
+2013-12-06 17:07:55,577 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
+2013-12-06 17:07:55,579 DEBUG NHibernate.Loader.Loader - processing result set
+2013-12-06 17:07:55,580 DEBUG NHibernate.Loader.Loader - result set row: 0
+2013-12-06 17:07:55,582 DEBUG NHibernate.Loader.Loader - result row: EntityKey[ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:55,585 DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:55,587 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:55,588 DEBUG NHibernate.Type.Int64Type - returning '1' as column: Version1_0_
+2013-12-06 17:07:55,589 DEBUG NHibernate.Type.SerializableType - returning '0001000000ffffffff01000000000000000c020000003d436f6d6d6f6e2c2056657273696f6e3d312e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c05010000001a436f6d6d6f6e2e4461746154797065732e454d61696c547970650100000005454d61696c01020000000603000000116d6178406d75737465726d616e6e2e64650b' as column: Email1_0_
+2013-12-06 17:07:55,589 DEBUG NHibernate.Type.StringType - returning 'Schmidt' as column: Nachname1_0_
+2013-12-06 17:07:55,589 DEBUG NHibernate.Type.StringType - returning 'Heinz' as column: Vorname1_0_
+2013-12-06 17:07:55,590 DEBUG NHibernate.Engine.TwoPhaseLoad - Version: 1
+2013-12-06 17:07:55,590 DEBUG NHibernate.Loader.Loader - done processing result set (1 rows)
+2013-12-06 17:07:55,590 DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
+2013-12-06 17:07:55,590 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
+2013-12-06 17:07:55,590 DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 15 ms
+2013-12-06 17:07:55,590 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2013-12-06 17:07:55,592 DEBUG NHibernate.Loader.Loader - total objects hydrated: 1
+2013-12-06 17:07:55,593 DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:55,595 DEBUG NHibernate.Engine.Loading.LoadContexts - creating collection wrapper:[ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]
+2013-12-06 17:07:55,601 DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:55,601 DEBUG NHibernate.Engine.StatefulPersistenceContext - initializing non-lazy collections
+2013-12-06 17:07:55,605 DEBUG NHibernate.Event.Default.DefaultInitializeCollectionEventListener - initializing collection [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]
+2013-12-06 17:07:55,605 DEBUG NHibernate.Event.Default.DefaultInitializeCollectionEventListener - checking second-level cache
+2013-12-06 17:07:55,606 DEBUG NHibernate.Event.Default.DefaultInitializeCollectionEventListener - collection not cached
+2013-12-06 17:07:55,607 DEBUG NHibernate.Loader.Loader - loading collection: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]
+2013-12-06 17:07:55,608 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2013-12-06 17:07:55,609 DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: SELECT adressen0_.Geschaeftspartner_id as Geschaef7_1_, adressen0_.Id as Id1_, adressen0_.Id as Id0_0_, adressen0_.Strasse as Strasse0_0_, adressen0_.Hausnummer as Hausnummer0_0_, adressen0_.PLZ as PLZ0_0_, adressen0_.Wohnort as Wohnort0_0_, adressen0_.Land as Land0_0_ FROM `Adresse` adressen0_ WHERE adressen0_.Geschaeftspartner_id=?
+2013-12-06 17:07:55,609 DEBUG NHibernate.Type.Int32Type - binding '1' to parameter: 0
+2013-12-06 17:07:55,609 INFO  NHibernate.Loader.Loader - SELECT adressen0_.Geschaeftspartner_id as Geschaef7_1_, adressen0_.Id as Id1_, adressen0_.Id as Id0_0_, adressen0_.Strasse as Strasse0_0_, adressen0_.Hausnummer as Hausnummer0_0_, adressen0_.PLZ as PLZ0_0_, adressen0_.Wohnort as Wohnort0_0_, adressen0_.Land as Land0_0_ FROM `Adresse` adressen0_ WHERE adressen0_.Geschaeftspartner_id=?p0
+2013-12-06 17:07:55,609 DEBUG NHibernate.SQL - SELECT adressen0_.Geschaeftspartner_id as Geschaef7_1_, adressen0_.Id as Id1_, adressen0_.Id as Id0_0_, adressen0_.Strasse as Strasse0_0_, adressen0_.Hausnummer as Hausnummer0_0_, adressen0_.PLZ as PLZ0_0_, adressen0_.Wohnort as Wohnort0_0_, adressen0_.Land as Land0_0_ FROM `Adresse` adressen0_ WHERE adressen0_.Geschaeftspartner_id=?p0;?p0 = 1 [Type: Int32 (0)]
+2013-12-06 17:07:55,609 DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2013-12-06 17:07:55,611 DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 2 ms
+2013-12-06 17:07:55,611 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
+2013-12-06 17:07:55,612 DEBUG NHibernate.Loader.Loader - result set contains (possibly empty) collection: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]
+2013-12-06 17:07:55,612 DEBUG NHibernate.Engine.Loading.LoadContexts - constructing collection load context for result set [NHibernate.Driver.NHybridDataReader]
+2013-12-06 17:07:55,614 DEBUG NHibernate.Engine.Loading.CollectionLoadContext - starting attempt to find loading collection [[ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]]
+2013-12-06 17:07:55,614 DEBUG NHibernate.Engine.Loading.CollectionLoadContext - collection not yet initialized; initializing
+2013-12-06 17:07:55,616 DEBUG NHibernate.Loader.Loader - processing result set
+2013-12-06 17:07:55,616 DEBUG NHibernate.Loader.Loader - done processing result set (0 rows)
+2013-12-06 17:07:55,616 DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
+2013-12-06 17:07:55,616 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
+2013-12-06 17:07:55,616 DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 7 ms
+2013-12-06 17:07:55,616 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2013-12-06 17:07:55,617 DEBUG NHibernate.Loader.Loader - total objects hydrated: 0
+2013-12-06 17:07:55,618 DEBUG NHibernate.Engine.Loading.LoadContexts - attempting to locate loading collection entry [CollectionKey[ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]] in any result-set context
+2013-12-06 17:07:55,618 DEBUG NHibernate.Engine.Loading.LoadContexts - collection [CollectionKey[ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]] not located in load context
+2013-12-06 17:07:55,619 DEBUG NHibernate.Engine.Loading.CollectionLoadContext - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]>@1ac8d03]
+2013-12-06 17:07:55,620 DEBUG NHibernate.Engine.Loading.CollectionLoadContext - 1 collections were found in result set for role: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-06 17:07:55,621 DEBUG NHibernate.Engine.Loading.CollectionLoadContext - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]>@1ac8d03]
+2013-12-06 17:07:55,622 DEBUG NHibernate.Engine.Loading.CollectionLoadContext - collection fully initialized: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]
+2013-12-06 17:07:55,622 DEBUG NHibernate.Engine.Loading.CollectionLoadContext - 1 collections initialized for role: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-06 17:07:55,623 DEBUG NHibernate.Loader.Loader - done loading collection
+2013-12-06 17:07:55,623 DEBUG NHibernate.Event.Default.DefaultInitializeCollectionEventListener - collection initialized
+2013-12-06 17:07:55,624 DEBUG NHibernate.Loader.Loader - done entity load
+2013-12-06 17:07:55,624 DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2013-12-06 17:07:55,624 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
+2013-12-06 17:07:55,624 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
+2013-12-06 17:07:55,624 INFO  NHibernate.Engine.Cascade - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:55,624 INFO  NHibernate.Engine.Cascade - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-06 17:07:55,624 INFO  NHibernate.Engine.Cascade - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-06 17:07:55,624 INFO  NHibernate.Engine.Cascade - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:55,624 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
+2013-12-06 17:07:55,625 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2013-12-06 17:07:55,626 DEBUG NHibernate.Engine.Collections - Collection found: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1], was: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1] (initialized)
+2013-12-06 17:07:55,626 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
+2013-12-06 17:07:55,626 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2013-12-06 17:07:55,626 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2013-12-06 17:07:55,626 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+2013-12-06 17:07:55,626 DEBUG NHibernate.Impl.Printer - listing entities:
+2013-12-06 17:07:55,626 DEBUG NHibernate.Impl.Printer - ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner{'GpNr'='1', 'Version'='1', 'Adressen'='[]', 'Email'='0001000000ffffffff01000000000000000c020000003d436f6d6d6f6e2c2056657273696f6e3d312e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c05010000001a436f6d6d6f6e2e4461746154797065732e454d61696c547970650100000005454d61696c01020000000603000000116d6178406d75737465726d616e6e2e64650b', 'Nachname'='Schmidt', 'Vorname'='Heinz'}
+2013-12-06 17:07:55,627 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
+2013-12-06 17:07:55,627 DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
+2013-12-06 17:07:55,627 DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
+2013-12-06 17:07:55,627 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
+2013-12-06 17:07:55,627 DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2013-12-06 17:07:55,628 DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2013-12-06 17:07:55,628 DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2013-12-06 17:07:55,628 DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2013-12-06 17:07:55,628 DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2013-12-06 17:07:55,628 DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2013-12-06 17:07:55,628 DEBUG NHibernate.Impl.SessionImpl - closing session
+2013-12-06 17:07:55,629 DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2013-12-06 17:07:56,457 DEBUG NHibernate.Impl.SessionImpl - [session-id=e34e25f0-2d84-4877-a13f-533e0822376f] opened session at timestamp: 635219464764, for session factory: [/731f46d5692f48bd9dbd5b65ebf1bb1b]
+2013-12-06 17:07:56,457 DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2013-12-06 17:07:56,457 DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2013-12-06 17:07:56,466 DEBUG NHibernate.Event.Default.DefaultLoadEventListener - loading entity: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:56,466 DEBUG NHibernate.Event.Default.DefaultLoadEventListener - attempting to resolve: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:56,467 DEBUG NHibernate.Event.Default.DefaultLoadEventListener - object not resolved in any cache: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:56,467 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Fetching entity: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:56,467 DEBUG NHibernate.Loader.Loader - loading entity: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:56,467 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2013-12-06 17:07:56,467 DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: SELECT geschaefts0_.GpNr as GpNr1_0_, geschaefts0_.Version as Version1_0_, geschaefts0_.Email as Email1_0_, geschaefts0_.Nachname as Nachname1_0_, geschaefts0_.Vorname as Vorname1_0_ FROM `Geschaeftspartner` geschaefts0_ WHERE geschaefts0_.GpNr=?
+2013-12-06 17:07:56,467 DEBUG NHibernate.Type.Int32Type - binding '1' to parameter: 0
+2013-12-06 17:07:56,467 INFO  NHibernate.Loader.Loader - SELECT geschaefts0_.GpNr as GpNr1_0_, geschaefts0_.Version as Version1_0_, geschaefts0_.Email as Email1_0_, geschaefts0_.Nachname as Nachname1_0_, geschaefts0_.Vorname as Vorname1_0_ FROM `Geschaeftspartner` geschaefts0_ WHERE geschaefts0_.GpNr=?p0
+2013-12-06 17:07:56,467 DEBUG NHibernate.SQL - SELECT geschaefts0_.GpNr as GpNr1_0_, geschaefts0_.Version as Version1_0_, geschaefts0_.Email as Email1_0_, geschaefts0_.Nachname as Nachname1_0_, geschaefts0_.Vorname as Vorname1_0_ FROM `Geschaeftspartner` geschaefts0_ WHERE geschaefts0_.GpNr=?p0;?p0 = 1 [Type: Int32 (0)]
+2013-12-06 17:07:56,468 DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2013-12-06 17:07:56,470 DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 2 ms
+2013-12-06 17:07:56,470 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
+2013-12-06 17:07:56,470 DEBUG NHibernate.Loader.Loader - processing result set
+2013-12-06 17:07:56,470 DEBUG NHibernate.Loader.Loader - result set row: 0
+2013-12-06 17:07:56,470 DEBUG NHibernate.Loader.Loader - result row: EntityKey[ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:56,471 DEBUG NHibernate.Loader.Loader - Initializing object from DataReader: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:56,471 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Hydrating entity: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:56,471 DEBUG NHibernate.Type.Int64Type - returning '1' as column: Version1_0_
+2013-12-06 17:07:56,471 DEBUG NHibernate.Type.SerializableType - returning '0001000000ffffffff01000000000000000c020000003d436f6d6d6f6e2c2056657273696f6e3d312e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c05010000001a436f6d6d6f6e2e4461746154797065732e454d61696c547970650100000005454d61696c01020000000603000000116d6178406d75737465726d616e6e2e64650b' as column: Email1_0_
+2013-12-06 17:07:56,471 DEBUG NHibernate.Type.StringType - returning 'Schmidt' as column: Nachname1_0_
+2013-12-06 17:07:56,471 DEBUG NHibernate.Type.StringType - returning 'Heinz' as column: Vorname1_0_
+2013-12-06 17:07:56,471 DEBUG NHibernate.Engine.TwoPhaseLoad - Version: 1
+2013-12-06 17:07:56,471 DEBUG NHibernate.Loader.Loader - done processing result set (1 rows)
+2013-12-06 17:07:56,471 DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
+2013-12-06 17:07:56,471 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
+2013-12-06 17:07:56,472 DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 3 ms
+2013-12-06 17:07:56,472 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2013-12-06 17:07:56,472 DEBUG NHibernate.Loader.Loader - total objects hydrated: 1
+2013-12-06 17:07:56,472 DEBUG NHibernate.Engine.TwoPhaseLoad - resolving associations for [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:56,472 DEBUG NHibernate.Engine.Loading.LoadContexts - creating collection wrapper:[ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]
+2013-12-06 17:07:56,472 DEBUG NHibernate.Engine.TwoPhaseLoad - done materializing entity [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner#1]
+2013-12-06 17:07:56,472 DEBUG NHibernate.Engine.StatefulPersistenceContext - initializing non-lazy collections
+2013-12-06 17:07:56,472 DEBUG NHibernate.Event.Default.DefaultInitializeCollectionEventListener - initializing collection [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]
+2013-12-06 17:07:56,472 DEBUG NHibernate.Event.Default.DefaultInitializeCollectionEventListener - checking second-level cache
+2013-12-06 17:07:56,472 DEBUG NHibernate.Event.Default.DefaultInitializeCollectionEventListener - collection not cached
+2013-12-06 17:07:56,473 DEBUG NHibernate.Loader.Loader - loading collection: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]
+2013-12-06 17:07:56,473 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2013-12-06 17:07:56,473 DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: SELECT adressen0_.Geschaeftspartner_id as Geschaef7_1_, adressen0_.Id as Id1_, adressen0_.Id as Id0_0_, adressen0_.Strasse as Strasse0_0_, adressen0_.Hausnummer as Hausnummer0_0_, adressen0_.PLZ as PLZ0_0_, adressen0_.Wohnort as Wohnort0_0_, adressen0_.Land as Land0_0_ FROM `Adresse` adressen0_ WHERE adressen0_.Geschaeftspartner_id=?
+2013-12-06 17:07:56,473 DEBUG NHibernate.Type.Int32Type - binding '1' to parameter: 0
+2013-12-06 17:07:56,486 INFO  NHibernate.Loader.Loader - SELECT adressen0_.Geschaeftspartner_id as Geschaef7_1_, adressen0_.Id as Id1_, adressen0_.Id as Id0_0_, adressen0_.Strasse as Strasse0_0_, adressen0_.Hausnummer as Hausnummer0_0_, adressen0_.PLZ as PLZ0_0_, adressen0_.Wohnort as Wohnort0_0_, adressen0_.Land as Land0_0_ FROM `Adresse` adressen0_ WHERE adressen0_.Geschaeftspartner_id=?p0
+2013-12-06 17:07:56,486 DEBUG NHibernate.SQL - SELECT adressen0_.Geschaeftspartner_id as Geschaef7_1_, adressen0_.Id as Id1_, adressen0_.Id as Id0_0_, adressen0_.Strasse as Strasse0_0_, adressen0_.Hausnummer as Hausnummer0_0_, adressen0_.PLZ as PLZ0_0_, adressen0_.Wohnort as Wohnort0_0_, adressen0_.Land as Land0_0_ FROM `Adresse` adressen0_ WHERE adressen0_.Geschaeftspartner_id=?p0;?p0 = 1 [Type: Int32 (0)]
+2013-12-06 17:07:56,486 DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2013-12-06 17:07:56,487 DEBUG NHibernate.Impl.SessionImpl - [session-id=b611d863-e288-4e88-a919-4108f12b633b] executing real Dispose(False)
+2013-12-06 17:07:56,488 DEBUG NHibernate.Impl.SessionImpl - [session-id=53d37625-2b2d-40fc-9246-b903c715dd3c] executing real Dispose(False)
+2013-12-06 17:07:56,489 DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 2 ms
+2013-12-06 17:07:56,489 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
+2013-12-06 17:07:56,489 DEBUG NHibernate.Loader.Loader - result set contains (possibly empty) collection: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]
+2013-12-06 17:07:56,489 DEBUG NHibernate.Engine.Loading.LoadContexts - constructing collection load context for result set [NHibernate.Driver.NHybridDataReader]
+2013-12-06 17:07:56,489 DEBUG NHibernate.Engine.Loading.CollectionLoadContext - starting attempt to find loading collection [[ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]]
+2013-12-06 17:07:56,489 DEBUG NHibernate.Engine.Loading.CollectionLoadContext - collection not yet initialized; initializing
+2013-12-06 17:07:56,489 DEBUG NHibernate.Loader.Loader - processing result set
+2013-12-06 17:07:56,489 DEBUG NHibernate.Loader.Loader - done processing result set (0 rows)
+2013-12-06 17:07:56,489 DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
+2013-12-06 17:07:56,489 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
+2013-12-06 17:07:56,490 DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 3 ms
+2013-12-06 17:07:56,490 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2013-12-06 17:07:56,490 DEBUG NHibernate.Loader.Loader - total objects hydrated: 0
+2013-12-06 17:07:56,490 DEBUG NHibernate.Engine.Loading.LoadContexts - attempting to locate loading collection entry [CollectionKey[ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]] in any result-set context
+2013-12-06 17:07:56,490 DEBUG NHibernate.Engine.Loading.LoadContexts - collection [CollectionKey[ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]] not located in load context
+2013-12-06 17:07:56,490 DEBUG NHibernate.Engine.Loading.CollectionLoadContext - removing collection load entry [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]>@255e838]
+2013-12-06 17:07:56,490 DEBUG NHibernate.Engine.Loading.CollectionLoadContext - 1 collections were found in result set for role: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-06 17:07:56,490 DEBUG NHibernate.Engine.Loading.CollectionLoadContext - ending loading collection [NHibernate.Engine.Loading.LoadingCollectionEntry<rs=NHibernate.Driver.NHybridDataReader, coll=[ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]>@255e838]
+2013-12-06 17:07:56,490 DEBUG NHibernate.Engine.Loading.CollectionLoadContext - collection fully initialized: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1]
+2013-12-06 17:07:56,490 DEBUG NHibernate.Engine.Loading.CollectionLoadContext - 1 collections initialized for role: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-06 17:07:56,490 DEBUG NHibernate.Loader.Loader - done loading collection
+2013-12-06 17:07:56,490 DEBUG NHibernate.Event.Default.DefaultInitializeCollectionEventListener - collection initialized
+2013-12-06 17:07:56,490 DEBUG NHibernate.Loader.Loader - done entity load
+2013-12-06 17:07:56,490 DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2013-12-06 17:07:56,491 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
+2013-12-06 17:07:56,491 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
+2013-12-06 17:07:56,491 INFO  NHibernate.Engine.Cascade - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:56,491 INFO  NHibernate.Engine.Cascade - cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-06 17:07:56,491 INFO  NHibernate.Engine.Cascade - done cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for collection: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-06 17:07:56,491 INFO  NHibernate.Engine.Cascade - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-06 17:07:56,491 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
+2013-12-06 17:07:56,491 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2013-12-06 17:07:56,491 DEBUG NHibernate.Engine.Collections - Collection found: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1], was: [ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen#1] (initialized)
+2013-12-06 17:07:56,491 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
+2013-12-06 17:07:56,491 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2013-12-06 17:07:56,492 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2013-12-06 17:07:56,492 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+2013-12-06 17:07:56,492 DEBUG NHibernate.Impl.Printer - listing entities:
+2013-12-06 17:07:56,492 DEBUG NHibernate.Impl.Printer - ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner{'GpNr'='1', 'Version'='1', 'Adressen'='[]', 'Email'='0001000000ffffffff01000000000000000c020000003d436f6d6d6f6e2c2056657273696f6e3d312e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c05010000001a436f6d6d6f6e2e4461746154797065732e454d61696c547970650100000005454d61696c01020000000603000000116d6178406d75737465726d616e6e2e64650b', 'Nachname'='Schmidt', 'Vorname'='Heinz'}
+2013-12-06 17:07:56,492 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
+2013-12-06 17:07:56,492 DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
+2013-12-06 17:07:56,492 DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
+2013-12-06 17:07:56,492 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
+2013-12-06 17:07:56,492 DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2013-12-06 17:07:56,494 DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2013-12-06 17:07:56,494 DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2013-12-06 17:07:56,494 DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2013-12-06 17:07:56,494 DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2013-12-06 17:07:56,494 DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2013-12-06 17:07:56,494 DEBUG NHibernate.Impl.SessionImpl - closing session
+2013-12-06 17:07:56,494 DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)

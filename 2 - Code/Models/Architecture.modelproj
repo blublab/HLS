@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{059b7624-bb3b-4460-81bc-d24da0639b79}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>Architecture</Name>
+    <RootNamespace>Models</RootNamespace>
+    <ValidateArchitecture>
+    </ValidateArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GraphCmdPath Condition="'$(GraphCmdPath)'=='' and '$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\11.0\Architect@GraphCmdDir)' != ''">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VisualStudio\11.0\Architect@GraphCmdDir)</GraphCmdPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\Models.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="Architecture.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="Architecture.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Architecture.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Architecture.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>Architecture.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AuftragKomponente\AuftragKomponente.csproj">
+      <Name>AuftragKomponente</Name>
+      <Project>{7b60032a-0d25-4a06-9d04-83fd1ff1e946}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\FrachtfuehrerAdapter\FrachtfuehrerAdapter.csproj">
+      <Name>FrachtfuehrerAdapter</Name>
+      <Project>{82e80abd-0d9f-447c-9d20-4b967664ea2d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\GeschaeftspartnerKomponente\GeschaeftspartnerKomponente.csproj">
+      <Name>GeschaeftspartnerKomponente</Name>
+      <Project>{18292c25-d2d5-4537-bb46-92ec366b1f85}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\MessagingServices\MessagingServices.csproj">
+      <Name>MessagingServices</Name>
+      <Project>{b8241aa9-bcbd-4fb2-bee1-abd2ca71ecda}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\PersistenceServices\PersistenceServices.csproj">
+      <Name>PersistenceServices</Name>
+      <Project>{4a905506-3375-4cb6-a065-3b9d63c545db}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TransportnetzKomponente\TransportnetzKomponente.csproj">
+      <Name>TransportnetzKomponente</Name>
+      <Project>{f286acd7-1c2a-434f-932e-66df0abfd19c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TransportplanungKomponente\TransportplanungKomponente.csproj">
+      <Name>TransportplanungKomponente</Name>
+      <Project>{fe0b1af0-6b33-49a9-badd-0163cd0d4543}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\UnterbeauftragungKomponente\UnterbeauftragungKomponente.csproj">
+      <Name>UnterbeauftragungKomponente</Name>
+      <Project>{e53bb22a-3e99-4eb7-ba09-ee1621d8085e}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

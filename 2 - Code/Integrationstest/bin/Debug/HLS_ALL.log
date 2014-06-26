@@ -1,0 +1,961 @@
+2013-12-11 00:23:21,422 INFO  NHibernate.Cfg.Environment - NHibernate 3.3.1.4000 (3.3.3.GA)
+2013-12-11 00:23:21,511 INFO  NHibernate.Cfg.Environment - hibernate-configuration section not found in application configuration file
+2013-12-11 00:23:21,512 INFO  NHibernate.Cfg.Environment - Bytecode provider name : lcg
+2013-12-11 00:23:21,513 INFO  NHibernate.Cfg.Environment - Using reflection optimizer
+2013-12-11 00:23:21,989 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung, BuchhaltungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Frachtabrechnung`"><id name="RechnungsNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="RechnungsNr" /><generator class="identity" /></id><property name="IstBestaetigt" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="IstBestaetigt" /></property><property name="Rechnungsbetrag" type="Common.DataTypes.WaehrungsType, Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"><column name="Rechnungsbetrag" /></property><property name="Frachtauftrag" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Frachtauftrag" /></property><many-to-one cascade="all" class="ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift, BuchhaltungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Gutschrift"><column name="Gutschrift_id" /></many-to-one></class></hibernate-mapping>
+2013-12-11 00:23:22,071 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:22,122 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung -> Frachtabrechnung
+2013-12-11 00:23:22,146 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: RechnungsNr -> RechnungsNr, type: Int32
+2013-12-11 00:23:22,159 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: IstBestaetigt -> IstBestaetigt, type: Boolean
+2013-12-11 00:23:22,160 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Rechnungsbetrag -> Rechnungsbetrag, type: Common.DataTypes.WaehrungsType
+2013-12-11 00:23:22,161 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Frachtauftrag -> Frachtauftrag, type: Int32
+2013-12-11 00:23:22,169 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Gutschrift -> Gutschrift_id, type: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift
+2013-12-11 00:23:22,173 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift, BuchhaltungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Gutschrift`"><id name="GutschriftNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="GutschriftNr" /><generator class="identity" /></id><property name="Kontodaten" type="Common.DataTypes.KontodatenType, Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"><column name="Kontodaten" /></property><property name="Betrag" type="Common.DataTypes.WaehrungsType, Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"><column name="Betrag" /></property></class></hibernate-mapping>
+2013-12-11 00:23:22,174 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:22,174 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift -> Gutschrift
+2013-12-11 00:23:22,174 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: GutschriftNr -> GutschriftNr, type: Int32
+2013-12-11 00:23:22,175 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Kontodaten -> Kontodaten, type: Common.DataTypes.KontodatenType
+2013-12-11 00:23:22,175 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Betrag -> Betrag, type: Common.DataTypes.WaehrungsType
+2013-12-11 00:23:22,175 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Kundenrechnung, BuchhaltungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Kundenrechnung`"><id name="RechnungsNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="RechnungsNr" /><generator class="identity" /></id><property name="Rechnungsbetrag" type="Common.DataTypes.WaehrungsType, Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"><column name="Rechnungsbetrag" /></property><property name="RechnungBezahlt" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="RechnungBezahlt" /></property><property name="Sendungsanfrage" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Sendungsanfrage" /></property><property name="Rechnungsadresse" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Rechnungsadresse" /></property></class></hibernate-mapping>
+2013-12-11 00:23:22,175 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:22,176 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Kundenrechnung -> Kundenrechnung
+2013-12-11 00:23:22,176 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: RechnungsNr -> RechnungsNr, type: Int32
+2013-12-11 00:23:22,176 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Rechnungsbetrag -> Rechnungsbetrag, type: Common.DataTypes.WaehrungsType
+2013-12-11 00:23:22,176 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: RechnungBezahlt -> RechnungBezahlt, type: Boolean
+2013-12-11 00:23:22,176 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Sendungsanfrage -> Sendungsanfrage, type: Int32
+2013-12-11 00:23:22,176 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Rechnungsadresse -> Rechnungsadresse, type: Int32
+2013-12-11 00:23:22,176 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Zahlungseingang, BuchhaltungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Zahlungseingang`"><id name="ZahlungsNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="ZahlungsNr" /><generator class="identity" /></id><property name="Zahlungsbetrag" type="Common.DataTypes.WaehrungsType, Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"><column name="Zahlungsbetrag" /></property><property name="KrNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="KrNr" /></property></class></hibernate-mapping>
+2013-12-11 00:23:22,177 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:22,177 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Zahlungseingang -> Zahlungseingang
+2013-12-11 00:23:22,177 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: ZahlungsNr -> ZahlungsNr, type: Int32
+2013-12-11 00:23:22,177 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Zahlungsbetrag -> Zahlungsbetrag, type: Common.DataTypes.WaehrungsType
+2013-12-11 00:23:22,177 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: KrNr -> KrNr, type: Int32
+2013-12-11 00:23:22,178 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtauftrag, UnterbeauftragungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Frachtauftrag`"><id name="FraNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="FraNr" /><generator class="identity" /></id><property name="PlanStartzeit" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="PlanStartzeit" /></property><property name="PlanEndezeit" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="PlanEndezeit" /></property><property name="VerwendeteKapazitaetTEU" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="VerwendeteKapazitaetTEU" /></property><property name="VerwendeteKapazitaetFEU" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="VerwendeteKapazitaetFEU" /></property><property name="Dokument" type="System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Dokument" /></property><property name="Status" type="FluentNHibernate.Mapping.GenericEnumMapper`1[[ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtauftragStatusTyp, UnterbeauftragungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], FluentNHibernate, Version=1.3.0.733, Culture=neutral, PublicKeyToken=8aa435e3cb308880"><column name="Status" /></property><property name="SaNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="SaNr" /></property><many-to-one class="ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag, UnterbeauftragungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FrachtfuehrerRahmenvertrag"><column name="FrachtfuehrerRahmenvertrag_id" /></many-to-one></class></hibernate-mapping>
+2013-12-11 00:23:22,178 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:22,179 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtauftrag -> Frachtauftrag
+2013-12-11 00:23:22,179 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: FraNr -> FraNr, type: Int32
+2013-12-11 00:23:22,179 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: PlanStartzeit -> PlanStartzeit, type: DateTime
+2013-12-11 00:23:22,179 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: PlanEndezeit -> PlanEndezeit, type: DateTime
+2013-12-11 00:23:22,179 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: VerwendeteKapazitaetTEU -> VerwendeteKapazitaetTEU, type: Int32
+2013-12-11 00:23:22,179 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: VerwendeteKapazitaetFEU -> VerwendeteKapazitaetFEU, type: Int32
+2013-12-11 00:23:22,179 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Dokument -> Dokument, type: Byte[]
+2013-12-11 00:23:22,183 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Status -> Status, type: enumstring - FrachtauftragStatusTyp
+2013-12-11 00:23:22,183 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: SaNr -> SaNr, type: Int32
+2013-12-11 00:23:22,183 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: FrachtfuehrerRahmenvertrag -> FrachtfuehrerRahmenvertrag_id, type: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag
+2013-12-11 00:23:22,183 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer, UnterbeauftragungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Frachtfuehrer`"><id name="FrfNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="FrfNr" /><generator class="identity" /></id></class></hibernate-mapping>
+2013-12-11 00:23:22,184 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:22,184 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer -> Frachtfuehrer
+2013-12-11 00:23:22,184 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: FrfNr -> FrfNr, type: Int32
+2013-12-11 00:23:22,190 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag, UnterbeauftragungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`FrachtfuehrerRahmenvertrag`"><id name="FrvNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="FrvNr" /><generator class="identity" /></id><bag cascade="all" name="Abfahrtszeiten"><key><column name="FrachtfuehrerRahmenvertrag_id" /></key><one-to-many class="ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Startzeit, UnterbeauftragungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" /></bag><property name="FuerTransportAufTransportbeziehung" type="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="FuerTransportAufTransportbeziehung" /></property><property name="GueltigkeitAb" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="GueltigkeitAb" /></property><property name="GueltigkeitBis" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="GueltigkeitBis" /></property><property name="KostenFix" type="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="KostenFix" /></property><property name="KostenProTEU" type="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="KostenProTEU" /></property><property name="KostenProFEU" type="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="KostenProFEU" /></property><property name="KapazitaetTEU" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="KapazitaetTEU" /></property><property name="Zeitvorgabe" type="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Zeitvorgabe" /></property><many-to-one class="ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer, UnterbeauftragungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Frachtfuehrer"><column name="Frachtfuehrer_id" /></many-to-one></class></hibernate-mapping>
+2013-12-11 00:23:22,202 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:22,202 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag -> FrachtfuehrerRahmenvertrag
+2013-12-11 00:23:22,202 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: FrvNr -> FrvNr, type: Int32
+2013-12-11 00:23:22,219 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Abfahrtszeiten, type: System.Collections.Generic.ICollection`1[[ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Startzeit, UnterbeauftragungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]](ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag.Abfahrtszeiten)
+2013-12-11 00:23:22,220 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: FuerTransportAufTransportbeziehung -> FuerTransportAufTransportbeziehung, type: Int64
+2013-12-11 00:23:22,220 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: GueltigkeitAb -> GueltigkeitAb, type: DateTime
+2013-12-11 00:23:22,220 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: GueltigkeitBis -> GueltigkeitBis, type: DateTime
+2013-12-11 00:23:22,220 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: KostenFix -> KostenFix, type: Decimal
+2013-12-11 00:23:22,220 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: KostenProTEU -> KostenProTEU, type: Decimal
+2013-12-11 00:23:22,220 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: KostenProFEU -> KostenProFEU, type: Decimal
+2013-12-11 00:23:22,220 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: KapazitaetTEU -> KapazitaetTEU, type: Int32
+2013-12-11 00:23:22,220 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Zeitvorgabe -> Zeitvorgabe, type: TimeSpan
+2013-12-11 00:23:22,220 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Frachtfuehrer -> Frachtfuehrer_id, type: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer
+2013-12-11 00:23:22,220 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Startzeit, UnterbeauftragungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Startzeit`"><id name="SzNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="SzNr" /><generator class="identity" /></id><property name="Wochentag" type="FluentNHibernate.Mapping.GenericEnumMapper`1[[System.DayOfWeek, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], FluentNHibernate, Version=1.3.0.733, Culture=neutral, PublicKeyToken=8aa435e3cb308880"><column name="Wochentag" /></property><property name="Uhrzeit" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Uhrzeit" /></property></class></hibernate-mapping>
+2013-12-11 00:23:22,221 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:22,221 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Startzeit -> Startzeit
+2013-12-11 00:23:22,221 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: SzNr -> SzNr, type: Int32
+2013-12-11 00:23:22,221 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Wochentag -> Wochentag, type: enumstring - DayOfWeek
+2013-12-11 00:23:22,221 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Uhrzeit -> Uhrzeit, type: Int32
+2013-12-11 00:23:22,222 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.TransportplanungKomponente.DataAccessLayer.Frachteinheit, TransportplanungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Frachteinheit`"><id name="FraeNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="FraeNr" /><generator class="identity" /></id><property name="FraeTyp" type="FluentNHibernate.Mapping.GenericEnumMapper`1[[ApplicationCore.TransportplanungKomponente.DataAccessLayer.FrachteinheitTyp, TransportplanungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], FluentNHibernate, Version=1.3.0.733, Culture=neutral, PublicKeyToken=8aa435e3cb308880"><column name="FraeTyp" /></property><property name="Sendungspositionen" type="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Sendungspositionen" /></property></class></hibernate-mapping>
+2013-12-11 00:23:22,222 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:22,222 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Frachteinheit -> Frachteinheit
+2013-12-11 00:23:22,222 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: FraeNr -> FraeNr, type: Int32
+2013-12-11 00:23:22,223 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: FraeTyp -> FraeTyp, type: enumstring - FrachteinheitTyp
+2013-12-11 00:23:22,223 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Sendungspositionen -> Sendungspositionen, type: System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+2013-12-11 00:23:22,224 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan, TransportplanungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Transportplan`"><id name="TpNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="TpNr" /><generator class="identity" /></id><bag cascade="all" lazy="false" name="Frachteinheiten"><key><column name="Transportplan_id" /></key><one-to-many class="ApplicationCore.TransportplanungKomponente.DataAccessLayer.Frachteinheit, TransportplanungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" /></bag><bag cascade="all" lazy="false" name="TransportplanSchritte"><key><column name="Transportplan_id" /></key><one-to-many class="ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt, TransportplanungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" /></bag><property name="SaNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="SaNr" /></property><property name="Status" type="FluentNHibernate.Mapping.GenericEnumMapper`1[[ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanStatusTyp, TransportplanungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], FluentNHibernate, Version=1.3.0.733, Culture=neutral, PublicKeyToken=8aa435e3cb308880"><column name="Status" /></property><property name="Meldungen" type="System.Collections.Generic.List`1[[ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanMeldungTyp, TransportplanungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Meldungen" /></property></class></hibernate-mapping>
+2013-12-11 00:23:22,225 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:22,225 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan -> Transportplan
+2013-12-11 00:23:22,225 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: TpNr -> TpNr, type: Int32
+2013-12-11 00:23:22,226 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Frachteinheiten, type: System.Collections.Generic.ICollection`1[[ApplicationCore.TransportplanungKomponente.DataAccessLayer.Frachteinheit, TransportplanungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]](ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan.Frachteinheiten)
+2013-12-11 00:23:22,226 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: TransportplanSchritte, type: System.Collections.Generic.ICollection`1[[ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt, TransportplanungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]](ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan.TransportplanSchritte)
+2013-12-11 00:23:22,226 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: SaNr -> SaNr, type: Int32
+2013-12-11 00:23:22,227 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Status -> Status, type: enumstring - TransportplanStatusTyp
+2013-12-11 00:23:22,227 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Meldungen -> Meldungen, type: System.Collections.Generic.List`1[[ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanMeldungTyp, TransportplanungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2013-12-11 00:23:22,229 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt, TransportplanungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`TransportplanSchritt`"><id name="TpsNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="TpsNr" /><generator class="identity" /></id><property name="PlanStartzeit" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="PlanStartzeit" /></property><property name="PlanEndezeit" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="PlanEndezeit" /></property><property name="SpaetesterStart" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="SpaetesterStart" /></property><property name="Kosten" type="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Kosten" /></property><joined-subclass name="ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportAktivitaet, TransportplanungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`TransportAktivitaet`"><key><column name="TransportplanSchritt_id" /></key><property name="FrachtfuehrerRahmenvertrag" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="FrachtfuehrerRahmenvertrag" /></property><property name="FuerTransportAufTransportbeziehung" type="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="FuerTransportAufTransportbeziehung" /></property><property name="Frachtauftrag" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Frachtauftrag" /></property><property name="WartezeitAnStart" type="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="WartezeitAnStart" /></property><property name="VerwendeteKapazitaetTEU" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="VerwendeteKapazitaetTEU" /></property><property name="VerwendeteKapazitaetFEU" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="VerwendeteKapazitaetFEU" /></property></joined-subclass></class></hibernate-mapping>
+2013-12-11 00:23:22,240 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:22,240 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt -> TransportplanSchritt
+2013-12-11 00:23:22,240 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: TpsNr -> TpsNr, type: Int32
+2013-12-11 00:23:22,240 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: PlanStartzeit -> PlanStartzeit, type: DateTime
+2013-12-11 00:23:22,240 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: PlanEndezeit -> PlanEndezeit, type: DateTime
+2013-12-11 00:23:22,240 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: SpaetesterStart -> SpaetesterStart, type: DateTime
+2013-12-11 00:23:22,240 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Kosten -> Kosten, type: Decimal
+2013-12-11 00:23:22,245 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping joined-subclass: ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportAktivitaet -> TransportAktivitaet
+2013-12-11 00:23:22,247 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: FrachtfuehrerRahmenvertrag -> FrachtfuehrerRahmenvertrag, type: Int32
+2013-12-11 00:23:22,247 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: FuerTransportAufTransportbeziehung -> FuerTransportAufTransportbeziehung, type: Int64
+2013-12-11 00:23:22,247 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Frachtauftrag -> Frachtauftrag, type: Int32
+2013-12-11 00:23:22,247 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: WartezeitAnStart -> WartezeitAnStart, type: TimeSpan
+2013-12-11 00:23:22,247 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: VerwendeteKapazitaetTEU -> VerwendeteKapazitaetTEU, type: Int32
+2013-12-11 00:23:22,247 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: VerwendeteKapazitaetFEU -> VerwendeteKapazitaetFEU, type: Int32
+2013-12-11 00:23:22,248 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage, AuftragKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Sendungsanfrage`"><id name="SaNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="SaNr" /><generator class="identity" /></id><bag cascade="all" lazy="false" name="Sendungspositionen"><key><column name="Sendungsanfrage_id" /></key><one-to-many class="ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsposition, AuftragKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" /></bag><property name="AbholzeitfensterStart" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="AbholzeitfensterStart" /></property><property name="AbholzeitfensterEnde" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="AbholzeitfensterEnde" /></property><property name="AngebotGültigBis" type="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="AngebotGültigBis" /></property><property name="Status" type="FluentNHibernate.Mapping.GenericEnumMapper`1[[ApplicationCore.AuftragKomponente.DataAccessLayer.SendungsanfrageStatusTyp, AuftragKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], FluentNHibernate, Version=1.3.0.733, Culture=neutral, PublicKeyToken=8aa435e3cb308880"><column name="Status" /></property><property name="StartLokation" type="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="StartLokation" /></property><property name="ZielLokation" type="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="ZielLokation" /></property><property name="SendungNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="SendungNr" /></property><property name="Auftraggeber" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Auftraggeber" /></property></class></hibernate-mapping>
+2013-12-11 00:23:22,249 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:22,249 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage -> Sendungsanfrage
+2013-12-11 00:23:22,249 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: SaNr -> SaNr, type: Int32
+2013-12-11 00:23:22,249 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Sendungspositionen, type: System.Collections.Generic.ICollection`1[[ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsposition, AuftragKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]](ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage.Sendungspositionen)
+2013-12-11 00:23:22,249 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: AbholzeitfensterStart -> AbholzeitfensterStart, type: DateTime
+2013-12-11 00:23:22,249 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: AbholzeitfensterEnde -> AbholzeitfensterEnde, type: DateTime
+2013-12-11 00:23:22,249 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: AngebotGültigBis -> AngebotGültigBis, type: DateTime
+2013-12-11 00:23:22,250 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Status -> Status, type: enumstring - SendungsanfrageStatusTyp
+2013-12-11 00:23:22,250 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: StartLokation -> StartLokation, type: Int64
+2013-12-11 00:23:22,250 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: ZielLokation -> ZielLokation, type: Int64
+2013-12-11 00:23:22,250 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: SendungNr -> SendungNr, type: Int32
+2013-12-11 00:23:22,250 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Auftraggeber -> Auftraggeber, type: Int32
+2013-12-11 00:23:22,250 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsposition, AuftragKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Sendungsposition`"><id name="SendungspositionsNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="SendungspositionsNr" /><generator class="identity" /></id><property name="Bruttogewicht" type="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Bruttogewicht" /></property></class></hibernate-mapping>
+2013-12-11 00:23:22,251 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:22,251 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsposition -> Sendungsposition
+2013-12-11 00:23:22,251 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: SendungspositionsNr -> SendungspositionsNr, type: Int32
+2013-12-11 00:23:22,251 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Bruttogewicht -> Bruttogewicht, type: Decimal
+2013-12-11 00:23:22,251 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse, GeschätspartnerKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Adresse`"><id name="Id" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="identity" /></id><property name="Strasse" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Strasse" /></property><property name="Hausnummer" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Hausnummer" /></property><property name="PLZ" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="PLZ" /></property><property name="Wohnort" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Wohnort" /></property><property name="Land" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Land" /></property></class></hibernate-mapping>
+2013-12-11 00:23:22,252 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:22,252 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse -> Adresse
+2013-12-11 00:23:22,252 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Id -> Id, type: Int32
+2013-12-11 00:23:22,252 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Strasse -> Strasse, type: String
+2013-12-11 00:23:22,252 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Hausnummer -> Hausnummer, type: String
+2013-12-11 00:23:22,252 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: PLZ -> PLZ, type: String
+2013-12-11 00:23:22,252 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Wohnort -> Wohnort, type: String
+2013-12-11 00:23:22,252 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Land -> Land, type: String
+2013-12-11 00:23:22,254 DEBUG NHibernate.Cfg.Configuration - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner, GeschätspartnerKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Geschaeftspartner`"><id name="GpNr" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="GpNr" /><generator class="identity" /></id><version name="Version" type="System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Version" /></version><bag cascade="all" lazy="false" name="Adressen"><key><column name="Geschaeftspartner_id" /></key><one-to-many class="ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse, GeschätspartnerKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" /></bag><property name="Email" type="Common.DataTypes.EMailType, Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"><column name="Email" not-null="true" /></property><property name="Nachname" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nachname" not-null="true" /></property><property name="Vorname" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Vorname" not-null="true" /></property></class></hibernate-mapping>
+2013-12-11 00:23:22,266 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:22,266 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - Mapping class: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner -> Geschaeftspartner
+2013-12-11 00:23:22,266 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: GpNr -> GpNr, type: Int32
+2013-12-11 00:23:22,267 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Version -> Version, type: Int64
+2013-12-11 00:23:22,268 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Adressen, type: System.Collections.Generic.ICollection`1[[ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse, GeschätspartnerKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]](ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen)
+2013-12-11 00:23:22,268 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Email -> Email, type: Common.DataTypes.EMailType
+2013-12-11 00:23:22,268 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Nachname -> Nachname, type: String
+2013-12-11 00:23:22,268 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped property: Vorname -> Vorname, type: String
+2013-12-11 00:23:22,272 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:22,274 INFO  NHibernate.Cfg.Configuration - checking mappings queue
+2013-12-11 00:23:22,274 INFO  NHibernate.Cfg.Configuration - processing one-to-many association mappings
+2013-12-11 00:23:22,275 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Second pass for collection: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag.Abfahrtszeiten
+2013-12-11 00:23:22,277 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - mapping collection: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag.Abfahrtszeiten -> Startzeit
+2013-12-11 00:23:22,280 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped collection key: FrachtfuehrerRahmenvertrag_id, one-to-many: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Startzeit
+2013-12-11 00:23:22,280 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Second pass for collection: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan.Frachteinheiten
+2013-12-11 00:23:22,281 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - mapping collection: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan.Frachteinheiten -> Frachteinheit
+2013-12-11 00:23:22,281 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped collection key: Transportplan_id, one-to-many: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Frachteinheit
+2013-12-11 00:23:22,281 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Second pass for collection: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan.TransportplanSchritte
+2013-12-11 00:23:22,281 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - mapping collection: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan.TransportplanSchritte -> TransportplanSchritt
+2013-12-11 00:23:22,281 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped collection key: Transportplan_id, one-to-many: ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt
+2013-12-11 00:23:22,281 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Second pass for collection: ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage.Sendungspositionen
+2013-12-11 00:23:22,281 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - mapping collection: ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage.Sendungspositionen -> Sendungsposition
+2013-12-11 00:23:22,281 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped collection key: Sendungsanfrage_id, one-to-many: ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsposition
+2013-12-11 00:23:22,281 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Second pass for collection: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-11 00:23:22,281 INFO  NHibernate.Cfg.XmlHbmBinding.Binder - mapping collection: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen -> Adresse
+2013-12-11 00:23:22,281 DEBUG NHibernate.Cfg.XmlHbmBinding.Binder - Mapped collection key: Geschaeftspartner_id, one-to-many: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse
+2013-12-11 00:23:22,281 INFO  NHibernate.Cfg.Configuration - processing one-to-one association property references
+2013-12-11 00:23:22,281 INFO  NHibernate.Cfg.Configuration - processing foreign key constraints
+2013-12-11 00:23:22,283 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift
+2013-12-11 00:23:22,284 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag
+2013-12-11 00:23:22,284 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer
+2013-12-11 00:23:22,284 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag
+2013-12-11 00:23:22,284 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan
+2013-12-11 00:23:22,284 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan
+2013-12-11 00:23:22,284 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt
+2013-12-11 00:23:22,284 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage
+2013-12-11 00:23:22,284 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-11 00:23:22,285 INFO  NHibernate.Cfg.Configuration - processing filters (second pass)
+2013-12-11 00:23:22,300 INFO  NHibernate.Cfg.Configuration - checking mappings queue
+2013-12-11 00:23:22,300 INFO  NHibernate.Cfg.Configuration - processing one-to-many association mappings
+2013-12-11 00:23:22,300 INFO  NHibernate.Cfg.Configuration - processing one-to-one association property references
+2013-12-11 00:23:22,300 INFO  NHibernate.Cfg.Configuration - processing foreign key constraints
+2013-12-11 00:23:22,300 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift
+2013-12-11 00:23:22,300 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag
+2013-12-11 00:23:22,300 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer
+2013-12-11 00:23:22,300 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag
+2013-12-11 00:23:22,300 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan
+2013-12-11 00:23:22,300 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan
+2013-12-11 00:23:22,300 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt
+2013-12-11 00:23:22,300 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage
+2013-12-11 00:23:22,300 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-11 00:23:22,300 INFO  NHibernate.Cfg.Configuration - processing filters (second pass)
+2013-12-11 00:23:22,315 INFO  NHibernate.Connection.ConnectionProviderFactory - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2013-12-11 00:23:22,315 INFO  NHibernate.Connection.ConnectionProvider - Configuring ConnectionProvider
+2013-12-11 00:23:22,324 DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2013-12-11 00:23:22,806 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    
+alter table `Frachtabrechnung`  drop foreign key FK86814E4433146B9
+
+2013-12-11 00:23:22,861 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    
+alter table `Frachtauftrag`  drop foreign key FK450AE8F2EC1D6DFF
+
+2013-12-11 00:23:22,914 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    
+alter table `FrachtfuehrerRahmenvertrag`  drop foreign key FK62E8ED2926839783
+
+2013-12-11 00:23:22,966 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    
+alter table `Startzeit`  drop foreign key FK8122FA75EC1D6DFF
+
+2013-12-11 00:23:23,016 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    
+alter table `Frachteinheit`  drop foreign key FKB6F9C610DC159E81
+
+2013-12-11 00:23:23,063 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    
+alter table `TransportplanSchritt`  drop foreign key FKB1B439AEDC159E81
+
+2013-12-11 00:23:23,114 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    
+alter table `TransportAktivitaet`  drop foreign key FKF362D246589858CB
+
+2013-12-11 00:23:23,161 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    
+alter table `Sendungsposition`  drop foreign key FK4474CCF6C3653B18
+
+2013-12-11 00:23:23,212 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    
+alter table `Adresse`  drop foreign key FK48FA4275AE8B0ABA
+
+2013-12-11 00:23:23,306 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `Frachtabrechnung`
+2013-12-11 00:23:23,340 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `Gutschrift`
+2013-12-11 00:23:23,373 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `Kundenrechnung`
+2013-12-11 00:23:23,407 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `Zahlungseingang`
+2013-12-11 00:23:23,439 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `Frachtauftrag`
+2013-12-11 00:23:23,471 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `Frachtfuehrer`
+2013-12-11 00:23:23,516 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `FrachtfuehrerRahmenvertrag`
+2013-12-11 00:23:23,550 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `Startzeit`
+2013-12-11 00:23:23,593 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `Frachteinheit`
+2013-12-11 00:23:23,636 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `Transportplan`
+2013-12-11 00:23:23,668 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `TransportplanSchritt`
+2013-12-11 00:23:23,714 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `TransportAktivitaet`
+2013-12-11 00:23:23,753 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `Sendungsanfrage`
+2013-12-11 00:23:23,785 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `Sendungsposition`
+2013-12-11 00:23:23,817 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `Adresse`
+2013-12-11 00:23:23,852 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    drop table if exists `Geschaeftspartner`
+2013-12-11 00:23:23,888 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `Frachtabrechnung` (
+        RechnungsNr INTEGER NOT NULL AUTO_INCREMENT,
+       IstBestaetigt TINYINT(1),
+       Rechnungsbetrag LONGBLOB,
+       Frachtauftrag INTEGER,
+       Gutschrift_id INTEGER,
+       primary key (RechnungsNr)
+    )
+2013-12-11 00:23:23,930 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `Gutschrift` (
+        GutschriftNr INTEGER NOT NULL AUTO_INCREMENT,
+       Kontodaten LONGBLOB,
+       Betrag LONGBLOB,
+       primary key (GutschriftNr)
+    )
+2013-12-11 00:23:23,979 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `Kundenrechnung` (
+        RechnungsNr INTEGER NOT NULL AUTO_INCREMENT,
+       Rechnungsbetrag LONGBLOB,
+       RechnungBezahlt TINYINT(1),
+       Sendungsanfrage INTEGER,
+       Rechnungsadresse INTEGER,
+       primary key (RechnungsNr)
+    )
+2013-12-11 00:23:24,017 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `Zahlungseingang` (
+        ZahlungsNr INTEGER NOT NULL AUTO_INCREMENT,
+       Zahlungsbetrag LONGBLOB,
+       KrNr INTEGER,
+       primary key (ZahlungsNr)
+    )
+2013-12-11 00:23:24,052 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `Frachtauftrag` (
+        FraNr INTEGER NOT NULL AUTO_INCREMENT,
+       PlanStartzeit DATETIME,
+       PlanEndezeit DATETIME,
+       VerwendeteKapazitaetTEU INTEGER,
+       VerwendeteKapazitaetFEU INTEGER,
+       Dokument LONGBLOB,
+       Status VARCHAR(255),
+       SaNr INTEGER,
+       FrachtfuehrerRahmenvertrag_id INTEGER,
+       primary key (FraNr)
+    )
+2013-12-11 00:23:24,090 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `Frachtfuehrer` (
+        FrfNr INTEGER NOT NULL AUTO_INCREMENT,
+       primary key (FrfNr)
+    )
+2013-12-11 00:23:24,128 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `FrachtfuehrerRahmenvertrag` (
+        FrvNr INTEGER NOT NULL AUTO_INCREMENT,
+       FuerTransportAufTransportbeziehung BIGINT,
+       GueltigkeitAb DATETIME,
+       GueltigkeitBis DATETIME,
+       KostenFix NUMERIC(19,5),
+       KostenProTEU NUMERIC(19,5),
+       KostenProFEU NUMERIC(19,5),
+       KapazitaetTEU INTEGER,
+       Zeitvorgabe BIGINT,
+       Frachtfuehrer_id INTEGER,
+       primary key (FrvNr)
+    )
+2013-12-11 00:23:24,163 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `Startzeit` (
+        SzNr INTEGER NOT NULL AUTO_INCREMENT,
+       Wochentag VARCHAR(255),
+       Uhrzeit INTEGER,
+       FrachtfuehrerRahmenvertrag_id INTEGER,
+       primary key (SzNr)
+    )
+2013-12-11 00:23:24,203 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `Frachteinheit` (
+        FraeNr INTEGER NOT NULL AUTO_INCREMENT,
+       FraeTyp VARCHAR(255),
+       Sendungspositionen LONGBLOB,
+       Transportplan_id INTEGER,
+       primary key (FraeNr)
+    )
+2013-12-11 00:23:24,240 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `Transportplan` (
+        TpNr INTEGER NOT NULL AUTO_INCREMENT,
+       SaNr INTEGER,
+       Status VARCHAR(255),
+       Meldungen LONGBLOB,
+       primary key (TpNr)
+    )
+2013-12-11 00:23:24,276 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `TransportplanSchritt` (
+        TpsNr INTEGER NOT NULL AUTO_INCREMENT,
+       PlanStartzeit DATETIME,
+       PlanEndezeit DATETIME,
+       SpaetesterStart DATETIME,
+       Kosten NUMERIC(19,5),
+       Transportplan_id INTEGER,
+       primary key (TpsNr)
+    )
+2013-12-11 00:23:24,312 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `TransportAktivitaet` (
+        TransportplanSchritt_id INTEGER not null,
+       FrachtfuehrerRahmenvertrag INTEGER,
+       FuerTransportAufTransportbeziehung BIGINT,
+       Frachtauftrag INTEGER,
+       WartezeitAnStart BIGINT,
+       VerwendeteKapazitaetTEU INTEGER,
+       VerwendeteKapazitaetFEU INTEGER,
+       primary key (TransportplanSchritt_id)
+    )
+2013-12-11 00:23:24,348 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `Sendungsanfrage` (
+        SaNr INTEGER NOT NULL AUTO_INCREMENT,
+       AbholzeitfensterStart DATETIME,
+       AbholzeitfensterEnde DATETIME,
+       AngebotGültigBis DATETIME,
+       Status VARCHAR(255),
+       StartLokation BIGINT,
+       ZielLokation BIGINT,
+       SendungNr INTEGER,
+       Auftraggeber INTEGER,
+       primary key (SaNr)
+    )
+2013-12-11 00:23:24,386 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `Sendungsposition` (
+        SendungspositionsNr INTEGER NOT NULL AUTO_INCREMENT,
+       Bruttogewicht NUMERIC(19,5),
+       Sendungsanfrage_id INTEGER,
+       primary key (SendungspositionsNr)
+    )
+2013-12-11 00:23:24,426 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `Adresse` (
+        Id INTEGER NOT NULL AUTO_INCREMENT,
+       Strasse VARCHAR(255),
+       Hausnummer VARCHAR(255),
+       PLZ VARCHAR(255),
+       Wohnort VARCHAR(255),
+       Land VARCHAR(255),
+       Geschaeftspartner_id INTEGER,
+       primary key (Id)
+    )
+2013-12-11 00:23:24,465 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    create table `Geschaeftspartner` (
+        GpNr INTEGER NOT NULL AUTO_INCREMENT,
+       Version BIGINT not null,
+       Email LONGBLOB not null,
+       Nachname VARCHAR(255) not null,
+       Vorname VARCHAR(255) not null,
+       primary key (GpNr)
+    )
+2013-12-11 00:23:24,503 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    alter table `Frachtabrechnung` 
+        add index (Gutschrift_id), 
+        add constraint FK86814E4433146B9 
+        foreign key (Gutschrift_id) 
+        references `Gutschrift` (GutschriftNr)
+2013-12-11 00:23:24,552 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    alter table `Frachtauftrag` 
+        add index (FrachtfuehrerRahmenvertrag_id), 
+        add constraint FK450AE8F2EC1D6DFF 
+        foreign key (FrachtfuehrerRahmenvertrag_id) 
+        references `FrachtfuehrerRahmenvertrag` (FrvNr)
+2013-12-11 00:23:24,602 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    alter table `FrachtfuehrerRahmenvertrag` 
+        add index (Frachtfuehrer_id), 
+        add constraint FK62E8ED2926839783 
+        foreign key (Frachtfuehrer_id) 
+        references `Frachtfuehrer` (FrfNr)
+2013-12-11 00:23:24,647 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    alter table `Startzeit` 
+        add index (FrachtfuehrerRahmenvertrag_id), 
+        add constraint FK8122FA75EC1D6DFF 
+        foreign key (FrachtfuehrerRahmenvertrag_id) 
+        references `FrachtfuehrerRahmenvertrag` (FrvNr)
+2013-12-11 00:23:24,698 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    alter table `Frachteinheit` 
+        add index (Transportplan_id), 
+        add constraint FKB6F9C610DC159E81 
+        foreign key (Transportplan_id) 
+        references `Transportplan` (TpNr)
+2013-12-11 00:23:24,745 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    alter table `TransportplanSchritt` 
+        add index (Transportplan_id), 
+        add constraint FKB1B439AEDC159E81 
+        foreign key (Transportplan_id) 
+        references `Transportplan` (TpNr)
+2013-12-11 00:23:24,795 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    alter table `TransportAktivitaet` 
+        add index (TransportplanSchritt_id), 
+        add constraint FKF362D246589858CB 
+        foreign key (TransportplanSchritt_id) 
+        references `TransportplanSchritt` (TpsNr)
+2013-12-11 00:23:24,848 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    alter table `Sendungsposition` 
+        add index (Sendungsanfrage_id), 
+        add constraint FK4474CCF6C3653B18 
+        foreign key (Sendungsanfrage_id) 
+        references `Sendungsanfrage` (SaNr)
+2013-12-11 00:23:24,896 DEBUG NHibernate.Tool.hbm2ddl.SchemaExport - 
+    alter table `Adresse` 
+        add index (Geschaeftspartner_id), 
+        add constraint FK48FA4275AE8B0ABA 
+        foreign key (Geschaeftspartner_id) 
+        references `Geschaeftspartner` (GpNr)
+2013-12-11 00:23:24,945 DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2013-12-11 00:23:24,948 DEBUG NHibernate.Connection.ConnectionProvider - Disposing of ConnectionProvider.
+2013-12-11 00:23:24,950 INFO  NHibernate.Cfg.Configuration - checking mappings queue
+2013-12-11 00:23:24,950 INFO  NHibernate.Cfg.Configuration - processing one-to-many association mappings
+2013-12-11 00:23:24,950 INFO  NHibernate.Cfg.Configuration - processing one-to-one association property references
+2013-12-11 00:23:24,950 INFO  NHibernate.Cfg.Configuration - processing foreign key constraints
+2013-12-11 00:23:24,950 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift
+2013-12-11 00:23:24,950 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag
+2013-12-11 00:23:24,950 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer
+2013-12-11 00:23:24,950 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag
+2013-12-11 00:23:24,950 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan
+2013-12-11 00:23:24,950 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan
+2013-12-11 00:23:24,950 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt
+2013-12-11 00:23:24,950 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage
+2013-12-11 00:23:24,950 DEBUG NHibernate.Cfg.Configuration - resolving reference to class: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-11 00:23:24,951 INFO  NHibernate.Cfg.Configuration - processing filters (second pass)
+2013-12-11 00:23:24,978 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:24,982 INFO  NHibernate.Dialect.Dialect - Using dialect: NHibernate.Dialect.MySQLDialect
+2013-12-11 00:23:25,021 INFO  NHibernate.Exceptions.SQLExceptionConverterFactory - Using dialect defined converter
+2013-12-11 00:23:25,022 INFO  NHibernate.Cfg.SettingsFactory - Generate SQL with comments: disabled
+2013-12-11 00:23:25,022 INFO  NHibernate.Connection.ConnectionProviderFactory - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+2013-12-11 00:23:25,022 INFO  NHibernate.Connection.ConnectionProvider - Configuring ConnectionProvider
+2013-12-11 00:23:25,022 INFO  NHibernate.Cfg.SettingsFactory - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+2013-12-11 00:23:25,023 INFO  NHibernate.Cfg.SettingsFactory - Optimize cache for minimal puts: False
+2013-12-11 00:23:25,023 INFO  NHibernate.Cfg.SettingsFactory - Connection release mode: auto
+2013-12-11 00:23:25,023 INFO  NHibernate.Cfg.SettingsFactory - Default batch fetch size: 1
+2013-12-11 00:23:25,023 INFO  NHibernate.Cfg.SettingsFactory - Statistics: disabled
+2013-12-11 00:23:25,023 INFO  NHibernate.Cfg.SettingsFactory - Deleted entity synthetic identifier rollback: disabled
+2013-12-11 00:23:25,024 INFO  NHibernate.Cfg.SettingsFactory - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+2013-12-11 00:23:25,024 INFO  NHibernate.Cfg.SettingsFactory - Query language substitutions: {}
+2013-12-11 00:23:25,025 INFO  NHibernate.Cfg.SettingsFactory - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2013-12-11 00:23:25,026 INFO  NHibernate.Cfg.SettingsFactory - Order SQL inserts for batching: disabled
+2013-12-11 00:23:25,026 DEBUG NHibernate.Cfg.SettingsFactory - Wrap result sets: disabled
+2013-12-11 00:23:25,026 INFO  NHibernate.Cfg.SettingsFactory - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+2013-12-11 00:23:25,027 INFO  NHibernate.Cfg.SettingsFactory - Default entity-mode: Poco
+2013-12-11 00:23:25,027 INFO  NHibernate.Cfg.SettingsFactory - Named query checking : enabled
+2013-12-11 00:23:25,038 INFO  NHibernate.Impl.SessionFactoryImpl - building session factory
+2013-12-11 00:23:25,039 DEBUG NHibernate.Impl.SessionFactoryImpl - Session factory constructed with filter configurations : {}
+2013-12-11 00:23:25,039 DEBUG NHibernate.Impl.SessionFactoryImpl - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider', 'connection.driver_class'='NHibernate.Driver.MySqlDataDriver, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.MySQLDialect, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.MySQLDialect, NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'connection.connection_string'='Server=win-devel.informatik.haw-hamburg.de; Port=3306; Database=wp13team3db;Uid=team3;Pwd=Q3yz73j6;', 'current_session_context_class'='NHibernate.Context.CallSessionContext'}
+2013-12-11 00:23:25,040 DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2013-12-11 00:23:25,119 DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2013-12-11 00:23:25,168 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung
+2013-12-11 00:23:25,172 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung
+2013-12-11 00:23:25,188 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung
+2013-12-11 00:23:25,217 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift
+2013-12-11 00:23:25,217 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift
+2013-12-11 00:23:25,218 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift
+2013-12-11 00:23:25,218 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Kundenrechnung
+2013-12-11 00:23:25,218 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Kundenrechnung
+2013-12-11 00:23:25,218 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Kundenrechnung
+2013-12-11 00:23:25,219 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Zahlungseingang
+2013-12-11 00:23:25,219 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Zahlungseingang
+2013-12-11 00:23:25,219 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Zahlungseingang
+2013-12-11 00:23:25,220 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtauftrag
+2013-12-11 00:23:25,220 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtauftrag
+2013-12-11 00:23:25,220 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtauftrag
+2013-12-11 00:23:25,220 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer
+2013-12-11 00:23:25,221 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer
+2013-12-11 00:23:25,221 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer
+2013-12-11 00:23:25,222 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag
+2013-12-11 00:23:25,222 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag
+2013-12-11 00:23:25,235 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag
+2013-12-11 00:23:25,236 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Startzeit
+2013-12-11 00:23:25,236 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Startzeit
+2013-12-11 00:23:25,237 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Startzeit
+2013-12-11 00:23:25,237 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Frachteinheit
+2013-12-11 00:23:25,237 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Frachteinheit
+2013-12-11 00:23:25,237 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.TransportplanungKomponente.DataAccessLayer.Frachteinheit
+2013-12-11 00:23:25,239 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan
+2013-12-11 00:23:25,239 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan
+2013-12-11 00:23:25,239 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan
+2013-12-11 00:23:25,245 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportAktivitaet
+2013-12-11 00:23:25,246 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportAktivitaet
+2013-12-11 00:23:25,246 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportAktivitaet
+2013-12-11 00:23:25,250 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt
+2013-12-11 00:23:25,250 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt
+2013-12-11 00:23:25,250 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt
+2013-12-11 00:23:25,251 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage
+2013-12-11 00:23:25,252 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage
+2013-12-11 00:23:25,252 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage
+2013-12-11 00:23:25,252 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsposition
+2013-12-11 00:23:25,253 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsposition
+2013-12-11 00:23:25,253 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsposition
+2013-12-11 00:23:25,253 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse
+2013-12-11 00:23:25,253 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse
+2013-12-11 00:23:25,254 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse
+2013-12-11 00:23:25,256 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-11 00:23:25,256 DEBUG NHibernate.Tuple.Entity.AbstractEntityTuplizer - No custom accessors found for entity: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-11 00:23:25,257 DEBUG NHibernate.Tuple.Entity.PocoEntityTuplizer - Create Instantiator using optimizer for:ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-11 00:23:25,276 DEBUG NHibernate.Persister.Collection.ICollectionPersister - Static SQL for collection: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag.Abfahrtszeiten
+2013-12-11 00:23:25,278 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  Row insert: UPDATE `Startzeit` SET FrachtfuehrerRahmenvertrag_id = ? WHERE SzNr = ?
+2013-12-11 00:23:25,278 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  Row delete: UPDATE `Startzeit` SET FrachtfuehrerRahmenvertrag_id = null WHERE FrachtfuehrerRahmenvertrag_id = ? AND SzNr = ?
+2013-12-11 00:23:25,278 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  One-shot delete: UPDATE `Startzeit` SET FrachtfuehrerRahmenvertrag_id = null WHERE FrachtfuehrerRahmenvertrag_id = ?
+2013-12-11 00:23:25,280 DEBUG NHibernate.Persister.Collection.ICollectionPersister - Static SQL for collection: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan.Frachteinheiten
+2013-12-11 00:23:25,280 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  Row insert: UPDATE `Frachteinheit` SET Transportplan_id = ? WHERE FraeNr = ?
+2013-12-11 00:23:25,280 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  Row delete: UPDATE `Frachteinheit` SET Transportplan_id = null WHERE Transportplan_id = ? AND FraeNr = ?
+2013-12-11 00:23:25,280 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  One-shot delete: UPDATE `Frachteinheit` SET Transportplan_id = null WHERE Transportplan_id = ?
+2013-12-11 00:23:25,280 DEBUG NHibernate.Persister.Collection.ICollectionPersister - Static SQL for collection: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan.TransportplanSchritte
+2013-12-11 00:23:25,280 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  Row insert: UPDATE `TransportplanSchritt` SET Transportplan_id = ? WHERE TpsNr = ?
+2013-12-11 00:23:25,280 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  Row delete: UPDATE `TransportplanSchritt` SET Transportplan_id = null WHERE Transportplan_id = ? AND TpsNr = ?
+2013-12-11 00:23:25,280 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  One-shot delete: UPDATE `TransportplanSchritt` SET Transportplan_id = null WHERE Transportplan_id = ?
+2013-12-11 00:23:25,280 DEBUG NHibernate.Persister.Collection.ICollectionPersister - Static SQL for collection: ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage.Sendungspositionen
+2013-12-11 00:23:25,280 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  Row insert: UPDATE `Sendungsposition` SET Sendungsanfrage_id = ? WHERE SendungspositionsNr = ?
+2013-12-11 00:23:25,280 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  Row delete: UPDATE `Sendungsposition` SET Sendungsanfrage_id = null WHERE Sendungsanfrage_id = ? AND SendungspositionsNr = ?
+2013-12-11 00:23:25,280 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  One-shot delete: UPDATE `Sendungsposition` SET Sendungsanfrage_id = null WHERE Sendungsanfrage_id = ?
+2013-12-11 00:23:25,280 DEBUG NHibernate.Persister.Collection.ICollectionPersister - Static SQL for collection: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen
+2013-12-11 00:23:25,280 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  Row insert: UPDATE `Adresse` SET Geschaeftspartner_id = ? WHERE Id = ?
+2013-12-11 00:23:25,281 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  Row delete: UPDATE `Adresse` SET Geschaeftspartner_id = null WHERE Geschaeftspartner_id = ? AND Id = ?
+2013-12-11 00:23:25,281 DEBUG NHibernate.Persister.Collection.ICollectionPersister -  One-shot delete: UPDATE `Adresse` SET Geschaeftspartner_id = null WHERE Geschaeftspartner_id = ?
+2013-12-11 00:23:25,305 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung
+2013-12-11 00:23:25,305 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT RechnungsNr FROM `Frachtabrechnung` WHERE RechnungsNr = ?
+2013-12-11 00:23:25,305 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT frachtabre_.RechnungsNr, frachtabre_.IstBestaetigt as IstBesta2_0_, frachtabre_.Rechnungsbetrag as Rechnung3_0_, frachtabre_.Frachtauftrag as Frachtau4_0_, frachtabre_.Gutschrift_id as Gutschrift5_0_ FROM `Frachtabrechnung` frachtabre_ WHERE frachtabre_.RechnungsNr=?
+2013-12-11 00:23:25,305 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `Frachtabrechnung` (IstBestaetigt, Rechnungsbetrag, Frachtauftrag, Gutschrift_id, RechnungsNr) VALUES (?, ?, ?, ?, ?)
+2013-12-11 00:23:25,305 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `Frachtabrechnung` SET IstBestaetigt = ?, Rechnungsbetrag = ?, Frachtauftrag = ?, Gutschrift_id = ? WHERE RechnungsNr = ?
+2013-12-11 00:23:25,306 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `Frachtabrechnung` WHERE RechnungsNr = ?
+2013-12-11 00:23:25,306 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `Frachtabrechnung` (IstBestaetigt, Rechnungsbetrag, Frachtauftrag, Gutschrift_id) VALUES (?, ?, ?, ?)
+2013-12-11 00:23:25,336 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung: SELECT frachtabre0_.RechnungsNr as Rechnung1_0_0_, frachtabre0_.IstBestaetigt as IstBesta2_0_0_, frachtabre0_.Rechnungsbetrag as Rechnung3_0_0_, frachtabre0_.Frachtauftrag as Frachtau4_0_0_, frachtabre0_.Gutschrift_id as Gutschrift5_0_0_ FROM `Frachtabrechnung` frachtabre0_ WHERE frachtabre0_.RechnungsNr=?
+2013-12-11 00:23:25,337 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung: SELECT frachtabre0_.RechnungsNr as Rechnung1_0_0_, frachtabre0_.IstBestaetigt as IstBesta2_0_0_, frachtabre0_.Rechnungsbetrag as Rechnung3_0_0_, frachtabre0_.Frachtauftrag as Frachtau4_0_0_, frachtabre0_.Gutschrift_id as Gutschrift5_0_0_ FROM `Frachtabrechnung` frachtabre0_ WHERE frachtabre0_.RechnungsNr=?
+2013-12-11 00:23:25,337 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung: SELECT frachtabre0_.RechnungsNr as Rechnung1_0_0_, frachtabre0_.IstBestaetigt as IstBesta2_0_0_, frachtabre0_.Rechnungsbetrag as Rechnung3_0_0_, frachtabre0_.Frachtauftrag as Frachtau4_0_0_, frachtabre0_.Gutschrift_id as Gutschrift5_0_0_ FROM `Frachtabrechnung` frachtabre0_ WHERE frachtabre0_.RechnungsNr=? for update
+2013-12-11 00:23:25,337 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung: SELECT frachtabre0_.RechnungsNr as Rechnung1_0_0_, frachtabre0_.IstBestaetigt as IstBesta2_0_0_, frachtabre0_.Rechnungsbetrag as Rechnung3_0_0_, frachtabre0_.Frachtauftrag as Frachtau4_0_0_, frachtabre0_.Gutschrift_id as Gutschrift5_0_0_ FROM `Frachtabrechnung` frachtabre0_ WHERE frachtabre0_.RechnungsNr=? for update
+2013-12-11 00:23:25,337 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung: SELECT frachtabre0_.RechnungsNr as Rechnung1_0_0_, frachtabre0_.IstBestaetigt as IstBesta2_0_0_, frachtabre0_.Rechnungsbetrag as Rechnung3_0_0_, frachtabre0_.Frachtauftrag as Frachtau4_0_0_, frachtabre0_.Gutschrift_id as Gutschrift5_0_0_ FROM `Frachtabrechnung` frachtabre0_ WHERE frachtabre0_.RechnungsNr=? for update
+2013-12-11 00:23:25,343 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung: SELECT frachtabre0_.RechnungsNr as Rechnung1_0_1_, frachtabre0_.IstBestaetigt as IstBesta2_0_1_, frachtabre0_.Rechnungsbetrag as Rechnung3_0_1_, frachtabre0_.Frachtauftrag as Frachtau4_0_1_, frachtabre0_.Gutschrift_id as Gutschrift5_0_1_, gutschrift1_.GutschriftNr as Gutschri1_1_0_, gutschrift1_.Kontodaten as Kontodaten1_0_, gutschrift1_.Betrag as Betrag1_0_ FROM `Frachtabrechnung` frachtabre0_ left outer join `Gutschrift` gutschrift1_ on frachtabre0_.Gutschrift_id=gutschrift1_.GutschriftNr WHERE frachtabre0_.RechnungsNr=?
+2013-12-11 00:23:25,343 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung: SELECT frachtabre0_.RechnungsNr as Rechnung1_0_1_, frachtabre0_.IstBestaetigt as IstBesta2_0_1_, frachtabre0_.Rechnungsbetrag as Rechnung3_0_1_, frachtabre0_.Frachtauftrag as Frachtau4_0_1_, frachtabre0_.Gutschrift_id as Gutschrift5_0_1_, gutschrift1_.GutschriftNr as Gutschri1_1_0_, gutschrift1_.Kontodaten as Kontodaten1_0_, gutschrift1_.Betrag as Betrag1_0_ FROM `Frachtabrechnung` frachtabre0_ left outer join `Gutschrift` gutschrift1_ on frachtabre0_.Gutschrift_id=gutschrift1_.GutschriftNr WHERE frachtabre0_.RechnungsNr=?
+2013-12-11 00:23:25,344 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift
+2013-12-11 00:23:25,344 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT GutschriftNr FROM `Gutschrift` WHERE GutschriftNr = ?
+2013-12-11 00:23:25,344 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT gutschrift_.GutschriftNr, gutschrift_.Kontodaten as Kontodaten1_, gutschrift_.Betrag as Betrag1_ FROM `Gutschrift` gutschrift_ WHERE gutschrift_.GutschriftNr=?
+2013-12-11 00:23:25,344 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `Gutschrift` (Kontodaten, Betrag, GutschriftNr) VALUES (?, ?, ?)
+2013-12-11 00:23:25,344 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `Gutschrift` SET Kontodaten = ?, Betrag = ? WHERE GutschriftNr = ?
+2013-12-11 00:23:25,344 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `Gutschrift` WHERE GutschriftNr = ?
+2013-12-11 00:23:25,344 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `Gutschrift` (Kontodaten, Betrag) VALUES (?, ?)
+2013-12-11 00:23:25,344 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift: SELECT gutschrift0_.GutschriftNr as Gutschri1_1_0_, gutschrift0_.Kontodaten as Kontodaten1_0_, gutschrift0_.Betrag as Betrag1_0_ FROM `Gutschrift` gutschrift0_ WHERE gutschrift0_.GutschriftNr=?
+2013-12-11 00:23:25,344 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift: SELECT gutschrift0_.GutschriftNr as Gutschri1_1_0_, gutschrift0_.Kontodaten as Kontodaten1_0_, gutschrift0_.Betrag as Betrag1_0_ FROM `Gutschrift` gutschrift0_ WHERE gutschrift0_.GutschriftNr=?
+2013-12-11 00:23:25,344 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift: SELECT gutschrift0_.GutschriftNr as Gutschri1_1_0_, gutschrift0_.Kontodaten as Kontodaten1_0_, gutschrift0_.Betrag as Betrag1_0_ FROM `Gutschrift` gutschrift0_ WHERE gutschrift0_.GutschriftNr=? for update
+2013-12-11 00:23:25,344 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift: SELECT gutschrift0_.GutschriftNr as Gutschri1_1_0_, gutschrift0_.Kontodaten as Kontodaten1_0_, gutschrift0_.Betrag as Betrag1_0_ FROM `Gutschrift` gutschrift0_ WHERE gutschrift0_.GutschriftNr=? for update
+2013-12-11 00:23:25,344 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift: SELECT gutschrift0_.GutschriftNr as Gutschri1_1_0_, gutschrift0_.Kontodaten as Kontodaten1_0_, gutschrift0_.Betrag as Betrag1_0_ FROM `Gutschrift` gutschrift0_ WHERE gutschrift0_.GutschriftNr=? for update
+2013-12-11 00:23:25,344 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift: SELECT gutschrift0_.GutschriftNr as Gutschri1_1_0_, gutschrift0_.Kontodaten as Kontodaten1_0_, gutschrift0_.Betrag as Betrag1_0_ FROM `Gutschrift` gutschrift0_ WHERE gutschrift0_.GutschriftNr=?
+2013-12-11 00:23:25,345 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift: SELECT gutschrift0_.GutschriftNr as Gutschri1_1_0_, gutschrift0_.Kontodaten as Kontodaten1_0_, gutschrift0_.Betrag as Betrag1_0_ FROM `Gutschrift` gutschrift0_ WHERE gutschrift0_.GutschriftNr=?
+2013-12-11 00:23:25,345 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Kundenrechnung
+2013-12-11 00:23:25,345 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT RechnungsNr FROM `Kundenrechnung` WHERE RechnungsNr = ?
+2013-12-11 00:23:25,345 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT kundenrech_.RechnungsNr, kundenrech_.Rechnungsbetrag as Rechnung2_2_, kundenrech_.RechnungBezahlt as Rechnung3_2_, kundenrech_.Sendungsanfrage as Sendungs4_2_, kundenrech_.Rechnungsadresse as Rechnung5_2_ FROM `Kundenrechnung` kundenrech_ WHERE kundenrech_.RechnungsNr=?
+2013-12-11 00:23:25,345 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `Kundenrechnung` (Rechnungsbetrag, RechnungBezahlt, Sendungsanfrage, Rechnungsadresse, RechnungsNr) VALUES (?, ?, ?, ?, ?)
+2013-12-11 00:23:25,345 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `Kundenrechnung` SET Rechnungsbetrag = ?, RechnungBezahlt = ?, Sendungsanfrage = ?, Rechnungsadresse = ? WHERE RechnungsNr = ?
+2013-12-11 00:23:25,345 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `Kundenrechnung` WHERE RechnungsNr = ?
+2013-12-11 00:23:25,345 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `Kundenrechnung` (Rechnungsbetrag, RechnungBezahlt, Sendungsanfrage, Rechnungsadresse) VALUES (?, ?, ?, ?)
+2013-12-11 00:23:25,345 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Kundenrechnung: SELECT kundenrech0_.RechnungsNr as Rechnung1_2_0_, kundenrech0_.Rechnungsbetrag as Rechnung2_2_0_, kundenrech0_.RechnungBezahlt as Rechnung3_2_0_, kundenrech0_.Sendungsanfrage as Sendungs4_2_0_, kundenrech0_.Rechnungsadresse as Rechnung5_2_0_ FROM `Kundenrechnung` kundenrech0_ WHERE kundenrech0_.RechnungsNr=?
+2013-12-11 00:23:25,345 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Kundenrechnung: SELECT kundenrech0_.RechnungsNr as Rechnung1_2_0_, kundenrech0_.Rechnungsbetrag as Rechnung2_2_0_, kundenrech0_.RechnungBezahlt as Rechnung3_2_0_, kundenrech0_.Sendungsanfrage as Sendungs4_2_0_, kundenrech0_.Rechnungsadresse as Rechnung5_2_0_ FROM `Kundenrechnung` kundenrech0_ WHERE kundenrech0_.RechnungsNr=?
+2013-12-11 00:23:25,345 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Kundenrechnung: SELECT kundenrech0_.RechnungsNr as Rechnung1_2_0_, kundenrech0_.Rechnungsbetrag as Rechnung2_2_0_, kundenrech0_.RechnungBezahlt as Rechnung3_2_0_, kundenrech0_.Sendungsanfrage as Sendungs4_2_0_, kundenrech0_.Rechnungsadresse as Rechnung5_2_0_ FROM `Kundenrechnung` kundenrech0_ WHERE kundenrech0_.RechnungsNr=? for update
+2013-12-11 00:23:25,345 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Kundenrechnung: SELECT kundenrech0_.RechnungsNr as Rechnung1_2_0_, kundenrech0_.Rechnungsbetrag as Rechnung2_2_0_, kundenrech0_.RechnungBezahlt as Rechnung3_2_0_, kundenrech0_.Sendungsanfrage as Sendungs4_2_0_, kundenrech0_.Rechnungsadresse as Rechnung5_2_0_ FROM `Kundenrechnung` kundenrech0_ WHERE kundenrech0_.RechnungsNr=? for update
+2013-12-11 00:23:25,345 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Kundenrechnung: SELECT kundenrech0_.RechnungsNr as Rechnung1_2_0_, kundenrech0_.Rechnungsbetrag as Rechnung2_2_0_, kundenrech0_.RechnungBezahlt as Rechnung3_2_0_, kundenrech0_.Sendungsanfrage as Sendungs4_2_0_, kundenrech0_.Rechnungsadresse as Rechnung5_2_0_ FROM `Kundenrechnung` kundenrech0_ WHERE kundenrech0_.RechnungsNr=? for update
+2013-12-11 00:23:25,345 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Kundenrechnung: SELECT kundenrech0_.RechnungsNr as Rechnung1_2_0_, kundenrech0_.Rechnungsbetrag as Rechnung2_2_0_, kundenrech0_.RechnungBezahlt as Rechnung3_2_0_, kundenrech0_.Sendungsanfrage as Sendungs4_2_0_, kundenrech0_.Rechnungsadresse as Rechnung5_2_0_ FROM `Kundenrechnung` kundenrech0_ WHERE kundenrech0_.RechnungsNr=?
+2013-12-11 00:23:25,346 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Kundenrechnung: SELECT kundenrech0_.RechnungsNr as Rechnung1_2_0_, kundenrech0_.Rechnungsbetrag as Rechnung2_2_0_, kundenrech0_.RechnungBezahlt as Rechnung3_2_0_, kundenrech0_.Sendungsanfrage as Sendungs4_2_0_, kundenrech0_.Rechnungsadresse as Rechnung5_2_0_ FROM `Kundenrechnung` kundenrech0_ WHERE kundenrech0_.RechnungsNr=?
+2013-12-11 00:23:25,346 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Zahlungseingang
+2013-12-11 00:23:25,346 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT ZahlungsNr FROM `Zahlungseingang` WHERE ZahlungsNr = ?
+2013-12-11 00:23:25,346 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT zahlungsei_.ZahlungsNr, zahlungsei_.Zahlungsbetrag as Zahlungs2_3_, zahlungsei_.KrNr as KrNr3_ FROM `Zahlungseingang` zahlungsei_ WHERE zahlungsei_.ZahlungsNr=?
+2013-12-11 00:23:25,346 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `Zahlungseingang` (Zahlungsbetrag, KrNr, ZahlungsNr) VALUES (?, ?, ?)
+2013-12-11 00:23:25,346 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `Zahlungseingang` SET Zahlungsbetrag = ?, KrNr = ? WHERE ZahlungsNr = ?
+2013-12-11 00:23:25,346 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `Zahlungseingang` WHERE ZahlungsNr = ?
+2013-12-11 00:23:25,346 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `Zahlungseingang` (Zahlungsbetrag, KrNr) VALUES (?, ?)
+2013-12-11 00:23:25,346 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Zahlungseingang: SELECT zahlungsei0_.ZahlungsNr as ZahlungsNr3_0_, zahlungsei0_.Zahlungsbetrag as Zahlungs2_3_0_, zahlungsei0_.KrNr as KrNr3_0_ FROM `Zahlungseingang` zahlungsei0_ WHERE zahlungsei0_.ZahlungsNr=?
+2013-12-11 00:23:25,346 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Zahlungseingang: SELECT zahlungsei0_.ZahlungsNr as ZahlungsNr3_0_, zahlungsei0_.Zahlungsbetrag as Zahlungs2_3_0_, zahlungsei0_.KrNr as KrNr3_0_ FROM `Zahlungseingang` zahlungsei0_ WHERE zahlungsei0_.ZahlungsNr=?
+2013-12-11 00:23:25,346 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Zahlungseingang: SELECT zahlungsei0_.ZahlungsNr as ZahlungsNr3_0_, zahlungsei0_.Zahlungsbetrag as Zahlungs2_3_0_, zahlungsei0_.KrNr as KrNr3_0_ FROM `Zahlungseingang` zahlungsei0_ WHERE zahlungsei0_.ZahlungsNr=? for update
+2013-12-11 00:23:25,346 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Zahlungseingang: SELECT zahlungsei0_.ZahlungsNr as ZahlungsNr3_0_, zahlungsei0_.Zahlungsbetrag as Zahlungs2_3_0_, zahlungsei0_.KrNr as KrNr3_0_ FROM `Zahlungseingang` zahlungsei0_ WHERE zahlungsei0_.ZahlungsNr=? for update
+2013-12-11 00:23:25,346 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Zahlungseingang: SELECT zahlungsei0_.ZahlungsNr as ZahlungsNr3_0_, zahlungsei0_.Zahlungsbetrag as Zahlungs2_3_0_, zahlungsei0_.KrNr as KrNr3_0_ FROM `Zahlungseingang` zahlungsei0_ WHERE zahlungsei0_.ZahlungsNr=? for update
+2013-12-11 00:23:25,346 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Zahlungseingang: SELECT zahlungsei0_.ZahlungsNr as ZahlungsNr3_0_, zahlungsei0_.Zahlungsbetrag as Zahlungs2_3_0_, zahlungsei0_.KrNr as KrNr3_0_ FROM `Zahlungseingang` zahlungsei0_ WHERE zahlungsei0_.ZahlungsNr=?
+2013-12-11 00:23:25,346 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Zahlungseingang: SELECT zahlungsei0_.ZahlungsNr as ZahlungsNr3_0_, zahlungsei0_.Zahlungsbetrag as Zahlungs2_3_0_, zahlungsei0_.KrNr as KrNr3_0_ FROM `Zahlungseingang` zahlungsei0_ WHERE zahlungsei0_.ZahlungsNr=?
+2013-12-11 00:23:25,347 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtauftrag
+2013-12-11 00:23:25,347 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT FraNr FROM `Frachtauftrag` WHERE FraNr = ?
+2013-12-11 00:23:25,347 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT frachtauft_.FraNr, frachtauft_.PlanStartzeit as PlanStar2_4_, frachtauft_.PlanEndezeit as PlanEnde3_4_, frachtauft_.VerwendeteKapazitaetTEU as Verwende4_4_, frachtauft_.VerwendeteKapazitaetFEU as Verwende5_4_, frachtauft_.Dokument as Dokument4_, frachtauft_.Status as Status4_, frachtauft_.SaNr as SaNr4_, frachtauft_.FrachtfuehrerRahmenvertrag_id as Frachtfu9_4_ FROM `Frachtauftrag` frachtauft_ WHERE frachtauft_.FraNr=?
+2013-12-11 00:23:25,347 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `Frachtauftrag` (PlanStartzeit, PlanEndezeit, VerwendeteKapazitaetTEU, VerwendeteKapazitaetFEU, Dokument, Status, SaNr, FrachtfuehrerRahmenvertrag_id, FraNr) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2013-12-11 00:23:25,347 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `Frachtauftrag` SET PlanStartzeit = ?, PlanEndezeit = ?, VerwendeteKapazitaetTEU = ?, VerwendeteKapazitaetFEU = ?, Dokument = ?, Status = ?, SaNr = ?, FrachtfuehrerRahmenvertrag_id = ? WHERE FraNr = ?
+2013-12-11 00:23:25,347 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `Frachtauftrag` WHERE FraNr = ?
+2013-12-11 00:23:25,347 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `Frachtauftrag` (PlanStartzeit, PlanEndezeit, VerwendeteKapazitaetTEU, VerwendeteKapazitaetFEU, Dokument, Status, SaNr, FrachtfuehrerRahmenvertrag_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2013-12-11 00:23:25,347 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtauftrag: SELECT frachtauft0_.FraNr as FraNr4_0_, frachtauft0_.PlanStartzeit as PlanStar2_4_0_, frachtauft0_.PlanEndezeit as PlanEnde3_4_0_, frachtauft0_.VerwendeteKapazitaetTEU as Verwende4_4_0_, frachtauft0_.VerwendeteKapazitaetFEU as Verwende5_4_0_, frachtauft0_.Dokument as Dokument4_0_, frachtauft0_.Status as Status4_0_, frachtauft0_.SaNr as SaNr4_0_, frachtauft0_.FrachtfuehrerRahmenvertrag_id as Frachtfu9_4_0_ FROM `Frachtauftrag` frachtauft0_ WHERE frachtauft0_.FraNr=?
+2013-12-11 00:23:25,347 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtauftrag: SELECT frachtauft0_.FraNr as FraNr4_0_, frachtauft0_.PlanStartzeit as PlanStar2_4_0_, frachtauft0_.PlanEndezeit as PlanEnde3_4_0_, frachtauft0_.VerwendeteKapazitaetTEU as Verwende4_4_0_, frachtauft0_.VerwendeteKapazitaetFEU as Verwende5_4_0_, frachtauft0_.Dokument as Dokument4_0_, frachtauft0_.Status as Status4_0_, frachtauft0_.SaNr as SaNr4_0_, frachtauft0_.FrachtfuehrerRahmenvertrag_id as Frachtfu9_4_0_ FROM `Frachtauftrag` frachtauft0_ WHERE frachtauft0_.FraNr=?
+2013-12-11 00:23:25,347 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtauftrag: SELECT frachtauft0_.FraNr as FraNr4_0_, frachtauft0_.PlanStartzeit as PlanStar2_4_0_, frachtauft0_.PlanEndezeit as PlanEnde3_4_0_, frachtauft0_.VerwendeteKapazitaetTEU as Verwende4_4_0_, frachtauft0_.VerwendeteKapazitaetFEU as Verwende5_4_0_, frachtauft0_.Dokument as Dokument4_0_, frachtauft0_.Status as Status4_0_, frachtauft0_.SaNr as SaNr4_0_, frachtauft0_.FrachtfuehrerRahmenvertrag_id as Frachtfu9_4_0_ FROM `Frachtauftrag` frachtauft0_ WHERE frachtauft0_.FraNr=? for update
+2013-12-11 00:23:25,347 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtauftrag: SELECT frachtauft0_.FraNr as FraNr4_0_, frachtauft0_.PlanStartzeit as PlanStar2_4_0_, frachtauft0_.PlanEndezeit as PlanEnde3_4_0_, frachtauft0_.VerwendeteKapazitaetTEU as Verwende4_4_0_, frachtauft0_.VerwendeteKapazitaetFEU as Verwende5_4_0_, frachtauft0_.Dokument as Dokument4_0_, frachtauft0_.Status as Status4_0_, frachtauft0_.SaNr as SaNr4_0_, frachtauft0_.FrachtfuehrerRahmenvertrag_id as Frachtfu9_4_0_ FROM `Frachtauftrag` frachtauft0_ WHERE frachtauft0_.FraNr=? for update
+2013-12-11 00:23:25,347 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtauftrag: SELECT frachtauft0_.FraNr as FraNr4_0_, frachtauft0_.PlanStartzeit as PlanStar2_4_0_, frachtauft0_.PlanEndezeit as PlanEnde3_4_0_, frachtauft0_.VerwendeteKapazitaetTEU as Verwende4_4_0_, frachtauft0_.VerwendeteKapazitaetFEU as Verwende5_4_0_, frachtauft0_.Dokument as Dokument4_0_, frachtauft0_.Status as Status4_0_, frachtauft0_.SaNr as SaNr4_0_, frachtauft0_.FrachtfuehrerRahmenvertrag_id as Frachtfu9_4_0_ FROM `Frachtauftrag` frachtauft0_ WHERE frachtauft0_.FraNr=? for update
+2013-12-11 00:23:25,348 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtauftrag: SELECT frachtauft0_.FraNr as FraNr4_0_, frachtauft0_.PlanStartzeit as PlanStar2_4_0_, frachtauft0_.PlanEndezeit as PlanEnde3_4_0_, frachtauft0_.VerwendeteKapazitaetTEU as Verwende4_4_0_, frachtauft0_.VerwendeteKapazitaetFEU as Verwende5_4_0_, frachtauft0_.Dokument as Dokument4_0_, frachtauft0_.Status as Status4_0_, frachtauft0_.SaNr as SaNr4_0_, frachtauft0_.FrachtfuehrerRahmenvertrag_id as Frachtfu9_4_0_ FROM `Frachtauftrag` frachtauft0_ WHERE frachtauft0_.FraNr=?
+2013-12-11 00:23:25,348 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtauftrag: SELECT frachtauft0_.FraNr as FraNr4_0_, frachtauft0_.PlanStartzeit as PlanStar2_4_0_, frachtauft0_.PlanEndezeit as PlanEnde3_4_0_, frachtauft0_.VerwendeteKapazitaetTEU as Verwende4_4_0_, frachtauft0_.VerwendeteKapazitaetFEU as Verwende5_4_0_, frachtauft0_.Dokument as Dokument4_0_, frachtauft0_.Status as Status4_0_, frachtauft0_.SaNr as SaNr4_0_, frachtauft0_.FrachtfuehrerRahmenvertrag_id as Frachtfu9_4_0_ FROM `Frachtauftrag` frachtauft0_ WHERE frachtauft0_.FraNr=?
+2013-12-11 00:23:25,348 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer
+2013-12-11 00:23:25,348 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT FrfNr FROM `Frachtfuehrer` WHERE FrfNr = ?
+2013-12-11 00:23:25,348 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT frachtfueh_.FrfNr FROM `Frachtfuehrer` frachtfueh_ WHERE frachtfueh_.FrfNr=?
+2013-12-11 00:23:25,348 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `Frachtfuehrer` (FrfNr) VALUES (?)
+2013-12-11 00:23:25,348 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: 
+2013-12-11 00:23:25,348 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `Frachtfuehrer` WHERE FrfNr = ?
+2013-12-11 00:23:25,348 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `Frachtfuehrer` values ( )
+2013-12-11 00:23:25,348 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer: SELECT frachtfueh0_.FrfNr as FrfNr5_0_ FROM `Frachtfuehrer` frachtfueh0_ WHERE frachtfueh0_.FrfNr=?
+2013-12-11 00:23:25,348 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer: SELECT frachtfueh0_.FrfNr as FrfNr5_0_ FROM `Frachtfuehrer` frachtfueh0_ WHERE frachtfueh0_.FrfNr=?
+2013-12-11 00:23:25,348 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer: SELECT frachtfueh0_.FrfNr as FrfNr5_0_ FROM `Frachtfuehrer` frachtfueh0_ WHERE frachtfueh0_.FrfNr=? for update
+2013-12-11 00:23:25,348 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer: SELECT frachtfueh0_.FrfNr as FrfNr5_0_ FROM `Frachtfuehrer` frachtfueh0_ WHERE frachtfueh0_.FrfNr=? for update
+2013-12-11 00:23:25,348 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer: SELECT frachtfueh0_.FrfNr as FrfNr5_0_ FROM `Frachtfuehrer` frachtfueh0_ WHERE frachtfueh0_.FrfNr=? for update
+2013-12-11 00:23:25,349 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer: SELECT frachtfueh0_.FrfNr as FrfNr5_0_ FROM `Frachtfuehrer` frachtfueh0_ WHERE frachtfueh0_.FrfNr=?
+2013-12-11 00:23:25,349 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Frachtfuehrer: SELECT frachtfueh0_.FrfNr as FrfNr5_0_ FROM `Frachtfuehrer` frachtfueh0_ WHERE frachtfueh0_.FrfNr=?
+2013-12-11 00:23:25,349 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag
+2013-12-11 00:23:25,349 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT FrvNr FROM `FrachtfuehrerRahmenvertrag` WHERE FrvNr = ?
+2013-12-11 00:23:25,349 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT frachtfueh_.FrvNr, frachtfueh_.FuerTransportAufTransportbeziehung as FuerTran2_6_, frachtfueh_.GueltigkeitAb as Gueltigk3_6_, frachtfueh_.GueltigkeitBis as Gueltigk4_6_, frachtfueh_.KostenFix as KostenFix6_, frachtfueh_.KostenProTEU as KostenPr6_6_, frachtfueh_.KostenProFEU as KostenPr7_6_, frachtfueh_.KapazitaetTEU as Kapazita8_6_, frachtfueh_.Zeitvorgabe as Zeitvorg9_6_, frachtfueh_.Frachtfuehrer_id as Frachtf10_6_ FROM `FrachtfuehrerRahmenvertrag` frachtfueh_ WHERE frachtfueh_.FrvNr=?
+2013-12-11 00:23:25,349 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `FrachtfuehrerRahmenvertrag` (FuerTransportAufTransportbeziehung, GueltigkeitAb, GueltigkeitBis, KostenFix, KostenProTEU, KostenProFEU, KapazitaetTEU, Zeitvorgabe, Frachtfuehrer_id, FrvNr) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2013-12-11 00:23:25,349 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `FrachtfuehrerRahmenvertrag` SET FuerTransportAufTransportbeziehung = ?, GueltigkeitAb = ?, GueltigkeitBis = ?, KostenFix = ?, KostenProTEU = ?, KostenProFEU = ?, KapazitaetTEU = ?, Zeitvorgabe = ?, Frachtfuehrer_id = ? WHERE FrvNr = ?
+2013-12-11 00:23:25,349 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `FrachtfuehrerRahmenvertrag` WHERE FrvNr = ?
+2013-12-11 00:23:25,349 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `FrachtfuehrerRahmenvertrag` (FuerTransportAufTransportbeziehung, GueltigkeitAb, GueltigkeitBis, KostenFix, KostenProTEU, KostenProFEU, KapazitaetTEU, Zeitvorgabe, Frachtfuehrer_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2013-12-11 00:23:25,349 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag: SELECT frachtfueh0_.FrvNr as FrvNr6_0_, frachtfueh0_.FuerTransportAufTransportbeziehung as FuerTran2_6_0_, frachtfueh0_.GueltigkeitAb as Gueltigk3_6_0_, frachtfueh0_.GueltigkeitBis as Gueltigk4_6_0_, frachtfueh0_.KostenFix as KostenFix6_0_, frachtfueh0_.KostenProTEU as KostenPr6_6_0_, frachtfueh0_.KostenProFEU as KostenPr7_6_0_, frachtfueh0_.KapazitaetTEU as Kapazita8_6_0_, frachtfueh0_.Zeitvorgabe as Zeitvorg9_6_0_, frachtfueh0_.Frachtfuehrer_id as Frachtf10_6_0_ FROM `FrachtfuehrerRahmenvertrag` frachtfueh0_ WHERE frachtfueh0_.FrvNr=?
+2013-12-11 00:23:25,349 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag: SELECT frachtfueh0_.FrvNr as FrvNr6_0_, frachtfueh0_.FuerTransportAufTransportbeziehung as FuerTran2_6_0_, frachtfueh0_.GueltigkeitAb as Gueltigk3_6_0_, frachtfueh0_.GueltigkeitBis as Gueltigk4_6_0_, frachtfueh0_.KostenFix as KostenFix6_0_, frachtfueh0_.KostenProTEU as KostenPr6_6_0_, frachtfueh0_.KostenProFEU as KostenPr7_6_0_, frachtfueh0_.KapazitaetTEU as Kapazita8_6_0_, frachtfueh0_.Zeitvorgabe as Zeitvorg9_6_0_, frachtfueh0_.Frachtfuehrer_id as Frachtf10_6_0_ FROM `FrachtfuehrerRahmenvertrag` frachtfueh0_ WHERE frachtfueh0_.FrvNr=?
+2013-12-11 00:23:25,350 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag: SELECT frachtfueh0_.FrvNr as FrvNr6_0_, frachtfueh0_.FuerTransportAufTransportbeziehung as FuerTran2_6_0_, frachtfueh0_.GueltigkeitAb as Gueltigk3_6_0_, frachtfueh0_.GueltigkeitBis as Gueltigk4_6_0_, frachtfueh0_.KostenFix as KostenFix6_0_, frachtfueh0_.KostenProTEU as KostenPr6_6_0_, frachtfueh0_.KostenProFEU as KostenPr7_6_0_, frachtfueh0_.KapazitaetTEU as Kapazita8_6_0_, frachtfueh0_.Zeitvorgabe as Zeitvorg9_6_0_, frachtfueh0_.Frachtfuehrer_id as Frachtf10_6_0_ FROM `FrachtfuehrerRahmenvertrag` frachtfueh0_ WHERE frachtfueh0_.FrvNr=? for update
+2013-12-11 00:23:25,350 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag: SELECT frachtfueh0_.FrvNr as FrvNr6_0_, frachtfueh0_.FuerTransportAufTransportbeziehung as FuerTran2_6_0_, frachtfueh0_.GueltigkeitAb as Gueltigk3_6_0_, frachtfueh0_.GueltigkeitBis as Gueltigk4_6_0_, frachtfueh0_.KostenFix as KostenFix6_0_, frachtfueh0_.KostenProTEU as KostenPr6_6_0_, frachtfueh0_.KostenProFEU as KostenPr7_6_0_, frachtfueh0_.KapazitaetTEU as Kapazita8_6_0_, frachtfueh0_.Zeitvorgabe as Zeitvorg9_6_0_, frachtfueh0_.Frachtfuehrer_id as Frachtf10_6_0_ FROM `FrachtfuehrerRahmenvertrag` frachtfueh0_ WHERE frachtfueh0_.FrvNr=? for update
+2013-12-11 00:23:25,350 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag: SELECT frachtfueh0_.FrvNr as FrvNr6_0_, frachtfueh0_.FuerTransportAufTransportbeziehung as FuerTran2_6_0_, frachtfueh0_.GueltigkeitAb as Gueltigk3_6_0_, frachtfueh0_.GueltigkeitBis as Gueltigk4_6_0_, frachtfueh0_.KostenFix as KostenFix6_0_, frachtfueh0_.KostenProTEU as KostenPr6_6_0_, frachtfueh0_.KostenProFEU as KostenPr7_6_0_, frachtfueh0_.KapazitaetTEU as Kapazita8_6_0_, frachtfueh0_.Zeitvorgabe as Zeitvorg9_6_0_, frachtfueh0_.Frachtfuehrer_id as Frachtf10_6_0_ FROM `FrachtfuehrerRahmenvertrag` frachtfueh0_ WHERE frachtfueh0_.FrvNr=? for update
+2013-12-11 00:23:25,356 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag: SELECT frachtfueh0_.FrvNr as FrvNr6_1_, frachtfueh0_.FuerTransportAufTransportbeziehung as FuerTran2_6_1_, frachtfueh0_.GueltigkeitAb as Gueltigk3_6_1_, frachtfueh0_.GueltigkeitBis as Gueltigk4_6_1_, frachtfueh0_.KostenFix as KostenFix6_1_, frachtfueh0_.KostenProTEU as KostenPr6_6_1_, frachtfueh0_.KostenProFEU as KostenPr7_6_1_, frachtfueh0_.KapazitaetTEU as Kapazita8_6_1_, frachtfueh0_.Zeitvorgabe as Zeitvorg9_6_1_, frachtfueh0_.Frachtfuehrer_id as Frachtf10_6_1_, abfahrtsze1_.FrachtfuehrerRahmenvertrag_id as Frachtfu4_3_, abfahrtsze1_.SzNr as SzNr3_, abfahrtsze1_.SzNr as SzNr7_0_, abfahrtsze1_.Wochentag as Wochentag7_0_, abfahrtsze1_.Uhrzeit as Uhrzeit7_0_ FROM `FrachtfuehrerRahmenvertrag` frachtfueh0_ left outer join `Startzeit` abfahrtsze1_ on frachtfueh0_.FrvNr=abfahrtsze1_.FrachtfuehrerRahmenvertrag_id WHERE frachtfueh0_.FrvNr=?
+2013-12-11 00:23:25,356 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag: SELECT frachtfueh0_.FrvNr as FrvNr6_1_, frachtfueh0_.FuerTransportAufTransportbeziehung as FuerTran2_6_1_, frachtfueh0_.GueltigkeitAb as Gueltigk3_6_1_, frachtfueh0_.GueltigkeitBis as Gueltigk4_6_1_, frachtfueh0_.KostenFix as KostenFix6_1_, frachtfueh0_.KostenProTEU as KostenPr6_6_1_, frachtfueh0_.KostenProFEU as KostenPr7_6_1_, frachtfueh0_.KapazitaetTEU as Kapazita8_6_1_, frachtfueh0_.Zeitvorgabe as Zeitvorg9_6_1_, frachtfueh0_.Frachtfuehrer_id as Frachtf10_6_1_, abfahrtsze1_.FrachtfuehrerRahmenvertrag_id as Frachtfu4_3_, abfahrtsze1_.SzNr as SzNr3_, abfahrtsze1_.SzNr as SzNr7_0_, abfahrtsze1_.Wochentag as Wochentag7_0_, abfahrtsze1_.Uhrzeit as Uhrzeit7_0_ FROM `FrachtfuehrerRahmenvertrag` frachtfueh0_ left outer join `Startzeit` abfahrtsze1_ on frachtfueh0_.FrvNr=abfahrtsze1_.FrachtfuehrerRahmenvertrag_id WHERE frachtfueh0_.FrvNr=?
+2013-12-11 00:23:25,356 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Startzeit
+2013-12-11 00:23:25,356 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT SzNr FROM `Startzeit` WHERE SzNr = ?
+2013-12-11 00:23:25,356 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT startzeit_.SzNr, startzeit_.Wochentag as Wochentag7_, startzeit_.Uhrzeit as Uhrzeit7_ FROM `Startzeit` startzeit_ WHERE startzeit_.SzNr=?
+2013-12-11 00:23:25,356 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `Startzeit` (Wochentag, Uhrzeit, SzNr) VALUES (?, ?, ?)
+2013-12-11 00:23:25,356 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `Startzeit` SET Wochentag = ?, Uhrzeit = ? WHERE SzNr = ?
+2013-12-11 00:23:25,357 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `Startzeit` WHERE SzNr = ?
+2013-12-11 00:23:25,357 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `Startzeit` (Wochentag, Uhrzeit) VALUES (?, ?)
+2013-12-11 00:23:25,357 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Startzeit: SELECT startzeit0_.SzNr as SzNr7_0_, startzeit0_.Wochentag as Wochentag7_0_, startzeit0_.Uhrzeit as Uhrzeit7_0_ FROM `Startzeit` startzeit0_ WHERE startzeit0_.SzNr=?
+2013-12-11 00:23:25,357 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Startzeit: SELECT startzeit0_.SzNr as SzNr7_0_, startzeit0_.Wochentag as Wochentag7_0_, startzeit0_.Uhrzeit as Uhrzeit7_0_ FROM `Startzeit` startzeit0_ WHERE startzeit0_.SzNr=?
+2013-12-11 00:23:25,357 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Startzeit: SELECT startzeit0_.SzNr as SzNr7_0_, startzeit0_.Wochentag as Wochentag7_0_, startzeit0_.Uhrzeit as Uhrzeit7_0_ FROM `Startzeit` startzeit0_ WHERE startzeit0_.SzNr=? for update
+2013-12-11 00:23:25,357 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Startzeit: SELECT startzeit0_.SzNr as SzNr7_0_, startzeit0_.Wochentag as Wochentag7_0_, startzeit0_.Uhrzeit as Uhrzeit7_0_ FROM `Startzeit` startzeit0_ WHERE startzeit0_.SzNr=? for update
+2013-12-11 00:23:25,357 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Startzeit: SELECT startzeit0_.SzNr as SzNr7_0_, startzeit0_.Wochentag as Wochentag7_0_, startzeit0_.Uhrzeit as Uhrzeit7_0_ FROM `Startzeit` startzeit0_ WHERE startzeit0_.SzNr=? for update
+2013-12-11 00:23:25,357 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Startzeit: SELECT startzeit0_.SzNr as SzNr7_0_, startzeit0_.Wochentag as Wochentag7_0_, startzeit0_.Uhrzeit as Uhrzeit7_0_ FROM `Startzeit` startzeit0_ WHERE startzeit0_.SzNr=?
+2013-12-11 00:23:25,357 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.Startzeit: SELECT startzeit0_.SzNr as SzNr7_0_, startzeit0_.Wochentag as Wochentag7_0_, startzeit0_.Uhrzeit as Uhrzeit7_0_ FROM `Startzeit` startzeit0_ WHERE startzeit0_.SzNr=?
+2013-12-11 00:23:25,357 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Frachteinheit
+2013-12-11 00:23:25,357 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT FraeNr FROM `Frachteinheit` WHERE FraeNr = ?
+2013-12-11 00:23:25,357 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT frachteinh_.FraeNr, frachteinh_.FraeTyp as FraeTyp8_, frachteinh_.Sendungspositionen as Sendungs3_8_ FROM `Frachteinheit` frachteinh_ WHERE frachteinh_.FraeNr=?
+2013-12-11 00:23:25,357 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `Frachteinheit` (FraeTyp, Sendungspositionen, FraeNr) VALUES (?, ?, ?)
+2013-12-11 00:23:25,357 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `Frachteinheit` SET FraeTyp = ?, Sendungspositionen = ? WHERE FraeNr = ?
+2013-12-11 00:23:25,357 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `Frachteinheit` WHERE FraeNr = ?
+2013-12-11 00:23:25,357 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `Frachteinheit` (FraeTyp, Sendungspositionen) VALUES (?, ?)
+2013-12-11 00:23:25,358 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.Frachteinheit: SELECT frachteinh0_.FraeNr as FraeNr8_0_, frachteinh0_.FraeTyp as FraeTyp8_0_, frachteinh0_.Sendungspositionen as Sendungs3_8_0_ FROM `Frachteinheit` frachteinh0_ WHERE frachteinh0_.FraeNr=?
+2013-12-11 00:23:25,358 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.Frachteinheit: SELECT frachteinh0_.FraeNr as FraeNr8_0_, frachteinh0_.FraeTyp as FraeTyp8_0_, frachteinh0_.Sendungspositionen as Sendungs3_8_0_ FROM `Frachteinheit` frachteinh0_ WHERE frachteinh0_.FraeNr=?
+2013-12-11 00:23:25,358 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.Frachteinheit: SELECT frachteinh0_.FraeNr as FraeNr8_0_, frachteinh0_.FraeTyp as FraeTyp8_0_, frachteinh0_.Sendungspositionen as Sendungs3_8_0_ FROM `Frachteinheit` frachteinh0_ WHERE frachteinh0_.FraeNr=? for update
+2013-12-11 00:23:25,358 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.Frachteinheit: SELECT frachteinh0_.FraeNr as FraeNr8_0_, frachteinh0_.FraeTyp as FraeTyp8_0_, frachteinh0_.Sendungspositionen as Sendungs3_8_0_ FROM `Frachteinheit` frachteinh0_ WHERE frachteinh0_.FraeNr=? for update
+2013-12-11 00:23:25,358 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.Frachteinheit: SELECT frachteinh0_.FraeNr as FraeNr8_0_, frachteinh0_.FraeTyp as FraeTyp8_0_, frachteinh0_.Sendungspositionen as Sendungs3_8_0_ FROM `Frachteinheit` frachteinh0_ WHERE frachteinh0_.FraeNr=? for update
+2013-12-11 00:23:25,358 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.Frachteinheit: SELECT frachteinh0_.FraeNr as FraeNr8_0_, frachteinh0_.FraeTyp as FraeTyp8_0_, frachteinh0_.Sendungspositionen as Sendungs3_8_0_ FROM `Frachteinheit` frachteinh0_ WHERE frachteinh0_.FraeNr=?
+2013-12-11 00:23:25,358 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.Frachteinheit: SELECT frachteinh0_.FraeNr as FraeNr8_0_, frachteinh0_.FraeTyp as FraeTyp8_0_, frachteinh0_.Sendungspositionen as Sendungs3_8_0_ FROM `Frachteinheit` frachteinh0_ WHERE frachteinh0_.FraeNr=?
+2013-12-11 00:23:25,358 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan
+2013-12-11 00:23:25,358 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT TpNr FROM `Transportplan` WHERE TpNr = ?
+2013-12-11 00:23:25,358 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT transportp_.TpNr, transportp_.SaNr as SaNr9_, transportp_.Status as Status9_, transportp_.Meldungen as Meldungen9_ FROM `Transportplan` transportp_ WHERE transportp_.TpNr=?
+2013-12-11 00:23:25,358 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `Transportplan` (SaNr, Status, Meldungen, TpNr) VALUES (?, ?, ?, ?)
+2013-12-11 00:23:25,358 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `Transportplan` SET SaNr = ?, Status = ?, Meldungen = ? WHERE TpNr = ?
+2013-12-11 00:23:25,358 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `Transportplan` WHERE TpNr = ?
+2013-12-11 00:23:25,358 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `Transportplan` (SaNr, Status, Meldungen) VALUES (?, ?, ?)
+2013-12-11 00:23:25,359 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan: SELECT transportp0_.TpNr as TpNr9_0_, transportp0_.SaNr as SaNr9_0_, transportp0_.Status as Status9_0_, transportp0_.Meldungen as Meldungen9_0_ FROM `Transportplan` transportp0_ WHERE transportp0_.TpNr=?
+2013-12-11 00:23:25,359 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan: SELECT transportp0_.TpNr as TpNr9_0_, transportp0_.SaNr as SaNr9_0_, transportp0_.Status as Status9_0_, transportp0_.Meldungen as Meldungen9_0_ FROM `Transportplan` transportp0_ WHERE transportp0_.TpNr=?
+2013-12-11 00:23:25,359 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan: SELECT transportp0_.TpNr as TpNr9_0_, transportp0_.SaNr as SaNr9_0_, transportp0_.Status as Status9_0_, transportp0_.Meldungen as Meldungen9_0_ FROM `Transportplan` transportp0_ WHERE transportp0_.TpNr=? for update
+2013-12-11 00:23:25,359 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan: SELECT transportp0_.TpNr as TpNr9_0_, transportp0_.SaNr as SaNr9_0_, transportp0_.Status as Status9_0_, transportp0_.Meldungen as Meldungen9_0_ FROM `Transportplan` transportp0_ WHERE transportp0_.TpNr=? for update
+2013-12-11 00:23:25,359 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan: SELECT transportp0_.TpNr as TpNr9_0_, transportp0_.SaNr as SaNr9_0_, transportp0_.Status as Status9_0_, transportp0_.Meldungen as Meldungen9_0_ FROM `Transportplan` transportp0_ WHERE transportp0_.TpNr=? for update
+2013-12-11 00:23:25,359 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan: SELECT transportp0_.TpNr as TpNr9_1_, transportp0_.SaNr as SaNr9_1_, transportp0_.Status as Status9_1_, transportp0_.Meldungen as Meldungen9_1_, frachteinh1_.Transportplan_id as Transpor4_3_, frachteinh1_.FraeNr as FraeNr3_, frachteinh1_.FraeNr as FraeNr8_0_, frachteinh1_.FraeTyp as FraeTyp8_0_, frachteinh1_.Sendungspositionen as Sendungs3_8_0_ FROM `Transportplan` transportp0_ left outer join `Frachteinheit` frachteinh1_ on transportp0_.TpNr=frachteinh1_.Transportplan_id WHERE transportp0_.TpNr=?
+2013-12-11 00:23:25,359 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan: SELECT transportp0_.TpNr as TpNr9_1_, transportp0_.SaNr as SaNr9_1_, transportp0_.Status as Status9_1_, transportp0_.Meldungen as Meldungen9_1_, frachteinh1_.Transportplan_id as Transpor4_3_, frachteinh1_.FraeNr as FraeNr3_, frachteinh1_.FraeNr as FraeNr8_0_, frachteinh1_.FraeTyp as FraeTyp8_0_, frachteinh1_.Sendungspositionen as Sendungs3_8_0_ FROM `Transportplan` transportp0_ left outer join `Frachteinheit` frachteinh1_ on transportp0_.TpNr=frachteinh1_.Transportplan_id WHERE transportp0_.TpNr=?
+2013-12-11 00:23:25,361 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportAktivitaet
+2013-12-11 00:23:25,362 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT TpsNr FROM `TransportplanSchritt` WHERE TpsNr = ?
+2013-12-11 00:23:25,362 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT transporta_.TransportplanSchritt_id, transporta_1_.PlanStartzeit as PlanStar2_10_, transporta_1_.PlanEndezeit as PlanEnde3_10_, transporta_1_.SpaetesterStart as Spaetest4_10_, transporta_1_.Kosten as Kosten10_, transporta_.FrachtfuehrerRahmenvertrag as Frachtfu2_11_, transporta_.FuerTransportAufTransportbeziehung as FuerTran3_11_, transporta_.Frachtauftrag as Frachtau4_11_, transporta_.WartezeitAnStart as Wartezei5_11_, transporta_.VerwendeteKapazitaetTEU as Verwende6_11_, transporta_.VerwendeteKapazitaetFEU as Verwende7_11_ FROM `TransportAktivitaet` transporta_ inner join `TransportplanSchritt` transporta_1_ on transporta_.TransportplanSchritt_id=transporta_1_.TpsNr WHERE transporta_.TransportplanSchritt_id=?
+2013-12-11 00:23:25,362 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `TransportplanSchritt` (PlanStartzeit, PlanEndezeit, SpaetesterStart, Kosten, TpsNr) VALUES (?, ?, ?, ?, ?)
+2013-12-11 00:23:25,362 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `TransportplanSchritt` SET PlanStartzeit = ?, PlanEndezeit = ?, SpaetesterStart = ?, Kosten = ? WHERE TpsNr = ?
+2013-12-11 00:23:25,362 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `TransportplanSchritt` WHERE TpsNr = ?
+2013-12-11 00:23:25,362 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 1: INSERT INTO `TransportAktivitaet` (FrachtfuehrerRahmenvertrag, FuerTransportAufTransportbeziehung, Frachtauftrag, WartezeitAnStart, VerwendeteKapazitaetTEU, VerwendeteKapazitaetFEU, TransportplanSchritt_id) VALUES (?, ?, ?, ?, ?, ?, ?)
+2013-12-11 00:23:25,362 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 1: UPDATE `TransportAktivitaet` SET FrachtfuehrerRahmenvertrag = ?, FuerTransportAufTransportbeziehung = ?, Frachtauftrag = ?, WartezeitAnStart = ?, VerwendeteKapazitaetTEU = ?, VerwendeteKapazitaetFEU = ? WHERE TransportplanSchritt_id = ?
+2013-12-11 00:23:25,362 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 1: DELETE FROM `TransportAktivitaet` WHERE TransportplanSchritt_id = ?
+2013-12-11 00:23:25,362 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `TransportplanSchritt` (PlanStartzeit, PlanEndezeit, SpaetesterStart, Kosten) VALUES (?, ?, ?, ?)
+2013-12-11 00:23:25,363 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportAktivitaet: SELECT transporta0_.TransportplanSchritt_id as TpsNr10_0_, transporta0_1_.PlanStartzeit as PlanStar2_10_0_, transporta0_1_.PlanEndezeit as PlanEnde3_10_0_, transporta0_1_.SpaetesterStart as Spaetest4_10_0_, transporta0_1_.Kosten as Kosten10_0_, transporta0_.FrachtfuehrerRahmenvertrag as Frachtfu2_11_0_, transporta0_.FuerTransportAufTransportbeziehung as FuerTran3_11_0_, transporta0_.Frachtauftrag as Frachtau4_11_0_, transporta0_.WartezeitAnStart as Wartezei5_11_0_, transporta0_.VerwendeteKapazitaetTEU as Verwende6_11_0_, transporta0_.VerwendeteKapazitaetFEU as Verwende7_11_0_ FROM `TransportAktivitaet` transporta0_ inner join `TransportplanSchritt` transporta0_1_ on transporta0_.TransportplanSchritt_id=transporta0_1_.TpsNr WHERE transporta0_.TransportplanSchritt_id=?
+2013-12-11 00:23:25,363 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportAktivitaet: SELECT transporta0_.TransportplanSchritt_id as TpsNr10_0_, transporta0_1_.PlanStartzeit as PlanStar2_10_0_, transporta0_1_.PlanEndezeit as PlanEnde3_10_0_, transporta0_1_.SpaetesterStart as Spaetest4_10_0_, transporta0_1_.Kosten as Kosten10_0_, transporta0_.FrachtfuehrerRahmenvertrag as Frachtfu2_11_0_, transporta0_.FuerTransportAufTransportbeziehung as FuerTran3_11_0_, transporta0_.Frachtauftrag as Frachtau4_11_0_, transporta0_.WartezeitAnStart as Wartezei5_11_0_, transporta0_.VerwendeteKapazitaetTEU as Verwende6_11_0_, transporta0_.VerwendeteKapazitaetFEU as Verwende7_11_0_ FROM `TransportAktivitaet` transporta0_ inner join `TransportplanSchritt` transporta0_1_ on transporta0_.TransportplanSchritt_id=transporta0_1_.TpsNr WHERE transporta0_.TransportplanSchritt_id=?
+2013-12-11 00:23:25,363 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportAktivitaet: SELECT transporta0_.TransportplanSchritt_id as TpsNr10_0_, transporta0_1_.PlanStartzeit as PlanStar2_10_0_, transporta0_1_.PlanEndezeit as PlanEnde3_10_0_, transporta0_1_.SpaetesterStart as Spaetest4_10_0_, transporta0_1_.Kosten as Kosten10_0_, transporta0_.FrachtfuehrerRahmenvertrag as Frachtfu2_11_0_, transporta0_.FuerTransportAufTransportbeziehung as FuerTran3_11_0_, transporta0_.Frachtauftrag as Frachtau4_11_0_, transporta0_.WartezeitAnStart as Wartezei5_11_0_, transporta0_.VerwendeteKapazitaetTEU as Verwende6_11_0_, transporta0_.VerwendeteKapazitaetFEU as Verwende7_11_0_ FROM `TransportAktivitaet` transporta0_ inner join `TransportplanSchritt` transporta0_1_ on transporta0_.TransportplanSchritt_id=transporta0_1_.TpsNr WHERE transporta0_.TransportplanSchritt_id=? for update
+2013-12-11 00:23:25,363 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportAktivitaet: SELECT transporta0_.TransportplanSchritt_id as TpsNr10_0_, transporta0_1_.PlanStartzeit as PlanStar2_10_0_, transporta0_1_.PlanEndezeit as PlanEnde3_10_0_, transporta0_1_.SpaetesterStart as Spaetest4_10_0_, transporta0_1_.Kosten as Kosten10_0_, transporta0_.FrachtfuehrerRahmenvertrag as Frachtfu2_11_0_, transporta0_.FuerTransportAufTransportbeziehung as FuerTran3_11_0_, transporta0_.Frachtauftrag as Frachtau4_11_0_, transporta0_.WartezeitAnStart as Wartezei5_11_0_, transporta0_.VerwendeteKapazitaetTEU as Verwende6_11_0_, transporta0_.VerwendeteKapazitaetFEU as Verwende7_11_0_ FROM `TransportAktivitaet` transporta0_ inner join `TransportplanSchritt` transporta0_1_ on transporta0_.TransportplanSchritt_id=transporta0_1_.TpsNr WHERE transporta0_.TransportplanSchritt_id=? for update
+2013-12-11 00:23:25,363 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportAktivitaet: SELECT transporta0_.TransportplanSchritt_id as TpsNr10_0_, transporta0_1_.PlanStartzeit as PlanStar2_10_0_, transporta0_1_.PlanEndezeit as PlanEnde3_10_0_, transporta0_1_.SpaetesterStart as Spaetest4_10_0_, transporta0_1_.Kosten as Kosten10_0_, transporta0_.FrachtfuehrerRahmenvertrag as Frachtfu2_11_0_, transporta0_.FuerTransportAufTransportbeziehung as FuerTran3_11_0_, transporta0_.Frachtauftrag as Frachtau4_11_0_, transporta0_.WartezeitAnStart as Wartezei5_11_0_, transporta0_.VerwendeteKapazitaetTEU as Verwende6_11_0_, transporta0_.VerwendeteKapazitaetFEU as Verwende7_11_0_ FROM `TransportAktivitaet` transporta0_ inner join `TransportplanSchritt` transporta0_1_ on transporta0_.TransportplanSchritt_id=transporta0_1_.TpsNr WHERE transporta0_.TransportplanSchritt_id=? for update
+2013-12-11 00:23:25,363 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportAktivitaet: SELECT transporta0_.TransportplanSchritt_id as TpsNr10_0_, transporta0_1_.PlanStartzeit as PlanStar2_10_0_, transporta0_1_.PlanEndezeit as PlanEnde3_10_0_, transporta0_1_.SpaetesterStart as Spaetest4_10_0_, transporta0_1_.Kosten as Kosten10_0_, transporta0_.FrachtfuehrerRahmenvertrag as Frachtfu2_11_0_, transporta0_.FuerTransportAufTransportbeziehung as FuerTran3_11_0_, transporta0_.Frachtauftrag as Frachtau4_11_0_, transporta0_.WartezeitAnStart as Wartezei5_11_0_, transporta0_.VerwendeteKapazitaetTEU as Verwende6_11_0_, transporta0_.VerwendeteKapazitaetFEU as Verwende7_11_0_ FROM `TransportAktivitaet` transporta0_ inner join `TransportplanSchritt` transporta0_1_ on transporta0_.TransportplanSchritt_id=transporta0_1_.TpsNr WHERE transporta0_.TransportplanSchritt_id=?
+2013-12-11 00:23:25,364 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportAktivitaet: SELECT transporta0_.TransportplanSchritt_id as TpsNr10_0_, transporta0_1_.PlanStartzeit as PlanStar2_10_0_, transporta0_1_.PlanEndezeit as PlanEnde3_10_0_, transporta0_1_.SpaetesterStart as Spaetest4_10_0_, transporta0_1_.Kosten as Kosten10_0_, transporta0_.FrachtfuehrerRahmenvertrag as Frachtfu2_11_0_, transporta0_.FuerTransportAufTransportbeziehung as FuerTran3_11_0_, transporta0_.Frachtauftrag as Frachtau4_11_0_, transporta0_.WartezeitAnStart as Wartezei5_11_0_, transporta0_.VerwendeteKapazitaetTEU as Verwende6_11_0_, transporta0_.VerwendeteKapazitaetFEU as Verwende7_11_0_ FROM `TransportAktivitaet` transporta0_ inner join `TransportplanSchritt` transporta0_1_ on transporta0_.TransportplanSchritt_id=transporta0_1_.TpsNr WHERE transporta0_.TransportplanSchritt_id=?
+2013-12-11 00:23:25,364 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt
+2013-12-11 00:23:25,364 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT TpsNr FROM `TransportplanSchritt` WHERE TpsNr = ?
+2013-12-11 00:23:25,364 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT transportp_.TpsNr, transportp_.PlanStartzeit as PlanStar2_10_, transportp_.PlanEndezeit as PlanEnde3_10_, transportp_.SpaetesterStart as Spaetest4_10_, transportp_.Kosten as Kosten10_ FROM `TransportplanSchritt` transportp_ WHERE transportp_.TpsNr=?
+2013-12-11 00:23:25,364 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `TransportplanSchritt` (PlanStartzeit, PlanEndezeit, SpaetesterStart, Kosten, TpsNr) VALUES (?, ?, ?, ?, ?)
+2013-12-11 00:23:25,364 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `TransportplanSchritt` SET PlanStartzeit = ?, PlanEndezeit = ?, SpaetesterStart = ?, Kosten = ? WHERE TpsNr = ?
+2013-12-11 00:23:25,364 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `TransportplanSchritt` WHERE TpsNr = ?
+2013-12-11 00:23:25,364 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `TransportplanSchritt` (PlanStartzeit, PlanEndezeit, SpaetesterStart, Kosten) VALUES (?, ?, ?, ?)
+2013-12-11 00:23:25,366 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt: SELECT transportp0_.TpsNr as TpsNr10_0_, transportp0_.PlanStartzeit as PlanStar2_10_0_, transportp0_.PlanEndezeit as PlanEnde3_10_0_, transportp0_.SpaetesterStart as Spaetest4_10_0_, transportp0_.Kosten as Kosten10_0_, transportp0_1_.FrachtfuehrerRahmenvertrag as Frachtfu2_11_0_, transportp0_1_.FuerTransportAufTransportbeziehung as FuerTran3_11_0_, transportp0_1_.Frachtauftrag as Frachtau4_11_0_, transportp0_1_.WartezeitAnStart as Wartezei5_11_0_, transportp0_1_.VerwendeteKapazitaetTEU as Verwende6_11_0_, transportp0_1_.VerwendeteKapazitaetFEU as Verwende7_11_0_, case when transportp0_1_.TransportplanSchritt_id is not null then 1 when transportp0_.TpsNr is not null then 0 end as clazz_0_ FROM `TransportplanSchritt` transportp0_ left outer join `TransportAktivitaet` transportp0_1_ on transportp0_.TpsNr=transportp0_1_.TransportplanSchritt_id WHERE transportp0_.TpsNr=?
+2013-12-11 00:23:25,367 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt: SELECT transportp0_.TpsNr as TpsNr10_0_, transportp0_.PlanStartzeit as PlanStar2_10_0_, transportp0_.PlanEndezeit as PlanEnde3_10_0_, transportp0_.SpaetesterStart as Spaetest4_10_0_, transportp0_.Kosten as Kosten10_0_, transportp0_1_.FrachtfuehrerRahmenvertrag as Frachtfu2_11_0_, transportp0_1_.FuerTransportAufTransportbeziehung as FuerTran3_11_0_, transportp0_1_.Frachtauftrag as Frachtau4_11_0_, transportp0_1_.WartezeitAnStart as Wartezei5_11_0_, transportp0_1_.VerwendeteKapazitaetTEU as Verwende6_11_0_, transportp0_1_.VerwendeteKapazitaetFEU as Verwende7_11_0_, case when transportp0_1_.TransportplanSchritt_id is not null then 1 when transportp0_.TpsNr is not null then 0 end as clazz_0_ FROM `TransportplanSchritt` transportp0_ left outer join `TransportAktivitaet` transportp0_1_ on transportp0_.TpsNr=transportp0_1_.TransportplanSchritt_id WHERE transportp0_.TpsNr=?
+2013-12-11 00:23:25,367 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt: SELECT transportp0_.TpsNr as TpsNr10_0_, transportp0_.PlanStartzeit as PlanStar2_10_0_, transportp0_.PlanEndezeit as PlanEnde3_10_0_, transportp0_.SpaetesterStart as Spaetest4_10_0_, transportp0_.Kosten as Kosten10_0_, transportp0_1_.FrachtfuehrerRahmenvertrag as Frachtfu2_11_0_, transportp0_1_.FuerTransportAufTransportbeziehung as FuerTran3_11_0_, transportp0_1_.Frachtauftrag as Frachtau4_11_0_, transportp0_1_.WartezeitAnStart as Wartezei5_11_0_, transportp0_1_.VerwendeteKapazitaetTEU as Verwende6_11_0_, transportp0_1_.VerwendeteKapazitaetFEU as Verwende7_11_0_, case when transportp0_1_.TransportplanSchritt_id is not null then 1 when transportp0_.TpsNr is not null then 0 end as clazz_0_ FROM `TransportplanSchritt` transportp0_ left outer join `TransportAktivitaet` transportp0_1_ on transportp0_.TpsNr=transportp0_1_.TransportplanSchritt_id WHERE transportp0_.TpsNr=? for update
+2013-12-11 00:23:25,367 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt: SELECT transportp0_.TpsNr as TpsNr10_0_, transportp0_.PlanStartzeit as PlanStar2_10_0_, transportp0_.PlanEndezeit as PlanEnde3_10_0_, transportp0_.SpaetesterStart as Spaetest4_10_0_, transportp0_.Kosten as Kosten10_0_, transportp0_1_.FrachtfuehrerRahmenvertrag as Frachtfu2_11_0_, transportp0_1_.FuerTransportAufTransportbeziehung as FuerTran3_11_0_, transportp0_1_.Frachtauftrag as Frachtau4_11_0_, transportp0_1_.WartezeitAnStart as Wartezei5_11_0_, transportp0_1_.VerwendeteKapazitaetTEU as Verwende6_11_0_, transportp0_1_.VerwendeteKapazitaetFEU as Verwende7_11_0_, case when transportp0_1_.TransportplanSchritt_id is not null then 1 when transportp0_.TpsNr is not null then 0 end as clazz_0_ FROM `TransportplanSchritt` transportp0_ left outer join `TransportAktivitaet` transportp0_1_ on transportp0_.TpsNr=transportp0_1_.TransportplanSchritt_id WHERE transportp0_.TpsNr=? for update
+2013-12-11 00:23:25,367 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt: SELECT transportp0_.TpsNr as TpsNr10_0_, transportp0_.PlanStartzeit as PlanStar2_10_0_, transportp0_.PlanEndezeit as PlanEnde3_10_0_, transportp0_.SpaetesterStart as Spaetest4_10_0_, transportp0_.Kosten as Kosten10_0_, transportp0_1_.FrachtfuehrerRahmenvertrag as Frachtfu2_11_0_, transportp0_1_.FuerTransportAufTransportbeziehung as FuerTran3_11_0_, transportp0_1_.Frachtauftrag as Frachtau4_11_0_, transportp0_1_.WartezeitAnStart as Wartezei5_11_0_, transportp0_1_.VerwendeteKapazitaetTEU as Verwende6_11_0_, transportp0_1_.VerwendeteKapazitaetFEU as Verwende7_11_0_, case when transportp0_1_.TransportplanSchritt_id is not null then 1 when transportp0_.TpsNr is not null then 0 end as clazz_0_ FROM `TransportplanSchritt` transportp0_ left outer join `TransportAktivitaet` transportp0_1_ on transportp0_.TpsNr=transportp0_1_.TransportplanSchritt_id WHERE transportp0_.TpsNr=? for update
+2013-12-11 00:23:25,367 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt: SELECT transportp0_.TpsNr as TpsNr10_0_, transportp0_.PlanStartzeit as PlanStar2_10_0_, transportp0_.PlanEndezeit as PlanEnde3_10_0_, transportp0_.SpaetesterStart as Spaetest4_10_0_, transportp0_.Kosten as Kosten10_0_, transportp0_1_.FrachtfuehrerRahmenvertrag as Frachtfu2_11_0_, transportp0_1_.FuerTransportAufTransportbeziehung as FuerTran3_11_0_, transportp0_1_.Frachtauftrag as Frachtau4_11_0_, transportp0_1_.WartezeitAnStart as Wartezei5_11_0_, transportp0_1_.VerwendeteKapazitaetTEU as Verwende6_11_0_, transportp0_1_.VerwendeteKapazitaetFEU as Verwende7_11_0_, case when transportp0_1_.TransportplanSchritt_id is not null then 1 when transportp0_.TpsNr is not null then 0 end as clazz_0_ FROM `TransportplanSchritt` transportp0_ left outer join `TransportAktivitaet` transportp0_1_ on transportp0_.TpsNr=transportp0_1_.TransportplanSchritt_id WHERE transportp0_.TpsNr=?
+2013-12-11 00:23:25,367 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.TransportplanungKomponente.DataAccessLayer.TransportplanSchritt: SELECT transportp0_.TpsNr as TpsNr10_0_, transportp0_.PlanStartzeit as PlanStar2_10_0_, transportp0_.PlanEndezeit as PlanEnde3_10_0_, transportp0_.SpaetesterStart as Spaetest4_10_0_, transportp0_.Kosten as Kosten10_0_, transportp0_1_.FrachtfuehrerRahmenvertrag as Frachtfu2_11_0_, transportp0_1_.FuerTransportAufTransportbeziehung as FuerTran3_11_0_, transportp0_1_.Frachtauftrag as Frachtau4_11_0_, transportp0_1_.WartezeitAnStart as Wartezei5_11_0_, transportp0_1_.VerwendeteKapazitaetTEU as Verwende6_11_0_, transportp0_1_.VerwendeteKapazitaetFEU as Verwende7_11_0_, case when transportp0_1_.TransportplanSchritt_id is not null then 1 when transportp0_.TpsNr is not null then 0 end as clazz_0_ FROM `TransportplanSchritt` transportp0_ left outer join `TransportAktivitaet` transportp0_1_ on transportp0_.TpsNr=transportp0_1_.TransportplanSchritt_id WHERE transportp0_.TpsNr=?
+2013-12-11 00:23:25,368 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage
+2013-12-11 00:23:25,368 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT SaNr FROM `Sendungsanfrage` WHERE SaNr = ?
+2013-12-11 00:23:25,368 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT sendungsan_.SaNr, sendungsan_.AbholzeitfensterStart as Abholzei2_12_, sendungsan_.AbholzeitfensterEnde as Abholzei3_12_, sendungsan_.AngebotGültigBis as AngebotG4_12_, sendungsan_.Status as Status12_, sendungsan_.StartLokation as StartLok6_12_, sendungsan_.ZielLokation as ZielLoka7_12_, sendungsan_.SendungNr as SendungNr12_, sendungsan_.Auftraggeber as Auftragg9_12_ FROM `Sendungsanfrage` sendungsan_ WHERE sendungsan_.SaNr=?
+2013-12-11 00:23:25,368 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `Sendungsanfrage` (AbholzeitfensterStart, AbholzeitfensterEnde, AngebotGültigBis, Status, StartLokation, ZielLokation, SendungNr, Auftraggeber, SaNr) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2013-12-11 00:23:25,368 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `Sendungsanfrage` SET AbholzeitfensterStart = ?, AbholzeitfensterEnde = ?, AngebotGültigBis = ?, Status = ?, StartLokation = ?, ZielLokation = ?, SendungNr = ?, Auftraggeber = ? WHERE SaNr = ?
+2013-12-11 00:23:25,368 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `Sendungsanfrage` WHERE SaNr = ?
+2013-12-11 00:23:25,368 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `Sendungsanfrage` (AbholzeitfensterStart, AbholzeitfensterEnde, AngebotGültigBis, Status, StartLokation, ZielLokation, SendungNr, Auftraggeber) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2013-12-11 00:23:25,368 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage: SELECT sendungsan0_.SaNr as SaNr12_0_, sendungsan0_.AbholzeitfensterStart as Abholzei2_12_0_, sendungsan0_.AbholzeitfensterEnde as Abholzei3_12_0_, sendungsan0_.AngebotGültigBis as AngebotG4_12_0_, sendungsan0_.Status as Status12_0_, sendungsan0_.StartLokation as StartLok6_12_0_, sendungsan0_.ZielLokation as ZielLoka7_12_0_, sendungsan0_.SendungNr as SendungNr12_0_, sendungsan0_.Auftraggeber as Auftragg9_12_0_ FROM `Sendungsanfrage` sendungsan0_ WHERE sendungsan0_.SaNr=?
+2013-12-11 00:23:25,368 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage: SELECT sendungsan0_.SaNr as SaNr12_0_, sendungsan0_.AbholzeitfensterStart as Abholzei2_12_0_, sendungsan0_.AbholzeitfensterEnde as Abholzei3_12_0_, sendungsan0_.AngebotGültigBis as AngebotG4_12_0_, sendungsan0_.Status as Status12_0_, sendungsan0_.StartLokation as StartLok6_12_0_, sendungsan0_.ZielLokation as ZielLoka7_12_0_, sendungsan0_.SendungNr as SendungNr12_0_, sendungsan0_.Auftraggeber as Auftragg9_12_0_ FROM `Sendungsanfrage` sendungsan0_ WHERE sendungsan0_.SaNr=?
+2013-12-11 00:23:25,368 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage: SELECT sendungsan0_.SaNr as SaNr12_0_, sendungsan0_.AbholzeitfensterStart as Abholzei2_12_0_, sendungsan0_.AbholzeitfensterEnde as Abholzei3_12_0_, sendungsan0_.AngebotGültigBis as AngebotG4_12_0_, sendungsan0_.Status as Status12_0_, sendungsan0_.StartLokation as StartLok6_12_0_, sendungsan0_.ZielLokation as ZielLoka7_12_0_, sendungsan0_.SendungNr as SendungNr12_0_, sendungsan0_.Auftraggeber as Auftragg9_12_0_ FROM `Sendungsanfrage` sendungsan0_ WHERE sendungsan0_.SaNr=? for update
+2013-12-11 00:23:25,368 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage: SELECT sendungsan0_.SaNr as SaNr12_0_, sendungsan0_.AbholzeitfensterStart as Abholzei2_12_0_, sendungsan0_.AbholzeitfensterEnde as Abholzei3_12_0_, sendungsan0_.AngebotGültigBis as AngebotG4_12_0_, sendungsan0_.Status as Status12_0_, sendungsan0_.StartLokation as StartLok6_12_0_, sendungsan0_.ZielLokation as ZielLoka7_12_0_, sendungsan0_.SendungNr as SendungNr12_0_, sendungsan0_.Auftraggeber as Auftragg9_12_0_ FROM `Sendungsanfrage` sendungsan0_ WHERE sendungsan0_.SaNr=? for update
+2013-12-11 00:23:25,368 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage: SELECT sendungsan0_.SaNr as SaNr12_0_, sendungsan0_.AbholzeitfensterStart as Abholzei2_12_0_, sendungsan0_.AbholzeitfensterEnde as Abholzei3_12_0_, sendungsan0_.AngebotGültigBis as AngebotG4_12_0_, sendungsan0_.Status as Status12_0_, sendungsan0_.StartLokation as StartLok6_12_0_, sendungsan0_.ZielLokation as ZielLoka7_12_0_, sendungsan0_.SendungNr as SendungNr12_0_, sendungsan0_.Auftraggeber as Auftragg9_12_0_ FROM `Sendungsanfrage` sendungsan0_ WHERE sendungsan0_.SaNr=? for update
+2013-12-11 00:23:25,369 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage: SELECT sendungsan0_.SaNr as SaNr12_1_, sendungsan0_.AbholzeitfensterStart as Abholzei2_12_1_, sendungsan0_.AbholzeitfensterEnde as Abholzei3_12_1_, sendungsan0_.AngebotGültigBis as AngebotG4_12_1_, sendungsan0_.Status as Status12_1_, sendungsan0_.StartLokation as StartLok6_12_1_, sendungsan0_.ZielLokation as ZielLoka7_12_1_, sendungsan0_.SendungNr as SendungNr12_1_, sendungsan0_.Auftraggeber as Auftragg9_12_1_, sendungspo1_.Sendungsanfrage_id as Sendungs3_3_, sendungspo1_.SendungspositionsNr as Sendungs1_3_, sendungspo1_.SendungspositionsNr as Sendungs1_13_0_, sendungspo1_.Bruttogewicht as Bruttoge2_13_0_ FROM `Sendungsanfrage` sendungsan0_ left outer join `Sendungsposition` sendungspo1_ on sendungsan0_.SaNr=sendungspo1_.Sendungsanfrage_id WHERE sendungsan0_.SaNr=?
+2013-12-11 00:23:25,369 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage: SELECT sendungsan0_.SaNr as SaNr12_1_, sendungsan0_.AbholzeitfensterStart as Abholzei2_12_1_, sendungsan0_.AbholzeitfensterEnde as Abholzei3_12_1_, sendungsan0_.AngebotGültigBis as AngebotG4_12_1_, sendungsan0_.Status as Status12_1_, sendungsan0_.StartLokation as StartLok6_12_1_, sendungsan0_.ZielLokation as ZielLoka7_12_1_, sendungsan0_.SendungNr as SendungNr12_1_, sendungsan0_.Auftraggeber as Auftragg9_12_1_, sendungspo1_.Sendungsanfrage_id as Sendungs3_3_, sendungspo1_.SendungspositionsNr as Sendungs1_3_, sendungspo1_.SendungspositionsNr as Sendungs1_13_0_, sendungspo1_.Bruttogewicht as Bruttoge2_13_0_ FROM `Sendungsanfrage` sendungsan0_ left outer join `Sendungsposition` sendungspo1_ on sendungsan0_.SaNr=sendungspo1_.Sendungsanfrage_id WHERE sendungsan0_.SaNr=?
+2013-12-11 00:23:25,369 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsposition
+2013-12-11 00:23:25,369 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT SendungspositionsNr FROM `Sendungsposition` WHERE SendungspositionsNr = ?
+2013-12-11 00:23:25,369 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT sendungspo_.SendungspositionsNr, sendungspo_.Bruttogewicht as Bruttoge2_13_ FROM `Sendungsposition` sendungspo_ WHERE sendungspo_.SendungspositionsNr=?
+2013-12-11 00:23:25,369 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `Sendungsposition` (Bruttogewicht, SendungspositionsNr) VALUES (?, ?)
+2013-12-11 00:23:25,369 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `Sendungsposition` SET Bruttogewicht = ? WHERE SendungspositionsNr = ?
+2013-12-11 00:23:25,369 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `Sendungsposition` WHERE SendungspositionsNr = ?
+2013-12-11 00:23:25,369 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `Sendungsposition` (Bruttogewicht) VALUES (?)
+2013-12-11 00:23:25,369 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsposition: SELECT sendungspo0_.SendungspositionsNr as Sendungs1_13_0_, sendungspo0_.Bruttogewicht as Bruttoge2_13_0_ FROM `Sendungsposition` sendungspo0_ WHERE sendungspo0_.SendungspositionsNr=?
+2013-12-11 00:23:25,369 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsposition: SELECT sendungspo0_.SendungspositionsNr as Sendungs1_13_0_, sendungspo0_.Bruttogewicht as Bruttoge2_13_0_ FROM `Sendungsposition` sendungspo0_ WHERE sendungspo0_.SendungspositionsNr=?
+2013-12-11 00:23:25,369 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsposition: SELECT sendungspo0_.SendungspositionsNr as Sendungs1_13_0_, sendungspo0_.Bruttogewicht as Bruttoge2_13_0_ FROM `Sendungsposition` sendungspo0_ WHERE sendungspo0_.SendungspositionsNr=? for update
+2013-12-11 00:23:25,369 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsposition: SELECT sendungspo0_.SendungspositionsNr as Sendungs1_13_0_, sendungspo0_.Bruttogewicht as Bruttoge2_13_0_ FROM `Sendungsposition` sendungspo0_ WHERE sendungspo0_.SendungspositionsNr=? for update
+2013-12-11 00:23:25,369 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsposition: SELECT sendungspo0_.SendungspositionsNr as Sendungs1_13_0_, sendungspo0_.Bruttogewicht as Bruttoge2_13_0_ FROM `Sendungsposition` sendungspo0_ WHERE sendungspo0_.SendungspositionsNr=? for update
+2013-12-11 00:23:25,369 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsposition: SELECT sendungspo0_.SendungspositionsNr as Sendungs1_13_0_, sendungspo0_.Bruttogewicht as Bruttoge2_13_0_ FROM `Sendungsposition` sendungspo0_ WHERE sendungspo0_.SendungspositionsNr=?
+2013-12-11 00:23:25,370 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsposition: SELECT sendungspo0_.SendungspositionsNr as Sendungs1_13_0_, sendungspo0_.Bruttogewicht as Bruttoge2_13_0_ FROM `Sendungsposition` sendungspo0_ WHERE sendungspo0_.SendungspositionsNr=?
+2013-12-11 00:23:25,370 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse
+2013-12-11 00:23:25,370 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT Id FROM `Adresse` WHERE Id = ?
+2013-12-11 00:23:25,370 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT adresse_.Id, adresse_.Strasse as Strasse14_, adresse_.Hausnummer as Hausnummer14_, adresse_.PLZ as PLZ14_, adresse_.Wohnort as Wohnort14_, adresse_.Land as Land14_ FROM `Adresse` adresse_ WHERE adresse_.Id=?
+2013-12-11 00:23:25,370 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `Adresse` (Strasse, Hausnummer, PLZ, Wohnort, Land, Id) VALUES (?, ?, ?, ?, ?, ?)
+2013-12-11 00:23:25,370 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `Adresse` SET Strasse = ?, Hausnummer = ?, PLZ = ?, Wohnort = ?, Land = ? WHERE Id = ?
+2013-12-11 00:23:25,370 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `Adresse` WHERE Id = ?
+2013-12-11 00:23:25,370 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `Adresse` (Strasse, Hausnummer, PLZ, Wohnort, Land) VALUES (?, ?, ?, ?, ?)
+2013-12-11 00:23:25,370 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse: SELECT adresse0_.Id as Id14_0_, adresse0_.Strasse as Strasse14_0_, adresse0_.Hausnummer as Hausnummer14_0_, adresse0_.PLZ as PLZ14_0_, adresse0_.Wohnort as Wohnort14_0_, adresse0_.Land as Land14_0_ FROM `Adresse` adresse0_ WHERE adresse0_.Id=?
+2013-12-11 00:23:25,370 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse: SELECT adresse0_.Id as Id14_0_, adresse0_.Strasse as Strasse14_0_, adresse0_.Hausnummer as Hausnummer14_0_, adresse0_.PLZ as PLZ14_0_, adresse0_.Wohnort as Wohnort14_0_, adresse0_.Land as Land14_0_ FROM `Adresse` adresse0_ WHERE adresse0_.Id=?
+2013-12-11 00:23:25,370 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse: SELECT adresse0_.Id as Id14_0_, adresse0_.Strasse as Strasse14_0_, adresse0_.Hausnummer as Hausnummer14_0_, adresse0_.PLZ as PLZ14_0_, adresse0_.Wohnort as Wohnort14_0_, adresse0_.Land as Land14_0_ FROM `Adresse` adresse0_ WHERE adresse0_.Id=? for update
+2013-12-11 00:23:25,370 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse: SELECT adresse0_.Id as Id14_0_, adresse0_.Strasse as Strasse14_0_, adresse0_.Hausnummer as Hausnummer14_0_, adresse0_.PLZ as PLZ14_0_, adresse0_.Wohnort as Wohnort14_0_, adresse0_.Land as Land14_0_ FROM `Adresse` adresse0_ WHERE adresse0_.Id=? for update
+2013-12-11 00:23:25,370 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse: SELECT adresse0_.Id as Id14_0_, adresse0_.Strasse as Strasse14_0_, adresse0_.Hausnummer as Hausnummer14_0_, adresse0_.PLZ as PLZ14_0_, adresse0_.Wohnort as Wohnort14_0_, adresse0_.Land as Land14_0_ FROM `Adresse` adresse0_ WHERE adresse0_.Id=? for update
+2013-12-11 00:23:25,370 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse: SELECT adresse0_.Id as Id14_0_, adresse0_.Strasse as Strasse14_0_, adresse0_.Hausnummer as Hausnummer14_0_, adresse0_.PLZ as PLZ14_0_, adresse0_.Wohnort as Wohnort14_0_, adresse0_.Land as Land14_0_ FROM `Adresse` adresse0_ WHERE adresse0_.Id=?
+2013-12-11 00:23:25,371 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Adresse: SELECT adresse0_.Id as Id14_0_, adresse0_.Strasse as Strasse14_0_, adresse0_.Hausnummer as Hausnummer14_0_, adresse0_.PLZ as PLZ14_0_, adresse0_.Wohnort as Wohnort14_0_, adresse0_.Land as Land14_0_ FROM `Adresse` adresse0_ WHERE adresse0_.Id=?
+2013-12-11 00:23:25,371 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Static SQL for entity: ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner
+2013-12-11 00:23:25,372 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Version select: SELECT Version FROM `Geschaeftspartner` WHERE GpNr = ?
+2013-12-11 00:23:25,372 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Snapshot select: SELECT geschaefts_.GpNr, geschaefts_.Version as Version15_, geschaefts_.Email as Email15_, geschaefts_.Nachname as Nachname15_, geschaefts_.Vorname as Vorname15_ FROM `Geschaeftspartner` geschaefts_ WHERE geschaefts_.GpNr=?
+2013-12-11 00:23:25,372 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Insert 0: INSERT INTO `Geschaeftspartner` (Version, Email, Nachname, Vorname, GpNr) VALUES (?, ?, ?, ?, ?)
+2013-12-11 00:23:25,372 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Update 0: UPDATE `Geschaeftspartner` SET Version = ?, Email = ?, Nachname = ?, Vorname = ? WHERE GpNr = ? AND Version = ?
+2013-12-11 00:23:25,372 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Delete 0: DELETE FROM `Geschaeftspartner` WHERE GpNr = ? AND Version = ?
+2013-12-11 00:23:25,372 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister -  Identity insert: INSERT INTO `Geschaeftspartner` (Version, Email, Nachname, Vorname) VALUES (?, ?, ?, ?)
+2013-12-11 00:23:25,372 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner: SELECT geschaefts0_.GpNr as GpNr15_0_, geschaefts0_.Version as Version15_0_, geschaefts0_.Email as Email15_0_, geschaefts0_.Nachname as Nachname15_0_, geschaefts0_.Vorname as Vorname15_0_ FROM `Geschaeftspartner` geschaefts0_ WHERE geschaefts0_.GpNr=?
+2013-12-11 00:23:25,372 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner: SELECT geschaefts0_.GpNr as GpNr15_0_, geschaefts0_.Version as Version15_0_, geschaefts0_.Email as Email15_0_, geschaefts0_.Nachname as Nachname15_0_, geschaefts0_.Vorname as Vorname15_0_ FROM `Geschaeftspartner` geschaefts0_ WHERE geschaefts0_.GpNr=?
+2013-12-11 00:23:25,372 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner: SELECT geschaefts0_.GpNr as GpNr15_0_, geschaefts0_.Version as Version15_0_, geschaefts0_.Email as Email15_0_, geschaefts0_.Nachname as Nachname15_0_, geschaefts0_.Vorname as Vorname15_0_ FROM `Geschaeftspartner` geschaefts0_ WHERE geschaefts0_.GpNr=? for update
+2013-12-11 00:23:25,372 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner: SELECT geschaefts0_.GpNr as GpNr15_0_, geschaefts0_.Version as Version15_0_, geschaefts0_.Email as Email15_0_, geschaefts0_.Nachname as Nachname15_0_, geschaefts0_.Vorname as Vorname15_0_ FROM `Geschaeftspartner` geschaefts0_ WHERE geschaefts0_.GpNr=? for update
+2013-12-11 00:23:25,372 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner: SELECT geschaefts0_.GpNr as GpNr15_0_, geschaefts0_.Version as Version15_0_, geschaefts0_.Email as Email15_0_, geschaefts0_.Nachname as Nachname15_0_, geschaefts0_.Vorname as Vorname15_0_ FROM `Geschaeftspartner` geschaefts0_ WHERE geschaefts0_.GpNr=? for update
+2013-12-11 00:23:25,372 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+MergeCascadingAction on entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner: SELECT geschaefts0_.GpNr as GpNr15_1_, geschaefts0_.Version as Version15_1_, geschaefts0_.Email as Email15_1_, geschaefts0_.Nachname as Nachname15_1_, geschaefts0_.Vorname as Vorname15_1_, adressen1_.Geschaeftspartner_id as Geschaef7_3_, adressen1_.Id as Id3_, adressen1_.Id as Id14_0_, adressen1_.Strasse as Strasse14_0_, adressen1_.Hausnummer as Hausnummer14_0_, adressen1_.PLZ as PLZ14_0_, adressen1_.Wohnort as Wohnort14_0_, adressen1_.Land as Land14_0_ FROM `Geschaeftspartner` geschaefts0_ left outer join `Adresse` adressen1_ on geschaefts0_.GpNr=adressen1_.Geschaeftspartner_id WHERE geschaefts0_.GpNr=?
+2013-12-11 00:23:25,372 DEBUG NHibernate.Loader.Entity.AbstractEntityLoader - Static select for action NHibernate.Engine.CascadingAction+RefreshCascadingAction on entity ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner: SELECT geschaefts0_.GpNr as GpNr15_1_, geschaefts0_.Version as Version15_1_, geschaefts0_.Email as Email15_1_, geschaefts0_.Nachname as Nachname15_1_, geschaefts0_.Vorname as Vorname15_1_, adressen1_.Geschaeftspartner_id as Geschaef7_3_, adressen1_.Id as Id3_, adressen1_.Id as Id14_0_, adressen1_.Strasse as Strasse14_0_, adressen1_.Hausnummer as Hausnummer14_0_, adressen1_.PLZ as PLZ14_0_, adressen1_.Wohnort as Wohnort14_0_, adressen1_.Land as Land14_0_ FROM `Geschaeftspartner` geschaefts0_ left outer join `Adresse` adressen1_ on geschaefts0_.GpNr=adressen1_.Geschaeftspartner_id WHERE geschaefts0_.GpNr=?
+2013-12-11 00:23:25,376 DEBUG NHibernate.Loader.Collection.OneToManyLoader - Static select for one-to-many ApplicationCore.UnterbeauftragungKomponente.DataAccessLayer.FrachtfuehrerRahmenvertrag.Abfahrtszeiten: SELECT abfahrtsze0_.FrachtfuehrerRahmenvertrag_id as Frachtfu4_1_, abfahrtsze0_.SzNr as SzNr1_, abfahrtsze0_.SzNr as SzNr7_0_, abfahrtsze0_.Wochentag as Wochentag7_0_, abfahrtsze0_.Uhrzeit as Uhrzeit7_0_ FROM `Startzeit` abfahrtsze0_ WHERE abfahrtsze0_.FrachtfuehrerRahmenvertrag_id=?
+2013-12-11 00:23:25,376 DEBUG NHibernate.Loader.Collection.OneToManyLoader - Static select for one-to-many ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan.Frachteinheiten: SELECT frachteinh0_.Transportplan_id as Transpor4_1_, frachteinh0_.FraeNr as FraeNr1_, frachteinh0_.FraeNr as FraeNr8_0_, frachteinh0_.FraeTyp as FraeTyp8_0_, frachteinh0_.Sendungspositionen as Sendungs3_8_0_ FROM `Frachteinheit` frachteinh0_ WHERE frachteinh0_.Transportplan_id=?
+2013-12-11 00:23:25,377 DEBUG NHibernate.Loader.Collection.OneToManyLoader - Static select for one-to-many ApplicationCore.TransportplanungKomponente.DataAccessLayer.Transportplan.TransportplanSchritte: SELECT transportp0_.Transportplan_id as Transpor6_1_, transportp0_.TpsNr as TpsNr1_, transportp0_.TpsNr as TpsNr10_0_, transportp0_.PlanStartzeit as PlanStar2_10_0_, transportp0_.PlanEndezeit as PlanEnde3_10_0_, transportp0_.SpaetesterStart as Spaetest4_10_0_, transportp0_.Kosten as Kosten10_0_, transportp0_1_.FrachtfuehrerRahmenvertrag as Frachtfu2_11_0_, transportp0_1_.FuerTransportAufTransportbeziehung as FuerTran3_11_0_, transportp0_1_.Frachtauftrag as Frachtau4_11_0_, transportp0_1_.WartezeitAnStart as Wartezei5_11_0_, transportp0_1_.VerwendeteKapazitaetTEU as Verwende6_11_0_, transportp0_1_.VerwendeteKapazitaetFEU as Verwende7_11_0_, case when transportp0_1_.TransportplanSchritt_id is not null then 1 when transportp0_.TpsNr is not null then 0 end as clazz_0_ FROM `TransportplanSchritt` transportp0_ left outer join `TransportAktivitaet` transportp0_1_ on transportp0_.TpsNr=transportp0_1_.TransportplanSchritt_id WHERE transportp0_.Transportplan_id=?
+2013-12-11 00:23:25,377 DEBUG NHibernate.Loader.Collection.OneToManyLoader - Static select for one-to-many ApplicationCore.AuftragKomponente.DataAccessLayer.Sendungsanfrage.Sendungspositionen: SELECT sendungspo0_.Sendungsanfrage_id as Sendungs3_1_, sendungspo0_.SendungspositionsNr as Sendungs1_1_, sendungspo0_.SendungspositionsNr as Sendungs1_13_0_, sendungspo0_.Bruttogewicht as Bruttoge2_13_0_ FROM `Sendungsposition` sendungspo0_ WHERE sendungspo0_.Sendungsanfrage_id=?
+2013-12-11 00:23:25,377 DEBUG NHibernate.Loader.Collection.OneToManyLoader - Static select for one-to-many ApplicationCore.GeschaeftspartnerKomponente.DataAccessLayer.Geschaeftspartner.Adressen: SELECT adressen0_.Geschaeftspartner_id as Geschaef7_1_, adressen0_.Id as Id1_, adressen0_.Id as Id14_0_, adressen0_.Strasse as Strasse14_0_, adressen0_.Hausnummer as Hausnummer14_0_, adressen0_.PLZ as PLZ14_0_, adressen0_.Wohnort as Wohnort14_0_, adressen0_.Land as Land14_0_ FROM `Adresse` adressen0_ WHERE adressen0_.Geschaeftspartner_id=?
+2013-12-11 00:23:25,378 DEBUG NHibernate.Impl.SessionFactoryObjectFactory - initializing class SessionFactoryObjectFactory
+2013-12-11 00:23:25,378 DEBUG NHibernate.Impl.SessionFactoryObjectFactory - registered: 633cb48625f14b45bbfffb54bc1ea684(unnamed)
+2013-12-11 00:23:25,378 INFO  NHibernate.Impl.SessionFactoryObjectFactory - no name configured
+2013-12-11 00:23:25,378 DEBUG NHibernate.Impl.SessionFactoryImpl - Instantiated session factory
+2013-12-11 00:23:25,381 DEBUG NHibernate.Impl.SessionFactoryImpl - Checking 0 named HQL queries
+2013-12-11 00:23:25,381 DEBUG NHibernate.Impl.SessionFactoryImpl - Checking 0 named SQL queries
+2013-12-11 00:23:25,548 DEBUG NHibernate.Impl.SessionImpl - [session-id=0d7a8f93-b5e2-4c5c-bcf7-58dfe06065f0] opened session at timestamp: 635223182055, for session factory: [/633cb48625f14b45bbfffb54bc1ea684]
+2013-12-11 00:23:25,552 DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2013-12-11 00:23:25,552 DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2013-12-11 00:23:25,687 DEBUG NHibernate.Engine.IdentifierValue - unsaved-value: 0
+2013-12-11 00:23:25,687 DEBUG NHibernate.Event.Default.AbstractSaveEventListener - transient instance of: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung
+2013-12-11 00:23:25,688 DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener - saving transient instance
+2013-12-11 00:23:25,691 DEBUG NHibernate.Event.Default.AbstractSaveEventListener - saving [ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung#<null>]
+2013-12-11 00:23:25,696 INFO  NHibernate.Engine.Cascade - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung
+2013-12-11 00:23:25,697 INFO  NHibernate.Engine.Cascade - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung
+2013-12-11 00:23:25,697 DEBUG NHibernate.Event.Default.AbstractSaveEventListener - executing insertions
+2013-12-11 00:23:25,703 DEBUG NHibernate.Event.Default.AbstractSaveEventListener - executing identity-insert immediately
+2013-12-11 00:23:25,705 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Inserting entity: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung (native id)
+2013-12-11 00:23:25,713 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2013-12-11 00:23:25,713 DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: INSERT INTO `Frachtabrechnung` (IstBestaetigt, Rechnungsbetrag, Frachtauftrag, Gutschrift_id) VALUES (?, ?, ?, ?)
+2013-12-11 00:23:25,714 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Dehydrating entity: [ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung#<null>]
+2013-12-11 00:23:25,715 DEBUG NHibernate.Type.BooleanType - binding 'False' to parameter: 0
+2013-12-11 00:23:25,716 DEBUG NHibernate.Type.SerializableType - binding null to parameter: 1
+2013-12-11 00:23:25,716 DEBUG NHibernate.Type.Int32Type - binding '1' to parameter: 2
+2013-12-11 00:23:25,717 DEBUG NHibernate.Type.Int32Type - binding null to parameter: 3
+2013-12-11 00:23:25,720 DEBUG NHibernate.SQL - INSERT INTO `Frachtabrechnung` (IstBestaetigt, Rechnungsbetrag, Frachtauftrag, Gutschrift_id) VALUES (?p0, ?p1, ?p2, ?p3);?p0 = False [Type: Boolean (0)], ?p1 = NULL [Type: Binary (0)], ?p2 = 1 [Type: Int32 (0)], ?p3 = NULL [Type: Int32 (0)]
+2013-12-11 00:23:25,721 DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2013-12-11 00:23:25,752 DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteNonQuery took 30 ms
+2013-12-11 00:23:25,755 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2013-12-11 00:23:25,758 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2013-12-11 00:23:25,758 DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: SELECT LAST_INSERT_ID()
+2013-12-11 00:23:25,759 DEBUG NHibernate.SQL - SELECT LAST_INSERT_ID()
+2013-12-11 00:23:25,760 DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2013-12-11 00:23:25,794 DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 34 ms
+2013-12-11 00:23:25,795 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
+2013-12-11 00:23:25,799 DEBUG NHibernate.Type.Int32Type - returning '1' as column: LAST_INSERT_ID()
+2013-12-11 00:23:25,799 DEBUG NHibernate.Id.IdentifierGeneratorFactory - Natively generated identity: 1
+2013-12-11 00:23:25,800 DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
+2013-12-11 00:23:25,801 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
+2013-12-11 00:23:25,801 DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 41 ms
+2013-12-11 00:23:25,801 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2013-12-11 00:23:25,813 INFO  NHibernate.Engine.Cascade - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung
+2013-12-11 00:23:25,813 INFO  NHibernate.Engine.Cascade - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung
+2013-12-11 00:23:25,815 DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2013-12-11 00:23:25,817 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
+2013-12-11 00:23:25,818 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
+2013-12-11 00:23:25,821 INFO  NHibernate.Engine.Cascade - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung
+2013-12-11 00:23:25,821 INFO  NHibernate.Engine.Cascade - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung
+2013-12-11 00:23:25,821 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
+2013-12-11 00:23:25,822 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2013-12-11 00:23:25,833 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
+2013-12-11 00:23:25,833 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2013-12-11 00:23:25,834 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2013-12-11 00:23:25,835 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2013-12-11 00:23:25,835 DEBUG NHibernate.Impl.Printer - listing entities:
+2013-12-11 00:23:25,837 DEBUG NHibernate.Impl.Printer - ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung{'RechnungsNr'='1', 'IstBestaetigt'='False', 'Rechnungsbetrag'=null, 'Frachtauftrag'='1', 'Gutschrift'='null'}
+2013-12-11 00:23:25,838 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
+2013-12-11 00:23:25,838 DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
+2013-12-11 00:23:25,839 DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
+2013-12-11 00:23:25,840 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
+2013-12-11 00:23:25,841 DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2013-12-11 00:23:25,872 DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2013-12-11 00:23:25,874 DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2013-12-11 00:23:25,875 DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2013-12-11 00:23:25,875 DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2013-12-11 00:23:25,879 DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2013-12-11 00:23:25,882 DEBUG NHibernate.Impl.SessionImpl - closing session
+2013-12-11 00:23:25,882 DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2013-12-11 00:23:26,764 DEBUG NHibernate.Impl.SessionImpl - [session-id=f8dbd240-1b39-4c8f-9ba7-7839d823849f] opened session at timestamp: 635223182067, for session factory: [/633cb48625f14b45bbfffb54bc1ea684]
+2013-12-11 00:23:26,764 DEBUG NHibernate.Transaction.AdoTransaction - Begin (Unspecified)
+2013-12-11 00:23:26,764 DEBUG NHibernate.Connection.DriverConnectionProvider - Obtaining IDbConnection from Driver
+2013-12-11 00:23:26,882 DEBUG NHibernate.Engine.IdentifierValue - unsaved-value: 0
+2013-12-11 00:23:26,882 DEBUG NHibernate.Event.Default.AbstractSaveEventListener - detached instance of: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung
+2013-12-11 00:23:26,883 DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener - updating detached instance
+2013-12-11 00:23:26,886 DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener - updating [ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung#1]
+2013-12-11 00:23:26,890 DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener - updating [ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung#1]
+2013-12-11 00:23:26,891 INFO  NHibernate.Engine.Cascade - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung
+2013-12-11 00:23:26,893 DEBUG NHibernate.Engine.CascadingAction - cascading to saveOrUpdate: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift
+2013-12-11 00:23:26,894 DEBUG NHibernate.Engine.IdentifierValue - unsaved-value: 0
+2013-12-11 00:23:26,894 DEBUG NHibernate.Event.Default.AbstractSaveEventListener - transient instance of: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift
+2013-12-11 00:23:26,894 DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener - saving transient instance
+2013-12-11 00:23:26,895 DEBUG NHibernate.Event.Default.AbstractSaveEventListener - saving [ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift#<null>]
+2013-12-11 00:23:26,895 DEBUG NHibernate.Event.Default.AbstractSaveEventListener - executing insertions
+2013-12-11 00:23:26,895 DEBUG NHibernate.Event.Default.AbstractSaveEventListener - executing identity-insert immediately
+2013-12-11 00:23:26,895 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Inserting entity: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift (native id)
+2013-12-11 00:23:26,896 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2013-12-11 00:23:26,896 DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: INSERT INTO `Gutschrift` (Kontodaten, Betrag) VALUES (?, ?)
+2013-12-11 00:23:26,896 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Dehydrating entity: [ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift#<null>]
+2013-12-11 00:23:26,896 DEBUG NHibernate.Type.SerializableType - binding null to parameter: 0
+2013-12-11 00:23:26,896 DEBUG NHibernate.Type.SerializableType - binding null to parameter: 1
+2013-12-11 00:23:26,896 DEBUG NHibernate.SQL - INSERT INTO `Gutschrift` (Kontodaten, Betrag) VALUES (?p0, ?p1);?p0 = NULL [Type: Binary (0)], ?p1 = NULL [Type: Binary (0)]
+2013-12-11 00:23:26,896 DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2013-12-11 00:23:26,925 DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteNonQuery took 28 ms
+2013-12-11 00:23:26,925 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2013-12-11 00:23:26,925 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2013-12-11 00:23:26,925 DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: SELECT LAST_INSERT_ID()
+2013-12-11 00:23:26,925 DEBUG NHibernate.SQL - SELECT LAST_INSERT_ID()
+2013-12-11 00:23:26,925 DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2013-12-11 00:23:26,953 DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteReader took 27 ms
+2013-12-11 00:23:26,954 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened IDataReader, open IDataReaders: 1
+2013-12-11 00:23:26,954 DEBUG NHibernate.Type.Int32Type - returning '1' as column: LAST_INSERT_ID()
+2013-12-11 00:23:26,954 DEBUG NHibernate.Id.IdentifierGeneratorFactory - Natively generated identity: 1
+2013-12-11 00:23:26,954 DEBUG NHibernate.Driver.NHybridDataReader - running NHybridDataReader.Dispose()
+2013-12-11 00:23:26,954 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDataReader, open IDataReaders :0
+2013-12-11 00:23:26,954 DEBUG NHibernate.AdoNet.AbstractBatcher - DataReader was closed after 28 ms
+2013-12-11 00:23:26,954 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2013-12-11 00:23:26,955 INFO  NHibernate.Engine.Cascade - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung
+2013-12-11 00:23:26,955 DEBUG NHibernate.Transaction.AdoTransaction - Start Commit
+2013-12-11 00:23:26,955 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - flushing session
+2013-12-11 00:23:26,955 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - processing flush-time cascades
+2013-12-11 00:23:26,955 INFO  NHibernate.Engine.Cascade - processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung
+2013-12-11 00:23:26,955 DEBUG NHibernate.Engine.CascadingAction - cascading to saveOrUpdate: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift
+2013-12-11 00:23:26,955 DEBUG NHibernate.Event.Default.AbstractSaveEventListener - persistent instance of: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift
+2013-12-11 00:23:26,956 DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener - ignoring persistent instance
+2013-12-11 00:23:26,957 DEBUG NHibernate.Event.Default.DefaultSaveOrUpdateEventListener - object already associated with session: [ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift#1]
+2013-12-11 00:23:26,957 INFO  NHibernate.Engine.Cascade - done processing cascade NHibernate.Engine.CascadingAction+SaveUpdateCascadingAction for: ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung
+2013-12-11 00:23:26,957 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - dirty checking collections
+2013-12-11 00:23:26,957 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+2013-12-11 00:23:26,960 DEBUG NHibernate.Event.Default.DefaultFlushEntityEventListener - Updating entity: [ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung#1]
+2013-12-11 00:23:26,964 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Processing unreferenced collections
+2013-12-11 00:23:26,964 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+2013-12-11 00:23:26,964 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 insertions, 1 updates, 0 deletions to 2 objects
+2013-12-11 00:23:26,964 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2013-12-11 00:23:26,964 DEBUG NHibernate.Impl.Printer - listing entities:
+2013-12-11 00:23:26,972 DEBUG NHibernate.Impl.Printer - ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung{'RechnungsNr'='1', 'IstBestaetigt'='True', 'Rechnungsbetrag'='0001000000ffffffff01000000000000000c020000003d436f6d6d6f6e2c2056657273696f6e3d312e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c05010000001e436f6d6d6f6e2e4461746154797065732e5761656872756e6773547970650100000004576572740005020000000233300b', 'Frachtauftrag'='1', 'Gutschrift'='ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift#1'}
+2013-12-11 00:23:26,972 DEBUG NHibernate.Impl.Printer - ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Gutschrift{'GutschriftNr'='1', 'Kontodaten'=null, 'Betrag'=null}
+2013-12-11 00:23:26,972 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - executing flush
+2013-12-11 00:23:26,972 DEBUG NHibernate.AdoNet.ConnectionManager - registering flush begin
+2013-12-11 00:23:26,983 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Updating entity: [ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung#1]
+2013-12-11 00:23:26,984 DEBUG NHibernate.AdoNet.AbstractBatcher - Opened new IDbCommand, open IDbCommands: 1
+2013-12-11 00:23:26,984 DEBUG NHibernate.AdoNet.AbstractBatcher - Building an IDbCommand object for the SqlString: UPDATE `Frachtabrechnung` SET IstBestaetigt = ?, Rechnungsbetrag = ?, Frachtauftrag = ?, Gutschrift_id = ? WHERE RechnungsNr = ?
+2013-12-11 00:23:26,984 DEBUG NHibernate.Persister.Entity.AbstractEntityPersister - Dehydrating entity: [ApplicationCore.BuchhaltungKomponente.DataAccessLayer.Frachtabrechnung#1]
+2013-12-11 00:23:26,984 DEBUG NHibernate.Type.BooleanType - binding 'True' to parameter: 0
+2013-12-11 00:23:26,984 DEBUG NHibernate.Type.SerializableType - binding '0001000000ffffffff01000000000000000c020000003d436f6d6d6f6e2c2056657273696f6e3d312e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c05010000001e436f6d6d6f6e2e4461746154797065732e5761656872756e6773547970650100000004576572740005020000000233300b' to parameter: 1
+2013-12-11 00:23:26,985 DEBUG NHibernate.Type.Int32Type - binding '1' to parameter: 2
+2013-12-11 00:23:26,985 DEBUG NHibernate.Type.Int32Type - binding '1' to parameter: 3
+2013-12-11 00:23:26,985 DEBUG NHibernate.Type.Int32Type - binding '1' to parameter: 4
+2013-12-11 00:23:26,986 DEBUG NHibernate.SQL - UPDATE `Frachtabrechnung` SET IstBestaetigt = ?p0, Rechnungsbetrag = ?p1, Frachtauftrag = ?p2, Gutschrift_id = ?p3 WHERE RechnungsNr = ?p4;?p0 = True [Type: Boolean (0)], ?p1 = 0x0001000000FFFFFFFF01000000000000000C020000003D436F6D6D6F6E2C2056657273696F6E3D312E302E302E302C2043756C747572653D6E65757472616C2C205075626C69634B6579546F6B656E3D6E756C6C05010000001E436F6D6D6F6E2E4461746154797065732E5761656872756E6773547970650100000004576572... [Type: Binary (139)], ?p2 = 1 [Type: Int32 (0)], ?p3 = 1 [Type: Int32 (0)], ?p4 = 1 [Type: Int32 (0)]
+2013-12-11 00:23:26,986 DEBUG NHibernate.Transaction.AdoTransaction - Enlist Command
+2013-12-11 00:23:27,015 DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteNonQuery took 29 ms
+2013-12-11 00:23:27,018 DEBUG NHibernate.AdoNet.AbstractBatcher - ExecuteBatch for 1 statements took 0 ms
+2013-12-11 00:23:27,018 DEBUG NHibernate.AdoNet.AbstractBatcher - Closed IDbCommand, open IDbCommands: 0
+2013-12-11 00:23:27,018 DEBUG NHibernate.AdoNet.ConnectionManager - registering flush end
+2013-12-11 00:23:27,018 DEBUG NHibernate.Event.Default.AbstractFlushingEventListener - post flush
+2013-12-11 00:23:27,018 DEBUG NHibernate.Impl.SessionImpl - before transaction completion
+2013-12-11 00:23:27,048 DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction Committed
+2013-12-11 00:23:27,048 DEBUG NHibernate.Impl.SessionImpl - transaction completion
+2013-12-11 00:23:27,048 DEBUG NHibernate.AdoNet.ConnectionManager - aggressively releasing database connection
+2013-12-11 00:23:27,048 DEBUG NHibernate.Connection.ConnectionProvider - Closing connection
+2013-12-11 00:23:27,048 DEBUG NHibernate.Transaction.AdoTransaction - IDbTransaction disposed.
+2013-12-11 00:23:27,049 DEBUG NHibernate.Impl.SessionImpl - closing session
+2013-12-11 00:23:27,049 DEBUG NHibernate.AdoNet.AbstractBatcher - running BatcherImpl.Dispose(true)
+2013-12-11 00:23:27,098 DEBUG Util.MessagingServices.Implementations.RabbitMQQueue`1[[ApplicationCore.BuchhaltungKomponente.DataAccessLayer.GutschriftDTO, BuchhaltungKomponente, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] - Message '{"GutschriftNr":0,"Kontodaten":null,"Betrag":null}' was acknowledged in queue 'HLS.Queue.Gutschrift.Team3'.

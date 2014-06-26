@@ -1,0 +1,81 @@
+﻿<Window x:Class="Client.GUI_Sendungsanfrage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Erstelle neue Sendungsanfrage" Height="399.078" Width="557.087" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <StackPanel>
+
+
+        <GroupBox Header="Geschäftspartner" Padding="10">
+            <StackPanel>
+                <TextBlock Text="Geschäftspartner wählen:" ></TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox x:Name="Cb_gp"  Padding="0,0,0,5" Width="470" SelectionChanged="Cb_gp_changed"></ComboBox>
+                    <Button x:Name="btn_NeuenGeschaeftspartner" Content="Neu..." Click="Btn_NeuenGeschaeftspartner_Click"/>
+                </StackPanel>
+                <TextBlock Text="Adresse wählen:" ></TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox x:Name="Cb_ad"  Padding="0,0,0,5" Width="470"></ComboBox>
+                    <Button x:Name="btn_NeueAdresse" Content="Neu..." Click="Btn_NeueAdresse_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="Sendungsposition" Padding="10">
+            <StackPanel>
+                <TextBlock Text="Bruttogewicht"></TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="tb_sendungsPositionBruttogewicht" Padding="0,0,0,5" Width="450">100,00</TextBox>
+                    <Button x:Name="btn_SendungspositionHinzufuegen" Content="hinzufügen" Click="Btn_SendungspositionHinzufuegen_Click"></Button>
+                </StackPanel>
+                <TextBlock Text="hinzugefügte Position"></TextBlock>
+                <ListBox x:Name="lb_hinzugefuegtePositionen"></ListBox>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="Sendungsinformationen" Padding="10">
+            <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel>
+                        <TextBlock Text="Abholzeitfenster Start"></TextBlock>
+                        <DatePicker x:Name="Dp_AbholfensterStart" Padding="0,0,0,5"></DatePicker>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Text="Abholzeitfenster Ende"></TextBlock>
+                        <DatePicker x:Name="Dp_AbholfensterEnde" Padding="0,0,0,5"></DatePicker>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <TextBlock Text="Angebot gültig bis"></TextBlock>
+                        <DatePicker x:Name="Dp_AngebotGueltigBis" Padding="0,0,0,5"></DatePicker>
+                    </StackPanel>
+                </Grid>
+
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel>
+                        <TextBlock Text="Start Lokation"></TextBlock>
+                        <ComboBox x:Name="Cb_lokStart" Padding="0,0,0,5"></ComboBox>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <TextBlock Text="Ziel Lokation"></TextBlock>
+                        <ComboBox x:Name="Cb_lokZiel" Padding="0,0,0,5"></ComboBox>
+                    </StackPanel>
+         
+                </Grid>
+
+
+            </StackPanel>
+        </GroupBox>
+        <Button x:Name="Btn_Save" Content="SPEICHERN" Click="Btn_Save_Click"></Button>
+    </StackPanel>
+
+</Window>

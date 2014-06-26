@@ -1,0 +1,9 @@
+C:\Users\Yavuz\HLS\2 - Code\Common.Test\bin\Release\Configurations\ConnectionStrings.config
+C:\Users\Yavuz\HLS\2 - Code\Common.Test\bin\Release\Configurations\Logger.config
+C:\Users\Yavuz\HLS\2 - Code\Common.Test\bin\Release\Common.Test.dll
+C:\Users\Yavuz\HLS\2 - Code\Common.Test\bin\Release\Common.Test.pdb
+C:\Users\Yavuz\HLS\2 - Code\Common.Test\bin\Release\Common.dll
+C:\Users\Yavuz\HLS\2 - Code\Common.Test\bin\Release\Common.pdb
+C:\Users\Yavuz\HLS\2 - Code\Common.Test\obj\Release\Common.Test.dll
+C:\Users\Yavuz\HLS\2 - Code\Common.Test\obj\Release\Common.Test.pdb
+C:\Users\Yavuz\HLS\2 - Code\Common.Test\obj\Release\Common.Test.csprojResolveAssemblyReference.cache

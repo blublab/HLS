@@ -1,0 +1,5 @@
+C:\Users\Yavuz\HLS\2 - Code\TimeServices\bin\Debug\TimeServices.dll
+C:\Users\Yavuz\HLS\2 - Code\TimeServices\bin\Debug\TimeServices.pdb
+C:\Users\Yavuz\HLS\2 - Code\TimeServices\obj\Debug\TimeServices.dll
+C:\Users\Yavuz\HLS\2 - Code\TimeServices\obj\Debug\TimeServices.pdb
+C:\Users\Yavuz\HLS\2 - Code\TimeServices\obj\Debug\TimeServices.csprojResolveAssemblyReference.cache

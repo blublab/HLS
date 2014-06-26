@@ -1,0 +1,5 @@
+C:\Users\Yavuz\HLS\2 - Code\BackgroundQueue\bin\Release\BackgroundQueue.dll
+C:\Users\Yavuz\HLS\2 - Code\BackgroundQueue\bin\Release\BackgroundQueue.pdb
+C:\Users\Yavuz\HLS\2 - Code\BackgroundQueue\obj\Release\BackgroundQueue.csprojResolveAssemblyReference.cache
+C:\Users\Yavuz\HLS\2 - Code\BackgroundQueue\obj\Release\BackgroundQueue.dll
+C:\Users\Yavuz\HLS\2 - Code\BackgroundQueue\obj\Release\BackgroundQueue.pdb

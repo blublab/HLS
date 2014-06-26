@@ -1,0 +1,15 @@
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Release\Configurations\ConnectionStrings.config
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Release\Configurations\Logger.config
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Release\MessagingServices.dll
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Release\MessagingServices.pdb
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Release\Common.dll
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Release\log4net.dll
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Release\Newtonsoft.Json.dll
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Release\RabbitMQ.Client.dll
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Release\Common.pdb
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Release\log4net.xml
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Release\Newtonsoft.Json.xml
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\bin\Release\RabbitMQ.Client.xml
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\obj\Release\MessagingServices.csprojResolveAssemblyReference.cache
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\obj\Release\MessagingServices.dll
+C:\Users\Yavuz\HLS\2 - Code\MessagingServices\obj\Release\MessagingServices.pdb

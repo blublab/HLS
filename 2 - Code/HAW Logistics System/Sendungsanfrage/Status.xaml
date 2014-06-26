@@ -1,0 +1,15 @@
+﻿<Window x:Class="Client.Status"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Status" Height="169" Width="493" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <TextBlock x:Name="tb_id" Margin="10 10 10 30" HorizontalAlignment="Center" >text text text</TextBlock>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="btn_Annehmen" Content="Nimm Angebot an" Margin="0 0 0 0" Click="Btn_Annehmen_Click" />
+            <Button x:Name="btn_Ablehnen" Content="Lehn Angebot ab" Margin="10 0 0 0" Click="Btn_Ablehnen_Click" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
+            <Button x:Name="btn_Cancel" Content=" Abbrechen " Click="Btn_Cancel_Click" Margin="10 30 0 0" IsCancel="True" />
+        </StackPanel>
+    </StackPanel>
+</Window>

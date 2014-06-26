@@ -1,0 +1,13 @@
+C:\Users\Yavuz\HLS\2 - Code\BuchhaltungsKomponente\obj\Release\BuchhaltungsKomponente.csprojResolveAssemblyReference.cache
+C:\Users\Yavuz\HLS\2 - Code\BuchhaltungsKomponente\bin\Release\Configurations\ConnectionStrings.config
+C:\Users\Yavuz\HLS\2 - Code\BuchhaltungsKomponente\bin\Release\Configurations\Logger.config
+C:\Users\Yavuz\HLS\2 - Code\BuchhaltungsKomponente\bin\Release\BuchhaltungsKomponente.dll
+C:\Users\Yavuz\HLS\2 - Code\BuchhaltungsKomponente\bin\Release\BuchhaltungsKomponente.pdb
+C:\Users\Yavuz\HLS\2 - Code\BuchhaltungsKomponente\bin\Release\Common.dll
+C:\Users\Yavuz\HLS\2 - Code\BuchhaltungsKomponente\bin\Release\FluentNHibernate.dll
+C:\Users\Yavuz\HLS\2 - Code\BuchhaltungsKomponente\bin\Release\NHibernate.dll
+C:\Users\Yavuz\HLS\2 - Code\BuchhaltungsKomponente\bin\Release\Common.pdb
+C:\Users\Yavuz\HLS\2 - Code\BuchhaltungsKomponente\bin\Release\FluentNHibernate.xml
+C:\Users\Yavuz\HLS\2 - Code\BuchhaltungsKomponente\bin\Release\NHibernate.xml
+C:\Users\Yavuz\HLS\2 - Code\BuchhaltungsKomponente\obj\Release\BuchhaltungsKomponente.dll
+C:\Users\Yavuz\HLS\2 - Code\BuchhaltungsKomponente\obj\Release\BuchhaltungsKomponente.pdb

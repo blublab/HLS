@@ -1,0 +1,35 @@
+﻿<Window x:Class="Client.GUI_Geschaeftspartner"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Geschaeftspartner hinzufügen" Height="201.808" Width="496" WindowStyle="ToolWindow" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <StackPanel Margin="10">
+        <GroupBox Header="Geschäftspartner" Padding="5" Margin="0 0 0 10">
+            <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel>
+                        <TextBlock Text="Vorname"></TextBlock>
+                        <TextBox x:Name="Tb_firstName" Padding="0,0,0,5">Peter</TextBox>
+                    </StackPanel>
+                    <StackPanel  Grid.Column="1">
+                        <TextBlock Text="Nachname"></TextBlock>
+                        <TextBox x:Name="Tb_lastName" Padding="0,0,0,5">Schmidt</TextBox>
+                    </StackPanel>
+                </Grid>
+                <StackPanel>
+                    <TextBlock Text="Email"></TextBlock>
+                    <TextBox x:Name="Tb_email" Padding="0,0,0,5">peter@schmidt.de</TextBox>
+                </StackPanel>
+
+            </StackPanel>
+        </GroupBox>
+        
+        <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
+            <Button x:Name="btn_Save" Content=" Geschäftspartner speichern" Click="Btn_Save_Click" IsDefault="True"></Button>
+            <Button x:Name="btn_Cancel" Content=" Abbrechen " Click="Btn_Cancel_Click" Margin="10 0 0 0" IsCancel="True"></Button>
+        </StackPanel>
+    </StackPanel>
+</Window>

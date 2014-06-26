@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58C1860D-CE81-4B14-A347-6E9D46483954}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HLS_Konsole</RootNamespace>
+    <AssemblyName>HLS Konsole</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentNHibernate, Version=1.3.0.733, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FluentNHibernate.1.3.0.733\lib\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Iesi.Collections.3.2.0.4000\lib\Net35\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.7.4\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.3.1.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHibernate.3.3.3.4000\lib\Net35\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AuftragKomponente\AuftragKomponente.csproj">
+      <Project>{7b60032a-0d25-4a06-9d04-83fd1ff1e946}</Project>
+      <Name>AuftragKomponente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BackgroundQueue\BackgroundQueue.csproj">
+      <Project>{26cdea8a-c0c4-446c-bb8c-b08aab37edfd}</Project>
+      <Name>BackgroundQueue</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BankAdapter\BankAdapter.csproj">
+      <Project>{9604b1cf-3940-44c0-b9b5-1b2c93e878b8}</Project>
+      <Name>BankAdapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BankExternal\BankExternal.csproj">
+      <Project>{0d797d96-299c-4be7-8d5d-115387768348}</Project>
+      <Name>BankExternal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BuchhaltungsKomponente\BuchhaltungKomponente.csproj">
+      <Project>{6c406950-f1fd-4e07-a2f4-db674551eb4b}</Project>
+      <Name>BuchhaltungKomponente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{841af5c4-1281-49f3-853f-3e08cd08aa6a}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrachtfuehrerAdapter\FrachtfuehrerAdapter.csproj">
+      <Project>{82e80abd-0d9f-447c-9d20-4b967664ea2d}</Project>
+      <Name>FrachtfuehrerAdapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrachtfuehrerExternal\FrachtfuehrerExternal.csproj">
+      <Project>{c9957192-aef9-422f-a36c-7688fb6e5e60}</Project>
+      <Name>FrachtfuehrerExternal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeschaeftspartnerKomponente\GeschaeftspartnerKomponente.csproj">
+      <Project>{18292c25-d2d5-4537-bb46-92ec366b1f85}</Project>
+      <Name>GeschaeftspartnerKomponente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LokationsAdapter\LokationsAdapter.csproj">
+      <Project>{b827bde9-c15a-419b-87df-c1610b75ce98}</Project>
+      <Name>LokationsAdapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MessagingServices\MessagingServices.csproj">
+      <Project>{b8241aa9-bcbd-4fb2-bee1-abd2ca71ecda}</Project>
+      <Name>MessagingServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDFErzeugungsKomponente\PDFErzeugungsKomponente.csproj">
+      <Project>{7db339b2-d796-4300-91bc-201e55b193da}</Project>
+      <Name>PDFErzeugungsKomponente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersistenceServices\PersistenceServices.csproj">
+      <Project>{4a905506-3375-4cb6-a065-3b9d63c545db}</Project>
+      <Name>PersistenceServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SendungKomponente\SendungKomponente.csproj">
+      <Project>{8b958cb1-8044-4dc4-aea7-106e8ed28f4b}</Project>
+      <Name>SendungKomponente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TimeServices\TimeServices.csproj">
+      <Project>{85abe358-27f3-4fa7-a9ab-1cd28dfa198d}</Project>
+      <Name>TimeServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TransportnetzKomponente\TransportnetzKomponente.csproj">
+      <Project>{f286acd7-1c2a-434f-932e-66df0abfd19c}</Project>
+      <Name>TransportnetzKomponente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TransportplanungKomponente\TransportplanungKomponente.csproj">
+      <Project>{fe0b1af0-6b33-49a9-badd-0163cd0d4543}</Project>
+      <Name>TransportplanungKomponente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnterbeauftragungKomponente\UnterbeauftragungKomponente.csproj">
+      <Project>{e53bb22a-3e99-4eb7-ba09-ee1621d8085e}</Project>
+      <Name>UnterbeauftragungKomponente</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
